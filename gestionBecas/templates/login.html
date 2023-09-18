@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
     <style>
-        /* Estilos CSS para centrar el contenido y agregar una imagen de fondo */
+      
         body {
             display: flex;
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
-            height: 100vh; /* Altura de la pantalla completa */
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
             margin: 0;
-            background-image: url("/static/images/watermark.jpg"); /* Ruta a tu imagen de fondo */
-            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-image: url("/static/images/watermark.jpg");
+            background-size: cover; 
         }
     
-        /* Resto de tus estilos CSS... */
+      
     </style>
     <style>
-        /* Estilos CSS para centrar el contenido */
+      
         body {
             display: flex;
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
-            height: 100vh; /* Altura de la pantalla completa */
+            justify-content: center;
+            align-items: center; 
+            height: 100vh; 
             margin: 0;
         }
 
@@ -38,7 +38,7 @@
             width: 100%;
         }
 
-        /* Estilos adicionales según tus preferencias */
+   
         h2 {
             color: #333;
         }
@@ -65,15 +65,23 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        button[type="submit1"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-        /* Estilo para mensajes de error */
+    
         p.error-message {
             color: red;
         }
     </style>
 </head>
 <body>
-    <!-- Agrega una clase al contenedor principal -->
+   
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
         {% if error_message %}
@@ -86,7 +94,9 @@
             <label for="contraseña">Contraseña:</label>
             <input type="password" id="contraseña" name="contraseña" required><br>
             <button type="submit">Iniciar Sesión</button>
+            <p>¿No tienes una cuenta? <a href="{% url 'app_login:signup' %}">Crear Usuario</a></p>
         </form>
+      
     </div>
 </body>
 </html>
