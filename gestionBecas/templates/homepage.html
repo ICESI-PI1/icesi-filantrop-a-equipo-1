@@ -4,53 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Agregamos la fuente Roboto -->
     <style>
         body {
+            font-family: 'Roboto', sans-serif; /* Usamos la fuente Roboto */
             display: flex;
-            justify-content: center; 
-            align-items: center;
+            flex-direction: column; /* Poner los elementos en columna */
+            align-items: center; /* Centrar horizontalmente */
             height: 100vh;
             margin: 0;
             background-image: url("/static/images/watermark.jpg");
             background-size: cover; 
         }
 
-        .main-container {
+        .logo-container {
             text-align: center;
-            padding: 20px;
+            margin-top: 20px; /* Espacio entre el logo y los módulos */
+            margin-bottom: 20px; /* Espacio entre el logo y los módulos */
+        }
+
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Espacio entre el logo y los módulos */
+        }
+
+        .logo-box img {
+            max-width: 200px; /* Tamaño máximo del logo */
+        }
+
+        .modules-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacio entre los módulos */
+        }
+
+        .module-container {
+            text-align: center;
+            padding: 40px;
             border: 1px solid #ffffff;
             background-color: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             max-width: 300px;
             width: 100%;
+            border-radius: 10px; /* Añadimos bordes redondeados */
         }
 
-        
         h1 {
             color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Agregamos sombra al texto del encabezado */
+        }
+
+        p {
+            color: #555;
+            margin-top: 10px; /* Espacio entre el título y la descripción */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Espacio entre los botones y la descripción */
+        }
+
+        .login-button, .disabled-button {
+            padding: 12px 24px; /* Más espacio dentro del botón */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s; /* Transición suave */
         }
 
         .login-button {
             background-color: #007bff;
             color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
+            margin-right: 10px; /* Espacio entre los botones */
         }
 
-     
         .login-button:hover {
             background-color: #0056b3;
+        }
+
+        .disabled-button {
+            background-color: #ccc;
+            color: #666;
+            cursor: not-allowed;
         }
     </style>
 </head>
 <body>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img class="logo" src="/static/images/ban-icesi.png" alt="Logo"> <!-- Agregamos el logo -->
+        </div>
+    </div>
 
-    <div class="main-container">
-        <h1>MODULO GESTION BECAS</h1>
-        <a class="login-button" href="/login">Iniciar Sesión</a>
+    <div class="modules-container">
+        <div class="module-container">
+            <h1>MODULO GESTION BECAS</h1>
+            <p>Administra y otorga becas a estudiantes.</p>
+            <div class="button-container">
+                <a class="login-button" href="/login">Iniciar Sesión</a>
+            </div>
+        </div>
+
+        <div class="module-container">
+            <h1>MODULO CRM</h1>
+            <p>Gestiona las relaciones con los clientes y las ventas.</p>
+            <div class="button-container">
+                <a class="disabled-button">No disponible</a>
+            </div>
+        </div>
+
+        <div class="module-container">
+            <h1>MODULO DE SEGUIMIENTO A ESTUDIANTES</h1>
+            <p>Realiza un seguimiento detallado del progreso académico de los estudiantes.</p>
+            <div class="button-container">
+                <a class="disabled-button">No disponible</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

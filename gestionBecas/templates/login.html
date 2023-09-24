@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Agregamos la fuente Roboto -->
     <style>
-      
         body {
+            font-family: 'Roboto', sans-serif; /* Usamos la fuente Roboto */
             display: flex;
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
+            flex-direction: column; /* Poner los elementos en columna */
+            align-items: center; /* Centrar horizontalmente */
+            height: 100vh;
             margin: 0;
             background-image: url("/static/images/watermark.jpg");
             background-size: cover; 
         }
-    
-      
-    </style>
-    <style>
-      
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center; 
-            height: 100vh; 
-            margin: 0;
+
+        .logo-container {
+            text-align: center;
+            margin-top: 20px; /* Espacio entre el logo y el formulario */
+            margin-bottom: 20px; /* Espacio entre el logo y el formulario */
+        }
+
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .logo-box img {
+            max-width: 100px;
+            max-height: 100px;
         }
 
         .login-container {
@@ -36,9 +43,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             max-width: 300px;
             width: 100%;
+            border-radius: 10px; /* Añadimos bordes redondeados */
         }
 
-   
         h2 {
             color: #333;
         }
@@ -65,27 +72,48 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        button[type="submit1"] {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
 
-    
         p.error-message {
             color: red;
+        }
+
+        .error-box {
+            background-color: #ff6b6b; /* Color rojo */
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px; /* Espacio entre el mensaje de error y el formulario */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .error-message {
+            color: #fff !important; /* Cambiado de rojo a blanco */
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        
+
+        a {
+            color: #007bff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-   
+
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="/static/images/ban-icesi.png" alt="Logo">
+        </div>
+    </div>
+
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
         {% if error_message %}
-        <p class="error-message">{{ error_message }}</p>
+        <div class="error-box">
+            <p class="error-message">{{ error_message }}</p>
+        </div>
         {% endif %}
         <form method="post" action="{% url 'app_login:login' %}">
             {% csrf_token %}
@@ -96,7 +124,6 @@
             <button type="submit">Iniciar Sesión</button>
             <p>¿No tienes una cuenta? <a href="{% url 'app_login:signup' %}">Crear Usuario</a></p>
         </form>
-      
     </div>
 </body>
 </html>

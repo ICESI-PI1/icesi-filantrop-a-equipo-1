@@ -4,6 +4,12 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario, Rol
 
+
+def mostrar_usuarios(request):
+    usuarios = Usuario.objects.all()
+    return render(request, 'asignar_roles.html', {'usuarios': usuarios})
+
+
 def asignar_roles(request):
     if request.method == 'POST':
         usuario_id = request.POST.get('usuario')
