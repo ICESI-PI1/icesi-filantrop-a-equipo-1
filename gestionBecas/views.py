@@ -69,3 +69,6 @@ def signup_view(request):
 
 def homepage(request):
     return render(request, 'homepage.html')
+
+def perfil(request):
+    return render(request, 'perfil.html') 

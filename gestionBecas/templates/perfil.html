@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('/static/images/watermark.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .perfil-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 590px;
+            text-align: left;
+            position: relative;
+        }
+
+        .perfil-container h1 {
+            font-size: 56px;
+        }
+
+        .volver-btn {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .logo {
+            width: 188px;
+            height: 62px;
+            margin: auto;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .editar-btn {
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="perfil-container">
+        <img class="logo" src="/static/images/ban-icesi.png" alt="Logo">
+        <h1>Perfil de Usuario</h1>
+
+        <form action="" method="post">
+            {% csrf_token %}
+
+            <!-- Campo de usuario no editable -->
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" value="{{ user.username }}" readonly><br><br>
+
+            <!-- Campo de contraseña actual no editable -->
+            <label for="password_actual">Contraseña Actual:</label>
+            <input type="password" id="password_actual" name="password_actual" value="{{ user.password }}" readonly><br><br>
+
+            <!-- Botón para mostrar campos de edición -->
+            <button type="button" onclick="mostrarEdicion()" class="editar-btn">Editar Perfil</button>
+
+            <!-- Campos de edición ocultos por defecto -->
+            <div id="editar-usuario" style="display: none;">
+                <label for="new_username">Nuevo Usuario:</label>
+                <input type="text" id="new_username" name="new_username"><br><br>
+            </div>
+
+            <div id="editar-contrasena" style="display: none;">
+                <label for="new_password">Nueva Contraseña:</label>
+                <input type="password" id="new_password" name="new_password"><br><br>
+            </div>
+
+            <input type="submit" value="Guardar Cambios" class="editar-btn">
+        </form>
+    </div>
+
+    <a href="/inicio" class="volver-btn">Volver al Inicio</a>
+
+    <script>
+        function mostrarEdicion() {
+            var editarUsuario = document.getElementById('editar-usuario');
+            var editarContrasena = document.getElementById('editar-contrasena');
+
+            // Verificar si están visibles y cambiar la visibilidad
+            if (editarUsuario.style.display === 'block' && editarContrasena.style.display === 'block') {
+                editarUsuario.style.display = 'none';
+                editarContrasena.style.display = 'none';
+            } else {
+                editarUsuario.style.display = 'block';
+                editarContrasena.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
