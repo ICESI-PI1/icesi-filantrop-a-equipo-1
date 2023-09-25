@@ -10,7 +10,7 @@
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
-|    25/09/23      |  El día de hoy seleccioné la funcionalidad que desarrollaré, creamos las ramas para trabajar simultaneamente y garantizar la buena praxis del proyecto.  |     Voy a encargarme de la funcionalidad de gestion de programas de becas por parte del administrador, empezando con la intefaz(templates) hasta las funcionalidad completa.     |    El manejo de GitHub y definir cuantas ramas usaremos.    |
+|    25/09/23      |  El día de hoy seleccioné la funcionalidad que desarrollaré, creamos las ramas para trabajar simultaneamente y garantizar la buena praxis del proyecto.  |     Voy a encargarme de la funcionalidad de gestion de programas de becas por parte del administrador, empezando con la intefaz(templates) hasta las funcionalidad completa.     |    El manejo de GitHub y definir cuantas ramas usaremos.    | 
 
 **Juan Ramirez**
 
