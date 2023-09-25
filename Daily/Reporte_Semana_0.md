@@ -28,7 +28,7 @@
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
-| (pongan la fechita)           |            |                    |                             |
+| 25/09/23         | El dia de hoy me encargue de investigar sobre los test para probar las funcionalidades de la aplicacion.          |  Voy a encargarme de empezar a realizar los test para los requerimiento de incio de sesion y registro de usuario                  | el entendimiento de los test aplicados a django                            |
 
 #<div/>
 
