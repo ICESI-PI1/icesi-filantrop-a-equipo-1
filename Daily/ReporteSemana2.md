@@ -16,7 +16,9 @@
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
-| 25/09/23           |   Arregle el markdown y lo puse bonito   | Creare una rama para meter el daily                    |no hubieron impedimentos                              |
+| 25/09/23           |   Arregle el markdown y lo puse bonito   | Creare una rama para meter el daily                    |no hubieron impedimentos                             |
+26/009/24            | Cree el html de la vista para el usuario donante | Hare el css para el html que hice | no hubieron impedimentos
+
 
 **Cristian Del Castillo**
 
@@ -31,4 +33,3 @@
 | 25/09/23         | El dia de hoy me encargue de investigar sobre los test para probar las funcionalidades de la aplicacion.          |  Voy a encargarme de empezar a realizar los test para los requerimiento de incio de sesion y registro de usuario                  | el entendimiento de los test aplicados a django                            |
 
 #<div/>
-
