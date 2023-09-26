@@ -17,7 +17,7 @@
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
 | 25/09/23           |   Arregle el markdown y lo puse bonito   | Creare una rama para meter el daily                    |no hubieron impedimentos                             |
-26/009/24            | Cree el html de la vista para el usuario donante | Hare el css para el html que hice | no hubieron impedimentos
+26/09/24            | Cree el html de la vista para el usuario donante | Hare el css para el html que hice | no hubieron impedimentos
 
 
 **Cristian Del Castillo**
