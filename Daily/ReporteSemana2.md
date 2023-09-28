@@ -16,7 +16,8 @@
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
 | 25/09/23           |   Arregle el markdown y lo puse bonito   | Creare una rama para meter el daily                    |no hubieron impedimentos                             |
-26/09/24            | Cree el html de la vista para el usuario donante | Hare el css para el html que hice | no hubieron impedimentos
+26/09/24            | Cree el html de la vista para el usuario donante | Creare el siguiente html para la vista del beneficiario | no hubieron impedimentos 
+| 27/09/24            |    Cree el html de la vista para el usuario beneficiario     | Creare el htmlpara la vista del usuario de apoyo financiero | Las complicaciones de hoy fueron mas que todo relacionadas con el tiempo, pues no tuve mucho tiempo libre, sin embargo termine la tarea del dia|
 
 
 **Cristian Del Castillo**
