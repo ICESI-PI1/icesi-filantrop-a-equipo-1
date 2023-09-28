@@ -31,5 +31,7 @@
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
 | 25/09/23         | El dia de hoy me encargue de investigar sobre los test para probar las funcionalidades de la aplicacion.          |  Voy a encargarme de empezar a realizar los test para los requerimiento de incio de sesion y registro de usuario                  | el entendimiento de los test aplicados a django                            |
+| 27/09/23        | Investigue sobre como hacer el test para probar la funcionalidad de inicio de sesion| 
+Empezare a armar el codigo de testeo de esta funcionalidad. | Los sitios de los que e sacado la informacion sobre el tema algunas veces no son tan claros a la hora de explicar el tema |
 
 #<div/>
