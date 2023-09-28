@@ -5,6 +5,7 @@
 |------------------|----------------------|-----------------------|--------------------------------------------------------|
 | 25/09/23        | Se corrigieron algunos errores en el diseño de la página de inicio, el login, el registro y Asignar roles. También se estableció un estándar para el tipo de letra y formato que se usará. | Añadiré la función para visualizar a los usuarios registrados y poder asignarles un rol. | No tengo acceso al admin de Django, por lo que no puedo ver o administrar cada uno de sus usuarios. |
 | 27/09/23        | Investigue como poder desplegar la lista de usuarios en la pagina html| Añadiré la función para visualizar a los usuarios registrados y poder asignarles un rol. | Los videos e informacion encontrada no es muy clara. |
+| 28/09/23        | Sigo investigando | Añadiré la función para visualizar a los usuarios registrados y poder asignarles un rol. | La informacion no es clara|
 
 **Collin Gonzalez**
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
