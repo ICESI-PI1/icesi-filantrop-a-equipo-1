@@ -15,7 +15,7 @@
         <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
         <div class="menu-text">Bienvenido {{user.username}} </div>
         <div class="menu-item">
-            <div style="margin-top: 140px;">Gestión de Programas de Becas</div>
+            <button type="button" class="rounded-button2" id="gestionPogramaBecasButton" style="color: white; background: #0060A9;">Gestión de Programas de Becas</button>
         </div>
         <div class="menu-item">
             <button type="button" class="rounded-button" id="gestionUsuariosRolesButton">Gestión de Usuarios y Roles</button>
@@ -56,6 +56,13 @@
         gestionUsuariosRolesButton.addEventListener('click', function () {
             window.location.href = '/lista_usuarios';
         });
+        
+        const gestionPogramaBecasButton = document.getElementById('gestionPogramaBecasButton');
+
+        gestionPogramaBecasButton.addEventListener('click', function () {
+            window.location.href = '/gestion_programa_beca';
+        });
+
     </script>
 </body>
 

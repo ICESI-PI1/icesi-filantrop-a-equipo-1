@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad ICESI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+ 
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('/static/images/watermark.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .banner {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 590px;
+            height: 557px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .rounded-button {
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .rounded-button2 {
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            margin-top: 180px; 
+        }
+
+        .expanded-content {
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%; 
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .expanded-content.active {
+            display: block;
+        }
+
+        .logo {
+            width: 188px;
+            height: 62px;
+            margin: auto;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .menu-text {
+            font-size: 24px;
+            color: #fff;
+            font-weight: 800;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-item div {
+            background: #0060A9;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+            justify-content: flex-start;
+            align-items: center;
+            gap: 39px;
+            display: inline-flex;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            word-wrap: break-word;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding: 10px 20px;
+            border-radius: 15px;
+        }
+
+        .admin-profile {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .admin-profile img {
+            width: 42px;
+            height: 39px;
+        }
+
+        .admin-info {
+            margin-left: 10px;
+            text-align: right;
+        }
+
+        .perfil-text {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .cerrar-sesion {
+            width: 42px;
+            height: 39px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .cerrar-sesion img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
+        <div class="menu-text">Menu Principal</div>
+        <div class="menu-item">
+            <button type="button" class="rounded-button2" id="crearProgramaBecaButton"
+                style="color: white; background: #0060A9;">Crear Programa de Beca</button>
+            <div class="expanded-content" id="crearProgramaBecaContent">
+                <div class="form-container">
+                    <label for="nombrePrograma">Nombre del Programa:</label>
+                    <input type="text" id="nombrePrograma" name="nombrePrograma" required>
+
+                    <label for="donantes">Lista de Donantes:</label>
+                    <select id="donantes" name="donantes">
+                        <option value="donante1">Donante 1</option>
+                        <option value="donante2">Donante 2</option>
+                        <option value="donante3">Donante 3</option>
+                    </select>
+
+                    <label for="beneficiarios">Lista de Beneficiarios:</label>
+                    <select id="beneficiarios" name="beneficiarios">
+                        <option value="beneficiario1">Beneficiario 1</option>
+                        <option value="beneficiario2">Beneficiario 2</option>
+                        <option value="beneficiario3">Beneficiario 3</option>
+                    </select>
+
+                    <label for="otroCampo">Otro Campo:</label>
+                    <input type="text" id="otroCampo" name="otroCampo">
+                    
+                    <button type="button">Guardar</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <button type="button" class="rounded-button" id="editarProgramaBecaButton"
+                style="color: white; background: #0060A9;">Editar Programa de Beca</button>
+            <div class="expanded-content" id="editarProgramaBecaContent">
+                <!-- info -->
+            </div>
+        </div>
+        <div class="menu-item">
+            <button type="button" class="rounded-button" id="eliminarProgramaBecaButton"
+                style="color: white; background: #0060A9;">Eliminar Programa de Beca</button>
+            <div class="expanded-content" id="eliminarProgramaBecaContent">
+                <!-- info -->
+            </div>
+        </div>
+        <div class="menu-item">
+            <button type="button" class="rounded-button" id="verProgramaBecaButton"
+                style="color: white; background: #0060A9;">Ver Programa de Beca</button>
+            <div class="expanded-content" id="verProgramaBecaContent">
+                <!-- info -->
+            </div>
+        </div>
+        <div class="admin-profile">
+            <img
+                src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
+            <div class="admin-info">
+                <div style="font-weight: bold;">Perfil</div>
+                <div>Administrador</div>
+            </div>
+        </div>
+        <div class="cerrar-sesion" onclick="cerrarSesion()">
+            <img src="/static/images/cerrar_sesion.png" alt="Cerrar Sesión">
+        </div>
+
+        <div class="perfil-text" onclick="irAPerfil()">Perfil</div>
+    </div>
+
+    <script>
+        function cerrarSesion() {
+            var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
+            if (confirmacion) {
+                window.location.href = "/login";
+            }
+        }
+
+        function irAPerfil() {
+            window.location.href = '/perfil';
+        }
+
+        const crearProgramaBecaButton = document.getElementById('crearProgramaBecaButton');
+        const crearProgramaBecaContent = document.getElementById('crearProgramaBecaContent');
+
+        crearProgramaBecaButton.addEventListener('click', function () {
+            crearProgramaBecaContent.classList.toggle('active');
+        });
+
+        const editarProgramaBecaButton = document.getElementById('editarProgramaBecaButton');
+        const editarProgramaBecaContent = document.getElementById('editarProgramaBecaContent');
+
+        editarProgramaBecaButton.addEventListener('click', function () {
+            editarProgramaBecaContent.classList.toggle('active');
+        });
+
+        const eliminarProgramaBecaButton = document.getElementById('eliminarProgramaBecaButton');
+        const eliminarProgramaBecaContent = document.getElementById('eliminarProgramaBecaContent');
+
+        eliminarProgramaBecaButton.addEventListener('click', function () {
+            eliminarProgramaBecaContent.classList.toggle('active');
+        });
+
+        const verProgramaBecaButton = document.getElementById('verProgramaBecaButton');
+        const verProgramaBecaContent = document.getElementById('verProgramaBecaContent');
+
+        verProgramaBecaButton.addEventListener('click', function () {
+            verProgramaBecaContent.classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>
