@@ -11,4 +11,5 @@ path('inicio_sesion/', views.login_view, name='login'),
  path('perfil/', views.perfil, name='perfil'),
   path('', views.homepage, name='homepage'),
   path('asignar_roles/', views.asignar_roles, name='asignar_roles'),
+  path('gestion_programa_beca/', views.gestion_programa_beca, name='gestion_programa_beca')
 ]
