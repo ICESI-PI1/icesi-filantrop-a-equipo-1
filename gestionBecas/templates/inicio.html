@@ -13,7 +13,7 @@
 
     <div class="container">
         <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
-        <div class="menu-text">Menu Principal</div>
+        <div class="menu-text">Bienvenido {{user.username}} </div>
         <div class="menu-item">
             <div style="margin-top: 140px;">Gestión de Programas de Becas</div>
         </div>
@@ -29,15 +29,14 @@
         <div class="admin-profile">
             <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
             <div class="admin-info">
-                <div style="font-weight: bold;">Perfil</div>
-                <div>Administrador</div>
+                <div>{{user.first_name}}</div>
             </div>
         </div>
         <div class="cerrar-sesion" onclick="cerrarSesion()">
             <img src="/static/images/cerrar_sesion.png" alt="Cerrar Sesión">
         </div>
 
-        <div class="perfil-text" onclick="irAPerfil()">Perfil</div>
+        <div style="font-weight: bold;" class="perfil-text" onclick="irAPerfil()">{{user.username}}</div>
     </div>
 
     <script>
@@ -55,7 +54,7 @@
         const gestionUsuariosRolesButton = document.getElementById('gestionUsuariosRolesButton');
 
         gestionUsuariosRolesButton.addEventListener('click', function () {
-            window.location.href = '/asignar_roles';
+            window.location.href = '/lista_usuarios';
         });
     </script>
 </body>
