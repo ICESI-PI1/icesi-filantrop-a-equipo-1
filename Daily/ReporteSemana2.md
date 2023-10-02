@@ -29,6 +29,8 @@
 | 26/09/24              |  no pude adelantar nada por el momento    | espero empezar la funcionalidad de eliminacion             |    el impedimento para el dia de hoy fue el tiempo que ya tenia asignado a otras materias                 |
 | 27/09/24              | creacion de mi primer  feature ademas de arreglos con conflictos de cambios de mis compañeros  | mañana se inicia la implementacion de la funcionalidad de eliminacion y de asignacion de roles          |    no se encontro ningun impedimento              |
 | 28/09/24              | se implemento el css externo para la vista inicio  | se espera hacer cambios en el crud        |   encontramos que nuestra estructura de crud no nos permite controlar los roles de los usuarios           |
+| 29/09/24              | no se realizaron cambios  | se espera arreglar y modificar el crud para manejar los roles en especial la eliminacion    | la investigacion de los metodos para manejar los roles      |
+| 30/09/24              | no se realizaron cambios  |  eliminacion de usuarios   | ningun impedimento   |
 
 **Juan Brawn**
 
