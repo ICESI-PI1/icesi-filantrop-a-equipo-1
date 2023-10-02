@@ -3,6 +3,26 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario, Rol
+from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+
+def editar_firstname(request, username):
+    usuario = get_object_or_404(User, username=username)
+
+    if request.method == 'POST':
+        nuevo_first_name = request.POST.get('first_name')
+        if nuevo_first_name:
+            usuario.first_name = nuevo_first_name
+            usuario.save()
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'error': 'El campo first_name no puede estar vacío.'})
+
+    return JsonResponse({'success': False, 'error': 'Método no permitido.'}, status=405)
+
+
+
 
 
 def mostrar_usuarios(request):
@@ -32,6 +52,10 @@ def asignar_roles(request):
     
     return render(request, 'asignar_roles.html', {'usuarios': usuarios, 'roles': roles})
 
+def lista_usuarios(request):
+    usuarios = User.objects.all()
+    return render(request, 'lista_usuarios.html', {'usuarios': usuarios})
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -41,8 +65,22 @@ def login_view(request):
 
         if user is not None:
             # El usuario ha iniciado sesión correctamente
+            first_name = user.first_name  
             login(request, user)
-            return redirect('app_login:inicio') 
+            
+            #return redirect('app_login:inicio') 
+            if first_name == "Sin Rol":
+                return redirect('app_login:inicio_sin_rol')  # Reemplaza 'ruta_pagina_uno' con la URL de tu primera página.
+            elif first_name == "Administrador":
+                return redirect('app_login:inicio')
+            elif first_name == "Donante":
+                return redirect('app_login:inicio_donante')
+            elif first_name == "Filantropia":
+                return redirect('app_login:inicio')
+            elif first_name == "Beneficiario":
+                return redirect('app_login:inicio')
+            
+            
         else:
             # El inicio de sesión ha fallado, puedes mostrar un mensaje de error
             error_message = "Nombre de usuario o contraseña incorrectos"
@@ -61,7 +99,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('login.html')  # Redirige a la página principal después del registro
+            return redirect('app_login:login')  # Redirige a la página principal después del registro
     else:
         form = UserCreationForm()
 
@@ -72,3 +110,11 @@ def homepage(request):
 
 def perfil(request):
     return render(request, 'perfil.html') 
+
+def gestion_programa_beca(request):
+    return render(request, 'gestion_programa_beca.html')
+def inicio_SinRol(request):
+        return render(request, 'inicio_SinRol.html')
+    
+def inicio_Donante(request):
+        return render(request, 'inicio_Donante.html')

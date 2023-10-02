@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidad ICESI</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
 
     <style>
         body {
@@ -40,7 +39,6 @@
         .container {
             width: 100%;
             max-width: 590px;
-            height: 557px;
             position: relative;
             background: rgba(255, 255, 255, 0.95);
             text-align: center;
@@ -48,6 +46,7 @@
             border-radius: 15px;
             padding: 20px;
         }
+        
 
         .rounded-button {
             border: none;
@@ -56,16 +55,6 @@
             font-size: 16px;
             cursor: pointer;
             margin-bottom: 10px;
-        }
-
-        .rounded-button2 {
-            border: none;
-            border-radius: 15px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            margin-top: 180px;
         }
 
         .logo {
@@ -165,13 +154,7 @@
         <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
         <div class="menu-text">Bienvenido {{user.username}} </div>
         <div class="menu-item">
-            <button type="button" class="rounded-button2" id="gestionPogramaBecasButton" style="color: white; background: #0060A9;">Gestión de Programas de Becas</button>
-        </div>
-        <div class="menu-item">
-            <button type="button" class="rounded-button" id="gestionUsuariosRolesButton">Gestión de Usuarios y Roles</button>
-        </div>
-        <div class="menu-item">
-            <div>Generación de Informes y Estadísticas</div>
+            <div style="margin-top: 140px;">Generación de Informes y Estadísticas</div>
         </div>
         <div class="menu-item">
             <div>Configuración del Sistema</div>
@@ -200,19 +183,6 @@
         function irAPerfil() {
             window.location.href = '/perfil';
         }
-
-        const gestionUsuariosRolesButton = document.getElementById('gestionUsuariosRolesButton');
-
-        gestionUsuariosRolesButton.addEventListener('click', function () {
-            window.location.href = '/lista_usuarios';
-        });
-        
-        const gestionPogramaBecasButton = document.getElementById('gestionPogramaBecasButton');
-
-        gestionPogramaBecasButton.addEventListener('click', function () {
-            window.location.href = '/gestion_programa_beca';
-        });
-
     </script>
 </body>
 
