@@ -24,12 +24,12 @@
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
-| (pongan la fechita)           |            |                    |                             |
-
+| 25/09/23           |  Se organizo la semana para que hubiera una mejor distribucion en el trabajo ademas se acomodaron las ramas y la forma en la cual se iba a utilizarlas       |  mi trabajo se basara en la creacion de la eliminacion de un usuario, ademas de la implementacion de la funcionalidad de las demas pantallas de los roles                  |         no se encontraron impedimentos                    |
+| 26/09/24              |  no pude adelantar nada por el momento    | espero empezar la funcionalidad de eliminacion             |    el impedimento para el dia de hoy fue el tiempo que ya tenia asignado a otras materias                 |
+| 27/09/24              | creacion de mi primer  feature ademas de arreglos con conflictos de cambios de mis compañeros  | mañana se inicia la implementacion de la funcionalidad de eliminacion y de asignacion de roles          |    no se encontro ningun impedimento              |
 **Juan Brawn**
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
 | 25/09/23         | El dia de hoy me encargue de investigar sobre los test para probar las funcionalidades de la aplicacion.          |  Voy a encargarme de empezar a realizar los test para los requerimiento de incio de sesion y registro de usuario                  | el entendimiento de los test aplicados a django                            |
 
-#<div/>
