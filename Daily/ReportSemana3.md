@@ -4,7 +4,8 @@
 
 | Fecha            | ¿Qué hice?          | ¿Qué voy a hacer?     | Impedimentos/Complicaciones                            |
 |------------------|----------------------|-----------------------|------------------------|
-
+|    03/10/23      |  Se trabajo en clase.  |    Supervisar el trabajo de mis compañeros.    |    Ninguna.    |
+|    04/10/23      |  No hice nada ya que mi historia de usuario esta terminada  |    Supervisar el trabajo de mis compañeros.    |    Ninguna.    |
 **Collin Gonzalez**
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
