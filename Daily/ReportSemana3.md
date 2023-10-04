@@ -17,6 +17,7 @@
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
 |2/10/23|Aun no tengo avances| creeare el proximo html| ninguno|
+|3/10/23|Aun no tengo avances| asignare las subtareas en el jira| ninguno|
 
 
 
