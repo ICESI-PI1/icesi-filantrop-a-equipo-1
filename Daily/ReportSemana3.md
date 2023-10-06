@@ -36,6 +36,7 @@
 **Juan Brawn**
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
-|------------------|------------|--------------------|-----------------------------|
+|2/10/23|subi la rama test con los avances que tenia de la semana anterior|continuare con el desarrollo de los test|ninguno|
+|5/10/23|investigue sobre como hacer los test de manera mas completa y efectiva|continuare con el desarrollo de los test|ninguno|
 
 #<div/>
