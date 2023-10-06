@@ -6,6 +6,14 @@ from .models import Usuario, Rol
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
+from django.http import HttpResponse
+
+def eliminar_usuario(request, username):
+    user = get_object_or_404(User, username=username)
+    user.delete()
+    return HttpResponse(status=200)
 
 def editar_firstname(request, username):
     usuario = get_object_or_404(User, username=username)
