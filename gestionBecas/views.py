@@ -156,6 +156,8 @@ def homepage(request):
 def perfil(request):
     return render(request, 'perfil.html') 
 
+def gestion_programa_beca(request):
+    return render(request, 'gestion_programa_beca.html')
 def inicio_SinRol(request):
         return render(request, 'inicio_SinRol.html')
     
