@@ -74,7 +74,7 @@ def login_view(request):
             elif first_name == "Administrador":
                 return redirect('app_login:inicio')
             elif first_name == "Donante":
-                return redirect('app_login:inicio_donante')
+                return redirect('app_login:donante')
             elif first_name == "Filantropia":
                 return redirect('app_login:inicio')
             elif first_name == "Beneficiario":
@@ -114,5 +114,5 @@ def perfil(request):
 def inicio_SinRol(request):
         return render(request, 'inicio_SinRol.html')
     
-def inicio_Donante(request):
-        return render(request, 'inicio_Donante.html')
+def donante(request):
+        return render(request, 'donante.html')

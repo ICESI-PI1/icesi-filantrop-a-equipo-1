@@ -15,5 +15,5 @@ path('inicio_sesion/', views.login_view, name='login'),
   path('lista_usuarios/', lista_usuarios, name='lista_usuarios'),
   path('editar_firstname/<str:username>/', views.editar_firstname, name='editar_firstname'),
   path('inicio_sin_rol/', inicio_SinRol, name='inicio_sin_rol'),
-  path('inicio_donante/', views.inicio_Donante, name='inicio_donante'),
+  path('donante/', views.donante, name='donante'),
 ]
