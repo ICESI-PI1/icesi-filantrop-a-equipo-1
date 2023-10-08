@@ -5,8 +5,7 @@ from .views import inicio_SinRol
 from .views import registrar_programa_beca
 app_name = 'app_login'
 
-urlpatterns  = [  
-path('inicio/', views.inicio_view, name='inicio'),  
+urlpatterns  = [path('inicio/', views.inicio_view, name='inicio'),  
 path('inicio_sesion/', views.login_view, name='login'),
  path('login/', views.login_view, name='login'),
  path('signup/', views.signup_view, name='signup'),
@@ -20,5 +19,9 @@ path('inicio_sesion/', views.login_view, name='login'),
   path('donante/', views.donante, name='donante'),
   path('eliminar_usuario/<str:username>/', views.eliminar_usuario, name='eliminar_usuario'),
 path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
+path('eliminar_programa_beca/', views.eliminar_programa_beca, name='eliminar_programa_beca'),
+path('eliminar_programa_beca/<str:programa_nombre>/', views.eliminar_programa_beca_individual, name='eliminar_programa_beca_individual')
+
 
 ]
+

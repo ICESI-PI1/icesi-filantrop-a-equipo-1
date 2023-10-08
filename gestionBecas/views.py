@@ -25,6 +25,13 @@ def registrar_programa_beca(request):
         tipoBeca = request.POST.get('tipoBeca')
         requisitos = request.POST.get('requisitos')
 
+        # Verificar si ya existe un programa de beca con el mismo nombre
+        if ProgramaBeca.objects.filter(nombre=nombre).exists():
+            error_message = 'Ya existe un programa de beca con este nombre.'
+            print (error_message)
+            return render(request, 'registrar_programa_beca.html', {'error_message': error_message})
+           
+
         programa_beca = ProgramaBeca(
             nombre=nombre,
             descripcion=descripcion,
@@ -36,15 +43,16 @@ def registrar_programa_beca(request):
             tipoBeca=tipoBeca,
             requisitos=requisitos
         )
-
         programa_beca.save()  # Guardar el programa de beca en la base de datos
 
         return render(request, 'registrar_programa_beca.html', {'success_message': 'Programa de Beca registrado exitosamente.'})
+
     else:
         # Obtener la lista de usuarios
         usuarios = User.objects.filter(first_name='Donante')
         context = {'usuarios': usuarios}
         return render(request, 'registrar_programa_beca.html', context)
+
 
 
 def eliminar_usuario(request, username):
@@ -163,3 +171,27 @@ def inicio_SinRol(request):
     
 def donante(request):
         return render(request, 'donante.html')
+
+def eliminar_programa_beca(request):
+   
+    # Si la solicitud no es DELETE, devuelve una respuesta JSON de error
+    programas_de_beca = ProgramaBeca.objects.all()  # Obtén todos los programas de beca
+    context = {'programas_de_beca': programas_de_beca}
+    return render(request, 'eliminar_programa_beca.html', context)
+
+def eliminar_programa_beca_individual(request, programa_nombre):
+    try:
+        programa_beca = ProgramaBeca.objects.get(nombre=programa_nombre)
+        programa_beca.delete()
+        return JsonResponse({'success': True, 'message': 'Programa de Beca eliminado con éxito.'})
+    except ProgramaBeca.DoesNotExist:
+        return JsonResponse({'success': False, 'message': 'El programa de beca no existe.'})
+
+
+
+
+
+
+
+
+
