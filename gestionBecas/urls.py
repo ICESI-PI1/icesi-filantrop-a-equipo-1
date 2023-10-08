@@ -6,11 +6,11 @@ from .views import registrar_programa_beca
 app_name = 'app_login'
 
 urlpatterns  = [  
-path('inicio/', views.inicio_view, name='inicio'),  
-path('inicio_sesion/', views.login_view, name='login'),
- path('login/', views.login_view, name='login'),
- path('signup/', views.signup_view, name='signup'),
- path('perfil/', views.perfil, name='perfil'),
+  path('inicio/', views.inicio_view, name='inicio'),  
+  path('inicio_sesion/', views.login_view, name='login'),
+  path('login/', views.login_view, name='login'),
+  path('signup/', views.signup_view, name='signup'),
+  path('perfil/', views.perfil, name='perfil'),
   path('', views.homepage, name='homepage'),
   path('asignar_roles/', views.asignar_roles, name='asignar_roles'),
   path('gestion_programa_beca/', views.gestion_programa_beca, name='gestion_programa_beca'),
@@ -19,6 +19,7 @@ path('inicio_sesion/', views.login_view, name='login'),
   path('inicio_sin_rol/', inicio_SinRol, name='inicio_sin_rol'),
   path('inicio_donante/', views.inicio_Donante, name='inicio_donante'),
   path('eliminar_usuario/<str:username>/', views.eliminar_usuario, name='eliminar_usuario'),
-path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
-
+  path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
+   path('editar_programa_beca/', views.editar_programa_beca, name='editar_programa_beca'),
+   path('editar_beca/<int:id_beca>/',views.editar_beca, name='editar_beca')
 ]
