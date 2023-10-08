@@ -181,52 +181,30 @@
         <div class="menu-item">
             <button type="button" class="rounded-button2" id="crearProgramaBecaButton"
                 style="color: white; background: #0060A9;">Crear Programa de Beca</button>
-            <div class="expanded-content" id="crearProgramaBecaContent">
-                <div class="form-container">
-                    <label for="nombrePrograma">Nombre del Programa:</label>
-                    <input type="text" id="nombrePrograma" name="nombrePrograma" required>
-
-                    <label for="donantes">Lista de Donantes:</label>
-                    <select id="donantes" name="donantes">
-                        <option value="donante1">Donante 1</option>
-                        <option value="donante2">Donante 2</option>
-                        <option value="donante3">Donante 3</option>
-                    </select>
-
-                    <label for="beneficiarios">Lista de Beneficiarios:</label>
-                    <select id="beneficiarios" name="beneficiarios">
-                        <option value="beneficiario1">Beneficiario 1</option>
-                        <option value="beneficiario2">Beneficiario 2</option>
-                        <option value="beneficiario3">Beneficiario 3</option>
-                    </select>
-
-                    <label for="otroCampo">Otro Campo:</label>
-                    <input type="text" id="otroCampo" name="otroCampo">
-                    
-                    <button type="button">Guardar</button>
-                </div>
-            </div>
+            <!-- <div class="expanded-content" id="crearProgramaBecaContent">
+                 info 
+            </div>-->
         </div>
         <div class="menu-item">
             <button type="button" class="rounded-button" id="editarProgramaBecaButton"
                 style="color: white; background: #0060A9;">Editar Programa de Beca</button>
-            <div class="expanded-content" id="editarProgramaBecaContent">
-                <!-- info -->
-            </div>
+            <!-- <div class="expanded-content" id="editarProgramaBecaContent">
+                 info 
+            </div> -->
         </div>
         <div class="menu-item">
             <button type="button" class="rounded-button" id="eliminarProgramaBecaButton"
                 style="color: white; background: #0060A9;">Eliminar Programa de Beca</button>
-            <div class="expanded-content" id="eliminarProgramaBecaContent">
-                <!-- info -->
-            </div>
+            <!-- <div class="expanded-content" id="eliminarProgramaBecaContent">
+                 info 
+            </div> -->
         </div>
         <div class="menu-item">
             <button type="button" class="rounded-button" id="verProgramaBecaButton"
                 style="color: white; background: #0060A9;">Ver Programa de Beca</button>
-            <div class="expanded-content" id="verProgramaBecaContent">
-                <!-- info -->
-            </div>
+            <!-- <div class="expanded-content" id="verProgramaBecaContent">
+                 info 
+            </div> -->
         </div>
         <div class="admin-profile">
             <img
@@ -256,11 +234,12 @@
         }
 
         const crearProgramaBecaButton = document.getElementById('crearProgramaBecaButton');
+        crearProgramaBecaButton.addEventListener('click', function () {
+            window.location.href = '/registrar_programa_beca';
+        });
         const crearProgramaBecaContent = document.getElementById('crearProgramaBecaContent');
 
-        crearProgramaBecaButton.addEventListener('click', function () {
-            crearProgramaBecaContent.classList.toggle('active');
-        });
+        
 
         const editarProgramaBecaButton = document.getElementById('editarProgramaBecaButton');
         const editarProgramaBecaContent = document.getElementById('editarProgramaBecaContent');
@@ -280,7 +259,7 @@
         const verProgramaBecaContent = document.getElementById('verProgramaBecaContent');
 
         verProgramaBecaButton.addEventListener('click', function () {
-            verProgramaBecaContent.classList.toggle('active');
+            window.location.href = '/ver_programa_beca';
         });
 
     </script>
