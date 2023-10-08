@@ -129,7 +129,7 @@
             <div class="form-group">
                 <label for="nombre">Seleccionar Programa:</label>
                 <select id="nombre" name="nombre" required style="width: 100%; padding: 10px; font-size: 14px;">
-                    <option value="">Seleccionar un programa</option>  <!-- Opción vacía -->
+                    <option value="">Seleccionar un programa</option>  <!-- Opcion vacia al refrescar -->
                     {% for programa in programas %}
                         <option value="{{ programa.id }}">{{ programa.nombre }}</option>
                     {% endfor %}
@@ -138,7 +138,6 @@
             <button class="btn-submit" type="submit">Ver Programa de Beca</button>
         </form>
 
-        <!-- Aquí se mostrarán los detalles del programa seleccionado -->
         {% if programa_seleccionado %}
             <div class="top">
                 <label for="nombre">Nombre:</label>

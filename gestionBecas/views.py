@@ -168,14 +168,14 @@ def ver_programa_beca(request):
     programas = ProgramaBeca.objects.all()  # Obtener la lista de programas de becas
 
     if request.method == 'POST':
-        programa_id = request.POST.get('nombre')  # Obtener el ID del programa de beca seleccionado desde la solicitud POST
+        programa_id = request.POST.get('nombre')  # Obtener el ID del programa de beca seleccionado desde la solicitud(POST)
 
         # Obtener el programa de beca correspondiente desde la base de datos
         programa_seleccionado = get_object_or_404(ProgramaBeca, id=programa_id)
 
         return render(request, 'ver_programa_beca.html', {'programas': programas, 'programa_seleccionado': programa_seleccionado})
     else:
-        # Si la solicitud no es POST, simplemente muestra la página con la lista de programas
+        # Si la solicitud no es POST muestra la página con la lista de programas
         return render(request, 'ver_programa_beca.html', {'programas': programas})
 
 
