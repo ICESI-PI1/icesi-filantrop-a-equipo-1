@@ -6,6 +6,51 @@ from .models import Usuario, Rol
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django.shortcuts import render
+
+from .models import ProgramaBeca
+
+def registrar_programa_beca(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombre')
+        descripcion = request.POST.get('descripcion')
+        fechaInicio = request.POST.get('fechaInicio')
+        fechaFin = request.POST.get('fechaFin')
+        cupo = request.POST.get('cupo')
+        donantes = request.POST.getlist('donantesSeleccionados')  # Obtener lista de donantes seleccionados
+        coberturaEconomica = request.POST.get('coberturaEconomica')
+        tipoBeca = request.POST.get('tipoBeca')
+        requisitos = request.POST.get('requisitos')
+
+        programa_beca = ProgramaBeca(
+            nombre=nombre,
+            descripcion=descripcion,
+            fechaInicio=fechaInicio,
+            fechaFin=fechaFin,
+            cupo=cupo,
+            donantes=', '.join(donantes),  # Convertir lista de donantes a string
+            coberturaEconomica=coberturaEconomica,
+            tipoBeca=tipoBeca,
+            requisitos=requisitos
+        )
+
+        programa_beca.save()  # Guardar el programa de beca en la base de datos
+
+        return render(request, 'registrar_programa_beca.html', {'success_message': 'Programa de Beca registrado exitosamente.'})
+    else:
+        # Obtener la lista de usuarios
+        usuarios = User.objects.filter(first_name='Donante')
+        context = {'usuarios': usuarios}
+        return render(request, 'registrar_programa_beca.html', context)
+
+
+def eliminar_usuario(request, username):
+    user = get_object_or_404(User, username=username)
+    user.delete()
+    return HttpResponse(status=200)
 
 def editar_firstname(request, username):
     usuario = get_object_or_404(User, username=username)
@@ -111,6 +156,8 @@ def homepage(request):
 def perfil(request):
     return render(request, 'perfil.html') 
 
+def gestion_programa_beca(request):
+    return render(request, 'gestion_programa_beca.html')
 def inicio_SinRol(request):
         return render(request, 'inicio_SinRol.html')
     

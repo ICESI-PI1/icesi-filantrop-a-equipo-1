@@ -101,9 +101,10 @@
                                 <option value="Administrador">Administrador</option>
                                 <option value="Filantropia">Filantropia</option>
                                 <option value="Beneficiario">Beneficiario</option>
-                                <!-- Agrega más opciones según tus necesidades -->
+                                <option value="Beneficiario">Admisiones</option>
                             </select>
                             <button class="editar-rol-button" data-username="{{ usuario.username }}">Editar</button>
+                            <button class="eliminar-button" data-username="{{ usuario.username }}">Eliminar</button>
                         </td>
                     </tr>
                 {% endfor %}
@@ -112,19 +113,41 @@
         </div>
     </div>
 </body>
-<!-- ... (código anterior) ... -->
-
 
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        const botonesEliminar = document.querySelectorAll('.eliminar-button[data-username]');
+    
+        botonesEliminar.forEach(boton => {
+            boton.addEventListener('click', function() {
+                const username = this.dataset.username;
+    
+                if (confirm(`¿Estás seguro de que quieres eliminar al usuario ${username}?`)) {
+                    fetch(`/eliminar_usuario/${username}/`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRFToken': '{{ csrf_token }}',
+                        },
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            const fila = this.parentElement.parentElement;
+                            fila.remove();
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            });
+        });
+    
         const selectoresEditar = document.querySelectorAll('.editar-rol-select');
-
+    
         selectoresEditar.forEach(function(selector) {
             selector.addEventListener('change', function() {
                 const username = this.getAttribute('data-username');
                 const nuevoFirstName = this.value;
-
+    
                 // Enviar el nuevoFirstName al servidor
                 fetch('/editar_firstname/' + username + '/', {
                     method: 'POST',
@@ -144,6 +167,6 @@
             });
         });
     });
-</script>
+    </script>
 
 </html>
