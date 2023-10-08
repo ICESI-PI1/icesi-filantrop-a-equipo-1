@@ -29,6 +29,21 @@ class LoginTestCase(TestCase):
         response=self.client.post(reverse('app_login:login'),{'usuario':'manuelh','constraseña':'incorretopasword'})) 
         self.assertContains(response,'nombre de usuario o contraseña incorrectos')  
 
+    def test_login_nonexistent_user(self):
+        response = self.client.post(reverse('app_login:login'), {'usuario': 'noexiste', 'contraseña': 'icesi123456'})
+        self.assertContains(response, 'Nombre de usuario o contraseña incorrectos')  # Verifica que se muestre un mensaje de error
+
+    def test_login_empty_username(self):
+        response = self.client.post(reverse('app_login:login'), {'usuario': '', 'contraseña': 'icesi123456'})
+        self.assertContains(response, 'Nombre de usuario o contraseña incorrectos')  # Verifica que se muestre un mensaje de error
+
+    def test_login_empty_password(self):
+        response = self.client.post(reverse('app_login:login'), {'usuario': 'juanesb', 'contraseña': ''})
+        self.assertContains(response, 'Nombre de usuario o contraseña incorrectos')  # Verifica que se muestre un mensaje de error
+
+
+        
+
 
 
 class RegistrationTestCase(TestCase):
@@ -68,4 +83,59 @@ class RegistrationTestCase(TestCase):
 
         # Verificar que se haya redirigido nuevamente a la página de registro debido a una contraseña incorrecta
         self.assertEqual(response.status_code, 302)
+
+    def test_register_short_username(self):
+        # Datos de usuario con nombre de usuario demasiado corto
+        username = 'nu'
+        password = 'nueva_contraseña'
+        email = 'juan@example.com'
+
+        # Intentar registrar un nuevo usuario con nombre de usuario demasiado corto
+        response = self.client.post(reverse('app_login:signup'), {
+            'username': username,
+            'password1': password,
+            'password2': password,
+            'email': email,
+        })
+
+        # Verificar que se haya redirigido nuevamente a la página de registro debido a un nombre de usuario demasiado corto
+        self.assertEqual(response.status_code, 302)
+
+    def test_register_short_password(self):
+        # Datos de usuario con contraseña demasiado corta
+        username = 'nuevo_usuario'
+        password = '123'
+        email = 'juan@example.com'
+
+        # Intentar registrar un nuevo usuario con contraseña demasiado corta
+        response = self.client.post(reverse('app_login:signup'), {
+            'username': username,
+            'password1': password,
+            'password2': password,
+            'email': email,
+        })
+
+        # Verificar que se haya redirigido nuevamente a la página de registro debido a una contraseña demasiado corta
+        self.assertEqual(response.status_code, 302)
+
+
+
+    def test_register_without_username(self):
+         # Datos de usuario sin proporcionar un nombre de usuario
+         username = ''
+         password = 'nueva_contraseña'
+         email = 'juan@example.com'
+
+         # Intentar registrar un nuevo usuario sin proporcionar un nombre de usuario
+         response = self.client.post(reverse('app_login:signup'), {
+             'username': username,
+             'password1': password,
+             'password2': password,
+             'email': email,
+         })
+
+         # Verificar que se haya redirigido nuevamente a la página de registro debido a no proporcionar un nombre de usuario
+         self.assertEqual(response.status_code, 302)
+  
+        
 
