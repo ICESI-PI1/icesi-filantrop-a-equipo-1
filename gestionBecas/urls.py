@@ -20,7 +20,7 @@ path('inicio_sesion/', views.login_view, name='login'),
   path('eliminar_usuario/<str:username>/', views.eliminar_usuario, name='eliminar_usuario'),
 path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
 path('eliminar_programa_beca/', views.eliminar_programa_beca, name='eliminar_programa_beca'),
-path('eliminar_programa_beca/<str:programa_nombre>/', views.eliminar_programa_beca_individual, name='eliminar_programa_beca_individual')
+path('eliminar_programa_beca/<str:programa_nombre>/', views.eliminar_programa_beca_individual, name='eliminar_programa_beca_individual'),
 
 path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
 
