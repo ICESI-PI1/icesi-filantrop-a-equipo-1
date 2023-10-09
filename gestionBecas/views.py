@@ -1,3 +1,4 @@
+from audioop import reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
@@ -11,7 +12,42 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from django.http import HttpResponseRedirect
+
 from .models import ProgramaBeca
+from .forms import ProgramaBecaForm
+
+
+def editar_programa_beca(request):
+    becas = ProgramaBeca.objects.all()  # Obtén todas las becas disponibles desde la base de datos
+    return render(request, 'editar_programa_beca.html', {'becas': becas})
+
+def editar_beca(request, id_beca):
+    print("ID de la beca:", id_beca)
+    # Obtener el objeto del programa de beca de la base de datos
+    programa_beca = get_object_or_404(ProgramaBeca, id=id_beca)
+
+    if request.method == 'POST':
+        # Obtener el ID de la beca del formulario
+        id_beca_formulario = request.POST.get('id_beca')
+        # Obtener el objeto del programa de beca de la base de datos usando el ID del formulario
+        programa_beca = get_object_or_404(ProgramaBeca, id=id_beca_formulario)
+        print("ID de la beca en la instancia del formulario:", programa_beca.id)
+
+        # Procesar los datos del formulario
+        form = ProgramaBecaForm(request.POST, instance=programa_beca)
+
+        if form.is_valid():
+            form.save()  # Guardar los datos del formulario en la base de datos
+            return HttpResponseRedirect('inicio')  # Redirigir a la página de éxito después de guardar los cambios
+
+    else:
+        # Si el método de solicitud es GET, crear una instancia del formulario con los datos del programa_beca
+        form = ProgramaBecaForm(instance=programa_beca)
+
+    # Renderizar la plantilla con el formulario y el programa_beca
+    return render(request, 'editar_beca.html', {'form': form, 'programa_beca': programa_beca})
+
 
 def registrar_programa_beca(request):
     if request.method == 'POST':
