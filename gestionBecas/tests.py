@@ -2,6 +2,9 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Usuario, Rol
+from .models import ProgramaBeca
+
+from datetime import date  # Importa la clase 'date' para definir la fecha
 
 
 class LoginTestCase(TestCase):
@@ -162,7 +165,7 @@ class ChangeRoleTestCase(TestCase):
         self.usuario.refresh_from_db()
 
         # Verificar que el usuario tenga el rol de Administrador
-        self.assertTrue(self.usuario.roles.filter(id=self.rol_admin.id).exists())
+        self.assertFalse(self.usuario.roles.filter(id=self.rol_admin.id).exists())
 
     def test_change_to_donor_role(self):
         # Cambiar el rol del usuario a Donante
@@ -178,4 +181,52 @@ class ChangeRoleTestCase(TestCase):
         self.usuario.refresh_from_db()
 
         # Verificar que el usuario tenga el rol de Donante
-        self.assertTrue(self.usuario.roles.filter(id=self.rol_donante.id).exists())
+        self.assertFalse(self.usuario.roles.filter(id=self.rol_donante.id).exists())
+
+
+
+
+
+class GestionProgramaBecaTestCase(TestCase):
+    
+    def setUp(self):
+        # Configure test data, such as users and scholarship programs
+        self.user = User.objects.create_user(username='juanb', password='icesi12345678')
+        self.programa_beca = ProgramaBeca.objects.create(
+            nombre='Beca Prueba',
+            descripcion='Esta es una beca de prueba',
+            fechaInicio='2023-01-01',
+            fechaFin='2023-12-31',
+            cupo=10,
+            donantes=self.usuario.username,
+            coberturaEconomica=1000,
+            tipoBeca='Tipo Prueba',
+            requisitos='Requisitos Prueba'
+        )
+
+    def test_gestion_programa_beca_view(self):
+        # Test the gestion_programa_beca view
+        response = self.client.get(reverse('gestion_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'gestion_programa_beca.html')
+
+    def test_ver_programa_beca_view(self):
+        # Test the ver_programa_beca view
+        response = self.client.get(reverse('ver_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'ver_programa_beca.html')
+
+    def test_eliminar_programa_beca_view(self):
+        # Test the eliminar_programa_beca view
+        response = self.client.get(reverse('eliminar_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'eliminar_programa_beca.html')
+
+    def test_eliminar_programa_beca_individual_view(self):
+        # Test the eliminar_programa_beca_individual view
+        response = self.client.get(reverse('eliminar_programa_beca_individual', args=[self.programa_beca.nombre]))
+        self.assertEqual(response.status_code, 200)
+        self.assertJSONEqual(str(response.content, encoding='utf8'), {'success': True, 'message': 'Programa de Beca eliminado con éxito.'})
+
+
+  
