@@ -17,11 +17,15 @@ urlpatterns  = [
   path('lista_usuarios/', lista_usuarios, name='lista_usuarios'),
   path('editar_firstname/<str:username>/', views.editar_firstname, name='editar_firstname'),
   path('inicio_sin_rol/', inicio_SinRol, name='inicio_sin_rol'),
-  path('inicio_donante/', views.inicio_Donante, name='inicio_donante'),
+  path('donante/', views.donante, name='donante'),
   path('eliminar_usuario/<str:username>/', views.eliminar_usuario, name='eliminar_usuario'),
+  path('editar_programa_beca/', views.editar_programa_beca, name='editar_programa_beca'),
+  path('editar_beca/<int:id_beca>/',views.editar_beca, name='editar_beca'),
+  path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
   path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
-   path('editar_programa_beca/', views.editar_programa_beca, name='editar_programa_beca'),
-   path('editar_beca/<int:id_beca>/',views.editar_beca, name='editar_beca'),
+  path('eliminar_programa_beca/', views.eliminar_programa_beca, name='eliminar_programa_beca'),
+  path('eliminar_programa_beca/<str:programa_nombre>/', views.eliminar_programa_beca_individual, name='eliminar_programa_beca_individual'),
   path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
 
 ]
+

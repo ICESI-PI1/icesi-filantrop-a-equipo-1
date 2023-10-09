@@ -247,13 +247,12 @@
         editarProgramaBecaButton.addEventListener('click', function () {
             window.location.href = '/editar_programa_beca';
         });
-
         const eliminarProgramaBecaButton = document.getElementById('eliminarProgramaBecaButton');
-        const eliminarProgramaBecaContent = document.getElementById('eliminarProgramaBecaContent');
 
-        eliminarProgramaBecaButton.addEventListener('click', function () {
-            eliminarProgramaBecaContent.classList.toggle('active');
-        });
+eliminarProgramaBecaButton.addEventListener('click', function () {
+    // Cambia la ubicación actual del navegador a la página eliminar_programa_beca.html
+    window.location.href = '/eliminar_programa_beca/';
+});
 
         const verProgramaBecaButton = document.getElementById('verProgramaBecaButton');
         const verProgramaBecaContent = document.getElementById('verProgramaBecaContent');
