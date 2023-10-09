@@ -6,6 +6,59 @@ from .models import Usuario, Rol
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django.shortcuts import render
+
+from .models import ProgramaBeca
+
+def registrar_programa_beca(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombre')
+        descripcion = request.POST.get('descripcion')
+        fechaInicio = request.POST.get('fechaInicio')
+        fechaFin = request.POST.get('fechaFin')
+        cupo = request.POST.get('cupo')
+        donantes = request.POST.getlist('donantesSeleccionados')  # Obtener lista de donantes seleccionados
+        coberturaEconomica = request.POST.get('coberturaEconomica')
+        tipoBeca = request.POST.get('tipoBeca')
+        requisitos = request.POST.get('requisitos')
+
+        # Verificar si ya existe un programa de beca con el mismo nombre
+        if ProgramaBeca.objects.filter(nombre=nombre).exists():
+            error_message = 'Ya existe un programa de beca con este nombre.'
+            print (error_message)
+            return render(request, 'registrar_programa_beca.html', {'error_message': error_message})
+           
+
+        programa_beca = ProgramaBeca(
+            nombre=nombre,
+            descripcion=descripcion,
+            fechaInicio=fechaInicio,
+            fechaFin=fechaFin,
+            cupo=cupo,
+            donantes=', '.join(donantes),  # Convertir lista de donantes a string
+            coberturaEconomica=coberturaEconomica,
+            tipoBeca=tipoBeca,
+            requisitos=requisitos
+        )
+        programa_beca.save()  # Guardar el programa de beca en la base de datos
+
+        return render(request, 'registrar_programa_beca.html', {'success_message': 'Programa de Beca registrado exitosamente.'})
+
+    else:
+        # Obtener la lista de usuarios
+        usuarios = User.objects.filter(first_name='Donante')
+        context = {'usuarios': usuarios}
+        return render(request, 'registrar_programa_beca.html', context)
+
+
+
+def eliminar_usuario(request, username):
+    user = get_object_or_404(User, username=username)
+    user.delete()
+    return HttpResponse(status=200)
 
 def editar_firstname(request, username):
     usuario = get_object_or_404(User, username=username)
@@ -74,7 +127,7 @@ def login_view(request):
             elif first_name == "Administrador":
                 return redirect('app_login:inicio')
             elif first_name == "Donante":
-                return redirect('app_login:inicio_donante')
+                return redirect('app_login:donante')
             elif first_name == "Filantropia":
                 return redirect('app_login:inicio')
             elif first_name == "Beneficiario":
@@ -115,6 +168,59 @@ def gestion_programa_beca(request):
     return render(request, 'gestion_programa_beca.html')
 def inicio_SinRol(request):
         return render(request, 'inicio_SinRol.html')
-    
-def inicio_Donante(request):
-        return render(request, 'inicio_Donante.html')
+
+def ver_programa_beca(request):
+    programas = ProgramaBeca.objects.all()  # Obtener la lista de programas de becas
+
+    if request.method == 'POST':
+        programa_id = request.POST.get('nombre')  # Obtener el ID del programa de beca seleccionado desde la solicitud(POST)
+
+        # Obtener el programa de beca correspondiente desde la base de datos
+        programa_seleccionado = get_object_or_404(ProgramaBeca, id=programa_id)
+
+        return render(request, 'ver_programa_beca.html', {'programas': programas, 'programa_seleccionado': programa_seleccionado})
+    else:
+        # Si la solicitud no es POST muestra la página con la lista de programas
+        return render(request, 'ver_programa_beca.html', {'programas': programas})
+def donante(request):
+        return render(request, 'donante.html')
+
+def eliminar_programa_beca(request):
+   
+    # Si la solicitud no es DELETE, devuelve una respuesta JSON de error
+    programas_de_beca = ProgramaBeca.objects.all()  # Obtén todos los programas de beca
+    context = {'programas_de_beca': programas_de_beca}
+    return render(request, 'eliminar_programa_beca.html', context)
+
+def eliminar_programa_beca_individual(request, programa_nombre):
+    try:
+        programa_beca = ProgramaBeca.objects.get(nombre=programa_nombre)
+        programa_beca.delete()
+        return JsonResponse({'success': True, 'message': 'Programa de Beca eliminado con éxito.'})
+    except ProgramaBeca.DoesNotExist:
+        return JsonResponse({'success': False, 'message': 'El programa de beca no existe.'})
+
+
+
+
+
+
+
+
+
+
+def ver_programa_beca(request):
+    programas = ProgramaBeca.objects.all()  # Obtener la lista de programas de becas
+
+    if request.method == 'POST':
+        programa_id = request.POST.get('nombre')  # Obtener el ID del programa de beca seleccionado desde la solicitud(POST)
+
+        # Obtener el programa de beca correspondiente desde la base de datos
+        programa_seleccionado = get_object_or_404(ProgramaBeca, id=programa_id)
+
+        return render(request, 'ver_programa_beca.html', {'programas': programas, 'programa_seleccionado': programa_seleccionado})
+    else:
+        # Si la solicitud no es POST muestra la página con la lista de programas
+        return render(request, 'ver_programa_beca.html', {'programas': programas})
+
+
