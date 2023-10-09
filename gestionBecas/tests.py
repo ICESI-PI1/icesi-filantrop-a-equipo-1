@@ -190,7 +190,7 @@ class ChangeRoleTestCase(TestCase):
 class GestionProgramaBecaTestCase(TestCase):
     
     def setUp(self):
-        # Configure test data, such as users and scholarship programs
+        # Configura datos de prueba, como usuarios y programas de becas
         self.user = User.objects.create_user(username='juanb', password='icesi12345678')
         self.programa_beca = ProgramaBeca.objects.create(
             nombre='Beca Prueba',
@@ -198,35 +198,38 @@ class GestionProgramaBecaTestCase(TestCase):
             fechaInicio='2023-01-01',
             fechaFin='2023-12-31',
             cupo=10,
-            donantes=self.usuario.username,
+            donantes=self.user.username,
             coberturaEconomica=1000,
             tipoBeca='Tipo Prueba',
             requisitos='Requisitos Prueba'
         )
 
     def test_gestion_programa_beca_view(self):
-        # Test the gestion_programa_beca view
-        response = self.client.get(reverse('gestion_programa_beca'))
+        # Prueba la vista gestion_programa_beca
+        response = self.client.get(reverse('app_login:gestion_programa_beca'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'gestion_programa_beca.html')
 
     def test_ver_programa_beca_view(self):
-        # Test the ver_programa_beca view
-        response = self.client.get(reverse('ver_programa_beca'))
+        # Prueba la vista ver_programa_beca
+        response = self.client.get(reverse('app_login:ver_programa_beca'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'ver_programa_beca.html')
 
     def test_eliminar_programa_beca_view(self):
-        # Test the eliminar_programa_beca view
-        response = self.client.get(reverse('eliminar_programa_beca'))
+        # Prueba la vista eliminar_programa_beca
+        response = self.client.get(reverse('app_login:eliminar_programa_beca'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'eliminar_programa_beca.html')
 
     def test_eliminar_programa_beca_individual_view(self):
-        # Test the eliminar_programa_beca_individual view
-        response = self.client.get(reverse('eliminar_programa_beca_individual', args=[self.programa_beca.nombre]))
+    # Test the eliminar_programa_beca_individual view
+        response = self.client.get(reverse('app_login:eliminar_programa_beca_individual', args=[self.programa_beca.nombre]))
         self.assertEqual(response.status_code, 200)
-        self.assertJSONEqual(str(response.content, encoding='utf8'), {'success': True, 'message': 'Programa de Beca eliminado con éxito.'})
+        expected_data = {'success': True, 'message': 'Programa de Beca eliminado con éxito.'}
+        self.assertJSONEqual(str(response.content, encoding='utf8'), expected_data)
 
-
-  
+    def test_ver_programa_beca(self):
+        response = self.client.get(reverse('app_login:ver_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Beca Prueba')
