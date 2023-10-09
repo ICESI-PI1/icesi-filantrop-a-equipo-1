@@ -44,5 +44,6 @@
 |2/10/23|subi la rama test con los avances que tenia de la semana anterior|continuare con el desarrollo de los test|ninguno|
 |5/10/23|investigue sobre como hacer los test de manera mas completa y efectiva|continuare con el desarrollo de los test|ninguno|
 |6/10/23|inicie con el desarollo del testeo del sign-up|continuare con el desarrollo de los test|ninguno|
-
+|7/10/23|desarrolle los test del sign-up y la gestion de rol|continuare con el desarrollo de los test|ninguno|
+|8/10/23|continue con el desarollo de los test|seguire con el desarollo|ninguno|
 #<div/>
