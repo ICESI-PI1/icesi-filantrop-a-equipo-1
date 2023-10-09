@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Programa de Beca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("/static/images/watermark.jpg");
+            background-size: cover; 
+        }
+
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box img {
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-right: 10px;
+            flex: 1;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .top {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .top input {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 14px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="logo-box">
+        <img src="/static/images/ban-icesi.png" alt="Logo">
+    </div>
+
+    <div class="form-container">
+        <h2>Ver Programa de Beca</h2>
+        <form method="post" action="{% url 'app_login:ver_programa_beca' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Seleccionar Programa:</label>
+                <select id="nombre" name="nombre" required style="width: 100%; padding: 10px; font-size: 14px;">
+                    <option value="">Seleccionar un programa</option>  <!-- Opcion vacia al refrescar -->
+                    {% for programa in programas %}
+                        <option value="{{ programa.id }}">{{ programa.nombre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="btn-submit" type="submit">Ver Programa de Beca</button>
+        </form>
+
+        {% if programa_seleccionado %}
+            <div class="top">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="{{ programa_seleccionado.nombre }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" cols="50" readonly>{{ programa_seleccionado.descripcion }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="fechaInicio">Fecha de Inicio:</label>
+                <input type="text" id="fechaInicio" name="fechaInicio" value="{{ programa_seleccionado.fechaInicio }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fechaFin">Fecha de Fin:</label>
+                <input type="text" id="fechaFin" name="fechaFin" value="{{ programa_seleccionado.fechaFin }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="cupo">Cupo:</label>
+                <input type="text" id="cupo" name="cupo" value="{{ programa_seleccionado.cupo }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="donantes">Donantes:</label>
+                <input type="text" id="donantes" name="donantes" value="{{ programa_seleccionado.donantes }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="coberturaEconomica">Cobertura Económica:</label>
+                <input type="text" id="coberturaEconomica" name="coberturaEconomica" value="{{ programa_seleccionado.coberturaEconomica }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="tipoBeca">Tipo de Beca:</label>
+                <input type="text" id="tipoBeca" name="tipoBeca" value="{{ programa_seleccionado.tipoBeca }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="requisitos">Requisitos:</label>
+                <textarea id="requisitos" name="requisitos" rows="4" cols="50" readonly>{{ programa_seleccionado.requisitos }}</textarea>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+
