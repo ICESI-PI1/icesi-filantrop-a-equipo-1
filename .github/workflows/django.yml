@@ -2,9 +2,9 @@ name: Django CI
 
 on:
   push:
-    branches: [ "feature_unit_test" ]
+    branches: [ "feature_unit_tests" ]
   pull_request:
-    branches: [ "feature_unit_test" ]
+    branches: [ "feature_unit_tests" ]
 
 jobs:
   build:
@@ -28,3 +28,4 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+        
