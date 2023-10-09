@@ -22,7 +22,6 @@ urlpatterns  = [
   path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
    path('editar_programa_beca/', views.editar_programa_beca, name='editar_programa_beca'),
    path('editar_beca/<int:id_beca>/',views.editar_beca, name='editar_beca')
-path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
-path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
+  path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
 
 ]
