@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Programa de Beca</title>
+</head>
+<body>
+    <h1>{{ programaB.last_name }}</h1>
+    <p>Descripción: {{ programaB.descripcion }}</p>
+    <p>Fecha de Inicio: {{ programaB.fechaInicio }}</p>
+    <p>Fecha de Fin: {{ programaB.fechaFin }}</p>
+    <p>Cupo: {{ programaB.cupo }}</p>
+    <p>Donantes: {{ programaB.donantes }}</p>
+    <p>Cobertura Económica: {{ programaB.coberturaEconomica }}</p>
+    <p>Tipo de Beca: {{ programaB.tipoBeca }}</p>
+    <p>Requisitos: {{ programaB.requisitos }}</p>
+
+    <h2>Estado de la Solicitud</h2>
+    <select id="estado_solicitud" name="estado_solicitud">
+        <option value="Aprobada">Aprobada</option>
+        <option value="No Aprobada">No Aprobada</option>
+        <option value="En Espera">En Espera</option>
+    </select>
+</body>
+</html>

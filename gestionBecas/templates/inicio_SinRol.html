@@ -85,4 +85,12 @@
 
 </body>
 
+<script>
+    var userFirstName = "{{ user.first_name }}"; 
+
+        if (userFirstName !== "Sin Rol") {
+             window.location.href = "/login"; 
+            }
+</script>
+
 </html>

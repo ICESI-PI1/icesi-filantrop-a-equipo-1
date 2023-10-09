@@ -180,6 +180,13 @@
     </div>
 
     <script>
+
+    var userFirstName = "{{ user.first_name }}"; 
+
+        if (userFirstName !== "Donante") {
+             window.location.href = "/login"; 
+            }
+
         function cerrarSesion() {
             var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
             if (confirmacion) {

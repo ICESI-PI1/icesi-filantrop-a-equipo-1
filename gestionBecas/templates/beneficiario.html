@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -154,22 +154,29 @@
         <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
         <div class="menu-text">Menu Principal</div>
         <div class="menu-item">
-            <div style="margin-top: 140px;">Programas de becas a los que ha contribuido</div>
+            <div style="margin-top: 140px;">
+                <a href="{% url 'app_login:aplicar_beca' %}" style="text-decoration: none; color: inherit;">
+                    Aplicar a una beca
+                </a>
+            </div>
         </div>
+        
         <div class="menu-item">
-            <button type="button" class="rounded-button" id="gestionUsuariosRolesButton" style="color: white; background: #0060A9;">Contribuir a nuevo programa</button>
+            <div>
+                <a href="{% url 'detalle_programa_beca/' %}" style="text-decoration: none; color: inherit;">
+                    Ver mis programas
+                </a>
+            </div>
         </div>
-        <div class="menu-item">
-            <div>Informes financieros y de beneficiarios</div>
-        </div>
+        
         <div class="menu-item">
             
         </div>
         <div class="admin-profile">
-            <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="2.4em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
             <div class="admin-info">
                 <div style="font-weight: bold;">Perfil</div>
-                <div>Donante</div>
+                <div>{{user.first_name}}</div>
             </div>
         </div>
         <div class="cerrar-sesion" onclick="cerrarSesion()">
@@ -180,6 +187,13 @@
     </div>
 
     <script>
+            // Verificar si el first_name es Beneficiario
+            var userFirstName = "{{ user.first_name }}"; 
+        
+            if (userFirstName !== "Beneficiario") {
+                window.location.href = "/login"; 
+            }
+        
         function cerrarSesion() {
             var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
             if (confirmacion) {

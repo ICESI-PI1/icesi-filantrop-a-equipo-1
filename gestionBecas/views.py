@@ -115,15 +115,15 @@ def login_view(request):
             
             #return redirect('app_login:inicio') 
             if first_name == "Sin Rol":
-                return redirect('app_login:inicio_sin_rol')  # Reemplaza 'ruta_pagina_uno' con la URL de tu primera página.
+                return redirect('app_login:inicio_sin_rol')  
             elif first_name == "Administrador":
                 return redirect('app_login:inicio')
             elif first_name == "Donante":
                 return redirect('app_login:inicio_donante')
             elif first_name == "Filantropia":
-                return redirect('app_login:inicio')
+                return redirect('app_login:inicio_Filantropia')
             elif first_name == "Beneficiario":
-                return redirect('app_login:inicio')
+                return redirect('app_login:beneficiario')
             
             
         else:
@@ -158,8 +158,82 @@ def perfil(request):
 
 def gestion_programa_beca(request):
     return render(request, 'gestion_programa_beca.html')
+
 def inicio_SinRol(request):
         return render(request, 'inicio_SinRol.html')
     
+<<<<<<< Updated upstream
 def inicio_Donante(request):
         return render(request, 'inicio_Donante.html')
+=======
+def inicio_Filantropia(request):
+        return render(request, 'inicio_Filantropia.html')  
+    
+def aplicar_beca(request):
+        return render(request, 'aplicar_beca.html')  
+    
+def donante(request):
+        return render(request, 'donante.html')
+    
+def detalle_programa_beca(request):
+        return render(request, 'detalle_programa_beca.html')
+    
+def beneficiario(request):
+        return render(request, 'beneficiario.html')
+    
+    
+def ver_programa_beca(request):
+    programas = ProgramaBeca.objects.all()  # Obtener la lista de programas de becas
+
+    if request.method == 'POST':
+        programa_id = request.POST.get('nombre')  # Obtener el ID del programa de beca seleccionado desde la solicitud(POST)
+
+        # Obtener el programa de beca correspondiente desde la base de datos
+        programa_seleccionado = get_object_or_404(ProgramaBeca, id=programa_id)
+
+        return render(request, 'ver_programa_beca.html', {'programas': programas, 'programa_seleccionado': programa_seleccionado})
+    else:
+        # Si la solicitud no es POST muestra la página con la lista de programas
+        return render(request, 'ver_programa_beca.html', {'programas': programas})
+    
+  
+def eliminar_programa_beca(request):
+   
+    # Si la solicitud no es DELETE, devuelve una respuesta JSON de error
+    programas_de_beca = ProgramaBeca.objects.all()  # Obtén todos los programas de beca
+    context = {'programas_de_beca': programas_de_beca}
+    return render(request, 'eliminar_programa_beca.html', context)
+
+def eliminar_programa_beca_individual(request, programa_nombre):
+    try:
+        programa_beca = ProgramaBeca.objects.get(nombre=programa_nombre)
+        programa_beca.delete()
+        return JsonResponse({'success': True, 'message': 'Programa de Beca eliminado con éxito.'})
+    except ProgramaBeca.DoesNotExist:
+        return JsonResponse({'success': False, 'message': 'El programa de beca no existe.'})
+
+
+
+
+
+
+
+
+
+
+def ver_programa_beca(request):
+    programas = ProgramaBeca.objects.all()  # Obtener la lista de programas de becas
+
+    if request.method == 'POST':
+        programa_id = request.POST.get('nombre')  # Obtener el ID del programa de beca seleccionado desde la solicitud(POST)
+
+        # Obtener el programa de beca correspondiente desde la base de datos
+        programa_seleccionado = get_object_or_404(ProgramaBeca, id=programa_id)
+
+        return render(request, 'ver_programa_beca.html', {'programas': programas, 'programa_seleccionado': programa_seleccionado})
+    else:
+        # Si la solicitud no es POST muestra la página con la lista de programas
+        return render(request, 'ver_programa_beca.html', {'programas': programas})
+
+
+>>>>>>> Stashed changes

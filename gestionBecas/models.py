@@ -4,6 +4,9 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.shortcuts import render, get_object_or_404
+
+
 
 @receiver(post_save, sender=User)
 def asignar_rol_sin_rol(sender, instance, created, **kwargs):
@@ -22,6 +25,10 @@ class ProgramaBeca(models.Model):
     tipoBeca = models.CharField(max_length=50)
     requisitos = models.TextField()
 
+def detalle_programa_beca(request, last_name):
+    programaB = get_object_or_404(ProgramaBeca, last_name=last_name)
+
+    return render(request, 'detalle_programa_beca.html', {'programa': programaB})
 
 class Rol(models.Model):
     nombre = models.CharField(max_length=100)
