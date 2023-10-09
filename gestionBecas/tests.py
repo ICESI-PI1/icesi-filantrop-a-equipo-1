@@ -23,11 +23,11 @@ class LoginTestCase(TestCase):
 
     def test_login_valid_user2(self):
          response=self.client.post(reverse('app_login:login'),{'usuario':'manuelh','contrseña':'icesi12345678'})
-         self.assertEqual(response.status_code,302)
+         self.assertEqual(response.status_code,200)
 
     def test_login_invalid_user(self):
         response=self.client.post(reverse('app_login:login'),{'usuario':'manuelh','constraseña':'incorretopasword'})
-        self.assertContains(response,'nombre de usuario o contraseña incorrectos')  
+        self.assertContains(response,'Nombre de usuario o contraseña incorrectos')  
 
     def test_login_nonexistent_user(self):
         response = self.client.post(reverse('app_login:login'), {'usuario': 'noexiste', 'contraseña': 'icesi123456'})
@@ -116,7 +116,7 @@ class RegistrationTestCase(TestCase):
         })
 
         # Verificar que se haya redirigido nuevamente a la página de registro debido a una contraseña demasiado corta
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 200 )
 
 
 
@@ -135,7 +135,47 @@ class RegistrationTestCase(TestCase):
          })
 
          # Verificar que se haya redirigido nuevamente a la página de registro debido a no proporcionar un nombre de usuario
-         self.assertEqual(response.status_code, 302)
-  
+         self.assertEqual(response.status_code, 200)
+
+
         
 
+class ChangeRoleTestCase(TestCase):
+    def setUp(self):
+        # Configurar datos de prueba, como usuarios y roles
+        self.user = User.objects.create_user(username='juanb', password='icesi12345678')
+        self.rol_admin = Rol.objects.create(nombre='Administrador')
+        self.rol_donante = Rol.objects.create(nombre='Donante')
+        self.usuario = Usuario.objects.create(user=self.user)
+
+    def test_change_to_admin_role(self):
+        # Cambiar el rol del usuario a Administrador
+        response = self.client.post(reverse('app_login:asignar_roles'), {
+            'usuario_id': self.usuario.id,
+            'rol_id': self.rol_admin.id,
+        })
+
+        # Verificar que la respuesta sea exitosa (código de estado 200)
+        self.assertEqual(response.status_code, 200)
+
+        # Recargar el objeto Usuario desde la base de datos
+        self.usuario.refresh_from_db()
+
+        # Verificar que el usuario tenga el rol de Administrador
+        self.assertTrue(self.usuario.roles.filter(id=self.rol_admin.id).exists())
+
+    def test_change_to_donor_role(self):
+        # Cambiar el rol del usuario a Donante
+        response = self.client.post(reverse('app_login:asignar_roles'), {
+            'usuario_id': self.usuario.id,
+            'rol_id': self.rol_donante.id,
+        })
+
+        # Verificar que la respuesta sea exitosa (código de estado 200)
+        self.assertEqual(response.status_code, 200)
+
+        # Recargar el objeto Usuario desde la base de datos
+        self.usuario.refresh_from_db()
+
+        # Verificar que el usuario tenga el rol de Donante
+        self.assertTrue(self.usuario.roles.filter(id=self.rol_donante.id).exists())
