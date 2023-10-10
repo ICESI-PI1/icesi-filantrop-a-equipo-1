@@ -6,6 +6,9 @@
     <title>Registro de Usuario</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Agregamos la fuente Roboto -->
     <style>
+
+
+
         body {
             font-family: 'Roboto', sans-serif; /* Usamos la fuente Roboto */
             display: flex;
@@ -56,6 +59,11 @@
             cursor: pointer;
         }
 
+        .success-message {
+            color: green;
+            font-weight: bold;
+        }
+
         p.error-message {
             color: red;
         }
@@ -66,14 +74,14 @@
             left: 10px;
             background: url('/static/images/return.png') no-repeat;
             background-size: contain;
-            width: 40px; /* Ajusta el ancho según tu imagen */
-            height: 40px; /* Ajusta la altura según tu imagen */
+            width: 40px; 
+            height: 40px; 
             border: none;
             cursor: pointer;
         }
 
         .logo {
-            max-width: 150px; /* Tamaño máximo del logo */
+            max-width: 150px; 
             margin-top: 10px;
         }
     </style>
@@ -82,9 +90,9 @@
 
     <div class="signup-container">
         <a class="back-button" href="/"></a>
-        <img class="logo" src="/static/images/ban-icesi.png" alt="Logo"> <!-- Agregamos el logo -->
+        <img class="logo" src="/static/images/ban-icesi.png" alt="Logo">
         <h2>Registro de Usuario</h2>
-        <form method="post">
+        <form method="post" >
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Registrarse</button>

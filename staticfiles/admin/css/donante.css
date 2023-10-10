@@ -1,0 +1,146 @@
+body {
+    overflow-x: hidden;
+    background-image: url('/static/images/watermark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.banner {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    max-width: 590px;
+    height: 557px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.rounded-button {
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: white;
+
+}
+
+.logo {
+    width: 188px;
+    height: 62px;
+    margin: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-text {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Estilos personalizados para el botón */
+#contribuirBecasButton {
+    margin-top: 150px; /* Cambiar la distancia desde la parte superior */
+    margin-left: 20px; /* Cambiar la distancia desde la izquierda */
+     justify-content: center;
+      align-items: center;
+       background: #0060A9;
+}
+#informesbuttom {
+    margin-top: 10px; /* Cambiar la distancia desde la parte superior */
+    margin-left: 10px; /* Cambiar la distancia desde la izquierda */
+     justify-content: center;
+      align-items: center;
+       background: #0060A9;
+}
+#ContribuirnuevoButtom{
+    margin-top: 10px; /* Cambiar la distancia desde la parte superior */
+    margin-left: 10px; /* Cambiar la distancia desde la izquierda */
+     justify-content: center;
+      align-items: center;
+       background: #0060A9;
+}
+
+
+.admin-profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-profile img {
+    width: 42px;
+    height: 39px;
+}
+
+.admin-info {
+    margin-left: 10px;
+    text-align: right;
+}
+
+.perfil-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.cerrar-sesion {
+    width: 42px;
+    height: 39px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cerrar-sesion img {
+    width: 100%;
+    height: 100%;
+}

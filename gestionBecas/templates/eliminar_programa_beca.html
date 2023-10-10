@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Programa de Beca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('/static/images/watermark.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .programas-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 60px;
+            max-width: 700px;
+            text-align: left;
+            position: relative;
+        }
+
+        .programas-box h2 {
+            font-size: 24px;
+        }
+
+        .programas-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .programas-box th, .programas-box td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .programas-box th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .eliminar-programa-button {
+            text-decoration: none;
+            background-color: #dc3545;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="programas-box">
+        <h1>Eliminar Programas de Beca</h1>
+
+        <table>
+            <tr>
+                <th>Nombre del Programa</th>
+                <th>Eliminar Programa</th>
+            </tr>
+            {% for programa in programas_de_beca %}
+                <tr>
+                    <td>{{ programa.nombre }}</td>
+                    <td>
+                        <a class="eliminar-programa-button" href="{{programa.nombre}}" data-nombre="{{ programa.nombre }}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botonesEliminarPrograma = document.querySelectorAll('.eliminar-programa-button[data-nombre]');
+
+            botonesEliminarPrograma.forEach(boton => {
+                boton.addEventListener('click', function(event) {
+                    event.preventDefault(); // Evita que el enlace se siga y recargue la página
+
+                    const nombrePrograma = this.dataset.nombre;
+
+                    if (confirm(`¿Estás seguro de que quieres eliminar el programa de beca "${nombrePrograma}"?`)) {
+                        fetch(`/eliminar_programa_beca/${nombrePrograma}/`, {
+                            method: 'DELETE',
+                            headers: {
+                                'X-CSRFToken': '{{ csrf_token }}',
+                            },
+                        })
+                        .then(response => {
+                            if (response.ok) {
+                                // Eliminar la fila de la tabla
+                                const fila = this.parentElement.parentElement;
+                                fila.remove();
+                            } else {
+                                alert('Hubo un error al eliminar el programa de beca.');
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

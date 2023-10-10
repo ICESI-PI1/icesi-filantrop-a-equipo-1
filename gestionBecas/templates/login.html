@@ -11,7 +11,7 @@
             display: flex;
             flex-direction: column; /* Poner los elementos en columna */
             align-items: center; /* Centrar horizontalmente */
-            height: 100vh;
+            height: 10vh;
             margin: 0;
             background-image: url("/static/images/watermark.jpg");
             background-size: cover; 
@@ -124,6 +124,8 @@
             <button type="submit">Iniciar Sesión</button>
             <p>¿No tienes una cuenta? <a href="{% url 'app_login:signup' %}">Crear Usuario</a></p>
         </form>
+        <a href="{% url 'app_login:donante' %}" class="rounded-button">Ir a la vista de Donante</a>
+    </div>
     </div>
 </body>
 </html>

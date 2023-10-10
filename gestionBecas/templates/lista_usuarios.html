@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('/static/images/watermark.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .usuarios-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 60px;
+            max-width: 700px;
+            text-align: left;
+            position: relative;
+        }
+
+        .usuarios-box h2 {
+            font-size: 24px;
+        }
+
+        .usuarios-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .usuarios-box th, .usuarios-box td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .usuarios-box th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .volver-btn {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .logo {
+            width: 188px;
+            height: 62px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="usuarios-box">
+        <img class="logo" src="/static/images/ban-icesi.png" alt="Logo">
+        <h1>Lista de Usuarios</h1>
+
+        <a href="/inicio" class="volver-btn">Volver al Inicio</a>
+
+        <div class="usuarios-box">
+            <h2>Usuarios Registrados</h2>
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Rol</th>
+                    <th>Asignar Rol</th>
+                </tr>
+                {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario.username }}</td>
+                        <td>{{ usuario.first_name }}</td>
+                        <td>
+                            <select class="editar-rol-select" data-username="{{ usuario.username }}">
+                                <option value="Opción01">Seleccione</option>
+                                <option value="Sin Rol">Sin Rol</option>
+                                <option value="Donante">Donante</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Filantropia">Filantropia</option>
+                                <option value="Beneficiario">Beneficiario</option>
+                                <option value="Beneficiario">Admisiones</option>
+                            </select>
+                            <button class="editar-rol-button" data-username="{{ usuario.username }}">Editar</button>
+                            <button class="eliminar-button" data-username="{{ usuario.username }}">Eliminar</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            
+        </div>
+    </div>
+</body>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const botonesEliminar = document.querySelectorAll('.eliminar-button[data-username]');
+    
+        botonesEliminar.forEach(boton => {
+            boton.addEventListener('click', function() {
+                const username = this.dataset.username;
+    
+                if (confirm(`¿Estás seguro de que quieres eliminar al usuario ${username}?`)) {
+                    fetch(`/eliminar_usuario/${username}/`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRFToken': '{{ csrf_token }}',
+                        },
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            const fila = this.parentElement.parentElement;
+                            fila.remove();
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            });
+        });
+    
+        const selectoresEditar = document.querySelectorAll('.editar-rol-select');
+    
+        selectoresEditar.forEach(function(selector) {
+            selector.addEventListener('change', function() {
+                const username = this.getAttribute('data-username');
+                const nuevoFirstName = this.value;
+    
+                // Enviar el nuevoFirstName al servidor
+                fetch('/editar_firstname/' + username + '/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: 'first_name=' + encodeURIComponent(nuevoFirstName)
+                }).then(function(response) {
+                    if (response.ok) {
+                        // Actualizar el valor en la página
+                        document.getElementById('firstname-' + username).textContent = nuevoFirstName;
+                    } else {
+                        alert('Hubo un error al guardar los cambios.');
+                    }
+                });
+            });
+        });
+    });
+    </script>
+
+</html>

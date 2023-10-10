@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidad ICESI</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
 
     <style>
         body {
@@ -56,16 +55,6 @@
             font-size: 16px;
             cursor: pointer;
             margin-bottom: 10px;
-        }
-
-        .rounded-button2 {
-            border: none;
-            border-radius: 15px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            margin-top: 180px;
         }
 
         .logo {
@@ -157,39 +146,37 @@
             height: 100%;
         }
     </style>
-
-    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
-
 </head>
 
 <body>
 
     <div class="container">
         <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
-        <div class="menu-text">Bienvenido {{user.username}} </div>
+        <div class="menu-text">Menu Principal</div>
         <div class="menu-item">
-            <button type="button" class="rounded-button2" id="gestionPogramaBecasButton" style="color: white; background: #0060A9;">Gestión de Programas de Becas</button>
+            <div style="margin-top: 140px;">Programas de becas a los que ha contribuido</div>
         </div>
         <div class="menu-item">
-            <button type="button" class="rounded-button" id="gestionUsuariosRolesButton">Gestión de Usuarios y Roles</button>
+            <button type="button" class="rounded-button" id="gestionUsuariosRolesButton" style="color: white; background: #0060A9;">Contribuir a nuevo programa</button>
         </div>
         <div class="menu-item">
-            <div>Generación de Informes y Estadísticas</div>
+            <div>Informes financieros y de beneficiarios</div>
         </div>
         <div class="menu-item">
-            <div>Configuración del Sistema</div>
+            
         </div>
         <div class="admin-profile">
             <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
             <div class="admin-info">
-                <div>{{user.first_name}}</div>
+                <div style="font-weight: bold;">Perfil</div>
+                <div>Donante</div>
             </div>
         </div>
         <div class="cerrar-sesion" onclick="cerrarSesion()">
             <img src="/static/images/cerrar_sesion.png" alt="Cerrar Sesión">
         </div>
 
-        <div style="font-weight: bold;" class="perfil-text" onclick="irAPerfil()">{{user.username}}</div>
+        <div class="perfil-text" onclick="irAPerfil()">Perfil</div>
     </div>
 
     <script>
@@ -207,15 +194,8 @@
         const gestionUsuariosRolesButton = document.getElementById('gestionUsuariosRolesButton');
 
         gestionUsuariosRolesButton.addEventListener('click', function () {
-            window.location.href = '/lista_usuarios';
+            window.location.href = '/asignar_roles';
         });
-        
-        const gestionPogramaBecasButton = document.getElementById('gestionPogramaBecasButton');
-
-        gestionPogramaBecasButton.addEventListener('click', function () {
-            window.location.href = '/gestion_programa_beca';
-        });
-
     </script>
 </body>
 
