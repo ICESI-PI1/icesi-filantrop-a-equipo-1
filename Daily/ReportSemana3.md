@@ -34,8 +34,14 @@
 
 **Cristian Del Castillo**
 
-| Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
-|------------------|------------|--------------------|-----------------------------|
+
+| Fecha            | ¿Qué hice?          | ¿Qué voy a hacer?     | Impedimentos/Complicaciones                            |
+|------------------|----------------------|-----------------------|------------------------|
+|    03/10/23      |  Se hizo un avance en clase sobre la edicion de las becas.  |   terminar de implementar la funcionalidad    |    Ninguna.    |
+|    04/10/23      |  hice una reunion con mis compañeros para dividir las tareas  |   investigar de base de datos y de como modificar un registro    |    Ninguna.    |
+|    05/10/23      | Investigue respecto a la edicion de campos que tienen varias selecciones y como editarlos |    implementar lo investigado   |    Ninguna.    |
+|    06/10/23      | tome el modulo que implemento mi compañero para las becas y apartir de el empece a implementar la funcionalidad de edicion |    finalizr mi historia de usuario completando la funcionalidad   |    Ninguna.    |
+|    07/10/23      | termine de implementar mi funcionalidad y coordine con mis compañeros para hacer los pull request |   Solucionar conflictos de los pr    |    Ninguna.    |
 
 **Juan Brawn**
 
