@@ -21,7 +21,8 @@
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
-
+|11/10/23          | Analice las historias de usuario para decidir cual hare y hacerlas ordenadamente | Investigare lo necesario para comenzar a desarrollar | sin impedimentos|
+|14/10/23          | Hice als investigaciones pertinentes para comenzar a desarrollar | Iniciare a desarrollar y en caso de necesitar mas informacion se realizara la investigacion pertinente | por ahora nada |
 
 
 
