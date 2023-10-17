@@ -26,7 +26,7 @@ class LoginTestCase(TestCase):
          self.assertEqual(response.status_code,302)
 
     def test_login_invalid_user(self):
-        response=self.client.post(reverse('app_login:login'),{'usuario':'manuelh','constraseña':'incorretopasword'})) 
+        response=self.client.post(reverse('app_login:login'),{'usuario':'manuelh','constraseña':'incorretopasword'})
         self.assertContains(response,'nombre de usuario o contraseña incorrectos')  
 
     def test_login_nonexistent_user(self):

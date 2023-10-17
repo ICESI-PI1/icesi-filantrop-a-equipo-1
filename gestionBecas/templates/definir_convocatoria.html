@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Tipo de Convocatoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('/static/images/watermark.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .convocatorias-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 60px;
+            max-width: 700px;
+            text-align: left;
+            position: relative;
+        }
+
+        .convocatorias-box h1 {
+            font-size: 24px;
+        }
+
+        .convocatorias-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .convocatorias-box th, .convocatorias-box td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .convocatorias-box th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .seleccionar-tipo {
+            text-decoration: none;
+            background-color: #28a745;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="convocatorias-box">
+        <h1>Seleccionar Tipo de Convocatoria</h1>
+        <table>
+            <tr>
+                <th>Nombre de la Convocatoria</th>
+                <th>Tipo de Convocatoria</th>
+            </tr>
+            {% for convocatoria in convocatorias %}
+                <tr>
+                    <td>{{ convocatoria.nombre }}</td>
+                    <td>
+                        <select name="tipo_convocatoria" id="tipo_convocatoria_{{ convocatoria.id }}">
+                            <option value="mixta">Mixta</option>
+                            <option value="abierta">Abierta</option>
+                            <option value="cerrada">Cerrada</option>
+                        </select>
+                        <button class="seleccionar-tipo" data-convocatoria-id="{{ convocatoria.id }}">Seleccionar</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const seleccionarTipoButtons = document.querySelectorAll('.seleccionar-tipo[data-convocatoria-id]');
+
+            seleccionarTipoButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const convocatoriaId = this.dataset.convocatoriaId;
+                    const selectedValue = document.getElementById(`tipo_convocatoria_${convocatoriaId}`).value;
+
+                    // Realiza la acción necesaria con el valor seleccionado (por ejemplo, envía a un servidor).
+                    console.log(`Se ha seleccionado "${selectedValue}" para la convocatoria con ID ${convocatoriaId}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

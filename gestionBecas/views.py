@@ -236,7 +236,8 @@ def eliminar_programa_beca_individual(request, programa_nombre):
     except ProgramaBeca.DoesNotExist:
         return JsonResponse({'success': False, 'message': 'El programa de beca no existe.'})
 
-
+def definir_convocatoria(request):
+    return render(request, 'definir_convocatoria.html')
 
 
 
@@ -258,5 +259,7 @@ def ver_programa_beca(request):
     else:
         # Si la solicitud no es POST muestra la página con la lista de programas
         return render(request, 'ver_programa_beca.html', {'programas': programas})
+    
+
 
 

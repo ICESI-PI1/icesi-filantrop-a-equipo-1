@@ -179,6 +179,10 @@
         <div class="menu-item">
             <div>Configuración del Sistema</div>
         </div>
+        <div class="menu-item">
+            <button  type="button" class="rounded-button" id="tiposDeConvocatoriaButtom" style="color: white; background: #0060A9;">Tipos de Convocatoria</button>
+        </div>
+      
         <div class="admin-profile">
             <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
             <div class="admin-info">
@@ -215,6 +219,12 @@
         gestionPogramaBecasButton.addEventListener('click', function () {
             window.location.href = '/gestion_programa_beca';
         });
+        const tiposDeConvocatoriaButtom = document.getElementById('tiposDeConvocatoriaButtom');
+
+tiposDeConvocatoriaButtom.addEventListener('click', function () {
+    // Cambia la ubicación actual del navegador a la página eliminar_programa_beca.html
+    window.location.href = '/definir_convocatoria/';
+});
 
     </script>
 </body>
