@@ -6,6 +6,7 @@
 |------------------|----------------------|-----------------------|------------------------|
 |    11/10/23      |  Investigue como leer archivos.  |    Implementar la historia de usuario    |    Mal uso de github.    |
 |    13/10/23      |  Comenze la implementacion de las funciones que realiza un estudiante beneficiado(Postularse a beca , ver becas postuladas)  |    Mejorar algunos apartados visuales de la .    |    Ninguna.    |
+|    17/10/23      |  Se mejoro el ambito visual de las vistas   |   Implementar el ver becas postuladas    |    Se estan creando los datos donde no es necesario.    |
 
 
 
