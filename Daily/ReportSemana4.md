@@ -44,7 +44,7 @@
 |------------------|------------|--------------------|-----------------------------|
 |11/10/23|discuti con mis compañeros las historias de usario restantes para decidir de que se va a encargar cada uno|voy a realizar los testeos en selenium por lo que voy a empezar investgando |ninguno|
 |14/10/23|investigue mas sobre selenium|iniciar con el testeo|ninguno|
-|15/10/23|inicies con el desarollo de las pruebas en selenium||ninguno|
+|15/10/23|inicie con el desarollo de las pruebas en selenium|continuare con la implementacion en selenium|ninguno|
 
 
 <div/>
