@@ -24,7 +24,8 @@
 |------------------|------------|--------------------|-----------------------------|
 |11/10/23          | Analice las historias de usuario para decidir cual hare y hacerlas ordenadamente | Investigare lo necesario para comenzar a desarrollar | sin impedimentos|
 |14/10/23          | Hice als investigaciones pertinentes para comenzar a desarrollar | Iniciare a desarrollar y en caso de necesitar mas informacion se realizara la investigacion pertinente | por ahora nada |
-|17/10/23|      Inicie la implementacion para definir un tipo de convocatoria, se modifico el html de "inicio" y se creo el html para "definir_convocatoria" | seguire con la implementacion y terminare el html, pues aun esta construyendose | sin complicaciones|
+|16/10/23|      Inicie la implementacion para definir un tipo de convocatoria, se modifico el html de "inicio" y se creo el html para "definir_convocatoria" | seguire con la implementacion y terminare el html, pues aun esta construyendose | sin complicaciones|
+|17/10/23 | Termine el html, perfeccione la importacion de datos para que me salieran las becas disponibles | Se necesita modificar la base de datos para que admita el campo de tipo de convocatoria, para asi poder asignarle el tipo, por lo que investigare de que forma se puede hacer| Ningun impedimiento por ahora|
 
 
 
