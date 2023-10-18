@@ -237,7 +237,9 @@ def eliminar_programa_beca_individual(request, programa_nombre):
         return JsonResponse({'success': False, 'message': 'El programa de beca no existe.'})
 
 def definir_convocatoria(request):
-    return render(request, 'definir_convocatoria.html')
+    programas_de_beca = ProgramaBeca.objects.all()  # Obtén todos los programas de beca
+    context = {'programas_de_beca': programas_de_beca}
+    return render(request, 'definir_convocatoria.html', context)
 
 
 

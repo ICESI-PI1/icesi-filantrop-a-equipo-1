@@ -41,8 +41,8 @@
         }
 
         .convocatorias-box th, .convocatorias-box td {
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 11px;
+            border: 3px solid #ccc;
         }
 
         .convocatorias-box th {
@@ -50,15 +50,16 @@
             color: #fff;
         }
 
-        .seleccionar-tipo {
-            text-decoration: none;
-            background-color: #28a745;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
+      .seleccionar-tipo {
+    text-decoration: none;
+    background-color: #007bff; 
+    color: #fff;
+    padding: 2px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
     </style>
 </head>
 <body>
@@ -66,22 +67,23 @@
         <h1>Seleccionar Tipo de Convocatoria</h1>
         <table>
             <tr>
-                <th>Nombre de la Convocatoria</th>
+                <th>Nombre de la beca</th>
                 <th>Tipo de Convocatoria</th>
             </tr>
-            {% for convocatoria in convocatorias %}
-                <tr>
-                    <td>{{ convocatoria.nombre }}</td>
-                    <td>
-                        <select name="tipo_convocatoria" id="tipo_convocatoria_{{ convocatoria.id }}">
-                            <option value="mixta">Mixta</option>
-                            <option value="abierta">Abierta</option>
-                            <option value="cerrada">Cerrada</option>
-                        </select>
-                        <button class="seleccionar-tipo" data-convocatoria-id="{{ convocatoria.id }}">Seleccionar</button>
-                    </td>
-                </tr>
-            {% endfor %}
+            {% for programa in programas_de_beca %}
+            <tr>
+                <td>{{ programa.nombre }}</td>
+                <td>
+                    <select name="tipo_convocatoria" id="tipo_convocatoria_{{ programa.name }}">
+                        <option value="mixta">Mixta</option>
+                        <option value="abierta">Abierta</option>
+                        <option value="cerrada">Cerrada</option>
+                    </select>
+                    <button class="seleccionar-tipo" data-convocatoria-id="{{ programa.name }}">Seleccionar</button>
+                </td>
+            </tr>
+        {% endfor %}
+        
         </table>
     </div>
     <script>
@@ -101,3 +103,4 @@
     </script>
 </body>
 </html>
+
