@@ -29,6 +29,7 @@
 
 
 
+
 **Cristian Del Castillo**
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
@@ -37,6 +38,7 @@
 |13/10/23          | revise el documento src del cual saque la conclusion para ver como seria la manera mas adecuada de implementacion | buscare reunirme con mis compañeros para cuadrar como llevaremos la implementacion y compartir ideas | sin impedimentos|
 |14/10/23          | dividimos las tareas de implementacion y se inicio con una primera parte de implementacion de botones| continuare la implementacion apenas tenga la disponibilidad | sin impedimentos|
 |17/10/23| se inicio con la separacion de css de las vistas del sprint anterior ya que algunas vistas quedaron en un solo archivo html | seguire con la implementacion de mi nueva tarea | sin complicaciones|
+|19/10/23| investigue porque me estaba generando error el css externo y arregle la vista inicio con la nueva tecnica de implementacion de css | seguire con la implementacion de mi nueva tarea | sin complicaciones|
 
 
 **Juan Brawn**
