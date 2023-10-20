@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
     overflow-x: hidden;
     background-image: url('/static/images/watermark.jpg');
@@ -11,6 +9,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 590px;
+    height: 557px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .banner {
@@ -28,30 +38,18 @@ p {
     font-size: 18px;
 }
 
-.container {
-    width: 100%;
-    max-width: 590px;
-    height: 557px;
-    position: relative;
-    background: rgba(255, 255, 255, 0.95);
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 15px;
-    padding: 20px;
-}
-
-.rounded-button {
-    font-family: 'Roboto', sans-serif;
+.rounded-button,
+.rounded-button2 {
     border: none;
     border-radius: 15px;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     margin-bottom: 10px;
-    background: #0060A9;
-    color: #fff;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-    
+}
+
+.rounded-button2 {
+    margin-top: 180px;
 }
 
 .logo {
@@ -114,18 +112,6 @@ p {
     height: 39px;
 }
 
-.admin-info {
-    margin-left: 10px;
-    text-align: right;
-}
-
-.perfil-text {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
 .cerrar-sesion {
     width: 42px;
     height: 39px;
@@ -142,3 +128,11 @@ p {
     width: 100%;
     height: 100%;
 }
+
+.perfil-text {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
