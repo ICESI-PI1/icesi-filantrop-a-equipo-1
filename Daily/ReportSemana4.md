@@ -9,7 +9,7 @@
 |    17/10/23      |  Se mejoro el ambito visual de las vistas   |   Implementar el ver becas postuladas    |    Se estan creando los datos donde no es necesario.    |
 |    19/10/23      |  Estoy implementando como aplicar a una beca   |   Implementar mi parte con la HU sobre convocatorias     |    Debo esperar el trabajo de mis compañeros   |
 |    20/10/23      |  Corrijo mi implementacion de como aplicar a una beca   |   Implementar mi parte con la HU sobre convocatorias     |  Ninguna  |
-
+|    21/10/23      |  Descansar   |   Seguir con el trabajo     |  Ninguna  |
 
 
 **Collin Gonzalez**
