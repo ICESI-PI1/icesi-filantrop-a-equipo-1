@@ -16,7 +16,8 @@
 
 | Fecha            | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 |------------------|------------|--------------------|-----------------------------|
-
+|    21/10/23      |  Hice la investigacion pertinente para terminar de completar la historia de usuario que permite la edicion de programas de becas.  |    Implementar la edicion en la base de datos.    |   Que los cambios se guarden en la base de datos al instante.    |
+|    22/10/23      |  Empecé la implementacion de las función con las vistas pertinentes y la logica necesaria.  |    Terminar la implementacion haciendo que se guarden los cambios.    |    Me suelta un error a la hora de guardar los cambios por una URL.    |
 
 **Juan Ramirez**
 
