@@ -26,7 +26,7 @@
             <button type="button" class="rounded-button" id="gestionUsuariosRolesButton">Gestión de Usuarios y Roles</button>
         </div>
         <div class="menu-item">
-            <div>Generación de Informes y Estadísticas</div>
+            <button type="button" class="rounded-button" id="informesyEstadisticas">Generación de Informes y Estadísticas</button>
         </div>
         <div class="menu-item">
             <div>Configuración del Sistema</div>
@@ -67,6 +67,14 @@
         gestionPogramaBecasButton.addEventListener('click', function () {
             window.location.href = '/gestion_programa_beca';
         });
+
+        const informesyEstadisticas = document.getElementById('informesyEstadisticas');
+
+        informesyEstadisticas.addEventListener('click', function () {
+            window.location.href = '/informes_estadisticas';
+        });
+
+        
 
     </script>
 </body>
