@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from .models import ProgramaBeca
+from .models import ProgramaBeca,TipoConvocatoria, Cronograma
 
 def registrar_programa_beca(request):
     if request.method == 'POST':
@@ -178,4 +178,31 @@ def ver_programa_beca(request):
         # Si la solicitud no es POST muestra la página con la lista de programas
         return render(request, 'ver_programa_beca.html', {'programas': programas})
 
+def crear_cronograma(request):
+    if request.method == 'POST':
+        programa_becas = request.POST['programa_becas']
+        tipo_convocatoria = request.POST['tipo_convocatoria']
+        fecha_inscripciones = request.POST['fecha_inscripciones']
+        fecha_cierre_inscripciones = request.POST['fecha_cierre_inscripciones']
+        fecha_seleccion_aspirantes = request.POST['fecha_seleccion_aspirantes']
+        fecha_entrevistas = request.POST['fecha_entrevistas']
+        fecha_publicacion_beneficiarios = request.POST['fecha_publicacion_beneficiarios']
 
+        # Crea instancias de los modelos y guárdalas en la base de datos
+        programa_beca_obj = ProgramaBeca.objects.create(nombre=programa_becas)
+        tipo_convocatoria_obj = TipoConvocatoria.objects.create(nombre=tipo_convocatoria)
+        cronograma_obj = Cronograma.objects.create(
+            programa_becas=programa_beca_obj,
+            tipo_convocatoria=tipo_convocatoria_obj,
+            fecha_inscripciones=fecha_inscripciones,
+            fecha_cierre_inscripciones=fecha_cierre_inscripciones,
+            fecha_seleccion_aspirantes=fecha_seleccion_aspirantes,
+            fecha_entrevistas=fecha_entrevistas,
+            fecha_publicacion_beneficiarios=fecha_publicacion_beneficiarios
+        )
+
+        # Redirige a alguna página de éxito o muestra un mensaje de éxito
+        return render(request, 'inicio.html')
+    else:
+        # Si el método de solicitud no es POST, muestra el formulario
+        return render(request, 'registrar_cronograma.html')

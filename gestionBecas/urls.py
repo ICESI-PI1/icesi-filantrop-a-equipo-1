@@ -21,5 +21,6 @@ path('inicio_sesion/', views.login_view, name='login'),
   path('eliminar_usuario/<str:username>/', views.eliminar_usuario, name='eliminar_usuario'),
 path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
 path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
+path('registrar_cronograma/', views.crear_cronograma, name='registrar_cronograma'),
 
 ]

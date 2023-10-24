@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cronograma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Crear Cronograma</h2>
+        <form action="/guardar_cronograma/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="programa_becas">Programa de Becas:</label>
+                <select id="nombre" name="nombre" required style="width: 100%; padding: 10px; font-size: 14px;">
+                    <option value="">Seleccionar un programa</option>  <!-- Opcion vacia al refrescar -->
+                    {% for programa in programas %}
+                        <option value="{{ programa.id }}">{{ programa.nombre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipo_convocatoria">Tipo de Convocatoria:</label>
+                <input type="text" id="tipo_convocatoria" name="tipo_convocatoria" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_inscripciones">Fecha de Inscripciones:</label>
+                <input type="date" id="fecha_inscripciones" name="fecha_inscripciones" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_cierre_inscripciones">Fecha de Cierre de Inscripciones:</label>
+                <input type="date" id="fecha_cierre_inscripciones" name="fecha_cierre_inscripciones" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_seleccion_aspirantes">Fecha de Selección de Aspirantes:</label>
+                <input type="date" id="fecha_seleccion_aspirantes" name="fecha_seleccion_aspirantes" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_entrevistas">Fecha de Entrevistas:</label>
+                <input type="date" id="fecha_entrevistas" name="fecha_entrevistas" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha_publicacion_beneficiarios">Fecha de Publicación de Beneficiarios:</label>
+                <input type="date" id="fecha_publicacion_beneficiarios" name="fecha_publicacion_beneficiarios" required>
+            </div>
+            <button type="submit">Guardar Cronograma</button>
+        </form>
+    </div>
+</body>
+</html>
