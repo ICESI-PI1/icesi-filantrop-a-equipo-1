@@ -42,6 +42,7 @@
 |17/10/23| se inicio con la separacion de css de las vistas del sprint anterior ya que algunas vistas quedaron en un solo archivo html | seguire con la implementacion de mi nueva tarea | sin complicaciones|
 |19/10/23| investigue porque me estaba generando error el css externo y arregle la vista inicio con la nueva tecnica de implementacion de css | seguire con la implementacion de mi nueva tarea | sin complicaciones|
 |22/10/23| subi varias actualizaciones de los css y html a mi rama, estuve probando y los css externos ya funcionan y finalmente volvi a retomar la lectura del src para estar mas claro de los ultimos pasos, llegue a la conclusion de que debemos reorganizar la forma en la que estabamos llevando el modulo ya que no nos permite llevar a acabo una fusion con otros modulos | utilizaremos el tiempo que nos permitan en la calse para evaluar con mis compañeros las nnuevas tareas y como manejaremos este ultimo sprint | sin complicaciones|
+|23/10/23| se creo el form para los cronogramas, se creo la vista html | terminar de ajustar detalles de la funcionalidad lo subi para que mi compañero pudiera avanzar en la funcionalidad de edicion de cronograma | sin complicaciones|
 
 
 **Juan Brawn**
