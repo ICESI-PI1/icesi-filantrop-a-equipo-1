@@ -19,7 +19,10 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
-|       |              |                     |                             |
+|  24/10/23     |  Se reeplanteo la funcionalidad que estaba desarrollando            |   Leere y entendere la neva forma en la que se debe desarrollar la funcionalidad                  |       sin impedimentos                      |
+| 26/10/23 | Se reflexiona acerca de la funcionalidad, ademas investigo cosas necesarias para el entendimiento de dicha actividad| Necesito conocimientos sobre como manejar la base de datos asi que investigare | sin impedimentos |
+|27/10/23| se investiga sobre base de datos | para realizar mi funcionalidad debo esperar a que mi compañero termine la de el, asi que verificare como va y entendere la logica usada | sin impedimentos |
+|28/10/23 | se verifico la logica de mi compañero, y entendi | iniciar nuevamente con el desarrollo de mi funcionalidad | sin impedimentos |
 
 **Cristian Del Castillo**
 
