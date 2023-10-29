@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
-from .models import Usuario, Rol
+from .models import Usuario, Rol, ProgramaBeca
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
@@ -11,6 +11,8 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from .models import ProgramaBeca
+from gestionBecas.forms import ProgramaBecaForm
 from .models import ProgramaBeca,TipoConvocatoria, Cronograma
 
 def registrar_programa_beca(request):
@@ -178,6 +180,35 @@ def ver_programa_beca(request):
         # Si la solicitud no es POST muestra la página con la lista de programas
         return render(request, 'ver_programa_beca.html', {'programas': programas})
 
+# Vista para seleccionar un programa de beca
+def seleccionar_programa_beca(request):
+    programas = ProgramaBeca.objects.all()
+    
+    if request.method == 'POST':
+        programa_id = request.POST.get('programa_id')
+        if programa_id:
+            return redirect('app_login:editar_programa_beca', programa_id=programa_id)
+    
+    return render(request, 'seleccionar_programa_beca.html', {'programas': programas})
+
+# Vista para editar un programa de beca
+def editar_programa_beca(request, programa_id):
+    programa_seleccionado = get_object_or_404(ProgramaBeca, id=programa_id)
+    programas = ProgramaBeca.objects.all()
+    usuarios_donantes = User.objects.filter(first_name='Donante')
+    success_message = ""
+
+    if request.method == 'POST':
+        form = ProgramaBecaForm(request.POST, instance=programa_seleccionado)
+        if form.is_valid():
+            form.save()
+            success_message = "Los cambios se han guardado exitosamente."
+        else:
+            print("Errores en el formulario:", form.errors)
+    else:
+        form = ProgramaBecaForm(instance=programa_seleccionado)
+
+    return render(request, 'editar_programa_beca.html', {'programa_seleccionado': programa_seleccionado, 'programas': programas, 'usuarios_donantes': usuarios_donantes, 'success_message': success_message, 'form': form})
 def crear_cronograma(request):
     if request.method == 'POST':
         programa_becas = request.POST['programa_becas']

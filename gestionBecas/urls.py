@@ -3,6 +3,8 @@ from . import views
 from .views import lista_usuarios
 from .views import inicio_SinRol
 from .views import registrar_programa_beca
+from .views import editar_programa_beca
+from .views import seleccionar_programa_beca
 app_name = 'app_login'
 
 urlpatterns  = [  
@@ -21,6 +23,8 @@ path('inicio_sesion/', views.login_view, name='login'),
   path('eliminar_usuario/<str:username>/', views.eliminar_usuario, name='eliminar_usuario'),
 path('registrar_programa_beca/', views.registrar_programa_beca, name='registrar_programa_beca'),
 path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
+path('seleccionar_programa_beca/', views.seleccionar_programa_beca, name='seleccionar_programa_beca'),
+path('editar_programa_beca/<int:programa_id>/', views.editar_programa_beca, name='editar_programa_beca'),
 path('registrar_cronograma/', views.crear_cronograma, name='registrar_cronograma'),
 
 ]
