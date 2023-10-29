@@ -13,7 +13,11 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
-|       |              |                     |                             |
+| 24/10/23 | Mejorar la estructura del proyecto. | Entender el funcionamiento del GET y PUSH en la base de datos. | Ninguno.    |
+| 25/10/23 | Empecé a modificar el codigo para realizar la edicion de programa de beca. | Terminar de entender el funcionamiento para implementar la edicion tanto en programa de beca y su respectivo cronograma. | Ninguno. |
+| 26/10/23 | Nada. | Terminar la edición de programa de beca para hacer lo mismo con el cronograma. | Ninguno. |
+| 29/10/23 | Terminé la edicion de programa de beca | Implementar lo mismo para el cronograma de beca | Problemas en la logica del views.py pues había conflicto a la hora de guardar la edicion en la base de datos pues tomaba los parametros como vacios incluso antes de darle al boton "Guardar cambios". |
+
 
 **Juan Ramirez**
 
