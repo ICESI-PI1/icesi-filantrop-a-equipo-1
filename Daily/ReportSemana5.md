@@ -44,6 +44,9 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
-|       |              |                     |                             |
+| 24/10/23      |   inicie con el coverage del del proyecto           |   continuar con el desarollo de los testeos de selenium                  |posibles problemas con la implementacion del coverage                             |
+|25/10/23|investigue mas sobre la implementacion del coverage por problemas con la implementacion|continuar con la implementacion del coverage|ninguno|
+|27/10/23|implemente el coverage|continuar con el desarollo de testeos en selenium|ninguno|
+|29/10/23|desarollar testeos en selenium|investigue un poco mas sobre el github action para implementaro con las pruebas de selenium|ninguno|
 
 <div/>
