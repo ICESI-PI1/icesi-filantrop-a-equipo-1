@@ -13,6 +13,8 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
+|1/11/23| Ayudar a mi comprañero a terminar la funcionalidad de cronograma, pues la neceisto para empezar la mia| Vere que necesito para empezar con mi funcionalidad | Falta el trabajo de mis compañeros |
+|3/11/23| Investigue cosas necesarias para iniciar con mi implementacion | Implementar mi HU | Falta el trabajo de mis compañeros |
 
 
 
