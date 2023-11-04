@@ -8,6 +8,9 @@
 |31/10/23| De momento nada | Implementar mi HU | Falta el trabajo de mis compañeros |
 |1/11/23| Revisar el estilo de los templates | Implementar mi HU | Falta el trabajo de mis compañeros |
 |3/11/23| Revisar el estilo de los templates | Implementar mi HU | Falta el trabajo de mis compañeros |
+|4/11/23| Nada | Implementar mi HU | Falta el trabajo de mis compañeros |
+
+
 
 **Collin Gonzalez**
 
