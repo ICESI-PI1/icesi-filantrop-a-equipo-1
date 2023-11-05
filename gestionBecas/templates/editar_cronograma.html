@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cronograma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("/static/images/watermark.jpg");
+            background-size: cover;
+        }
+
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box img {
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-right: 10px;
+            flex: 1;
+        }
+
+        .form-group input,
+        .form-group select {
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-box">
+        <img src="/static/images/ban-icesi.png" alt="Logo">
+    </div>
+
+    <div class="form-container">
+        <h2>Editar Cronograma</h2>
+        {% if success_message %}
+            <p class="success-message">{{ success_message }}</p>
+        {% endif %}
+        <a href="{% url 'app_login:gestion_informe_beca' %}">Regresar a Gestión de Cronograma</a>
+        {% if cronograma_seleccionado %}
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="programa_becas">Programa de Beca:</label>
+                    <span>{{ cronograma_seleccionado.programa_becas.nombre }}</span>
+                    <input type="hidden" id="programa_becas" name="programa_becas" value="{{ cronograma_seleccionado.programa_becas.id }}">
+                </div>                
+         
+                <div class="form-group">
+                    <label for="tipo_convocatoria">Tipo de Convocatoria:</label>
+                    <select id="tipo_convocatoria" name="tipo_convocatoria" required>
+                        <option value="Abierta" {% if "Abierta" in cronograma_seleccionado.tipo_convocatoria %} selected {% endif %}>Abierta</option>
+                        <option value="Mixta" {% if "Mixta" in cronograma_seleccionado.tipo_convocatoria %} selected {% endif %}>Mixta</option>
+                        <option value="Cerrada" {% if "Cerrada" in cronograma_seleccionado.tipo_convocatoria %} selected {% endif %}>Cerrada</option>
+                    </select>
+                </div>                
+                <div class="form-group">
+                    <label for="fecha_inscripciones">Fecha de Inscripciones:</label>
+                    <input type="date" id="fecha_inscripciones" name="fecha_inscripciones" value="{{ cronograma_seleccionado.fecha_inscripciones }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_cierre_inscripciones">Fecha de Cierre de Inscripciones:</label>
+                    <input type="date" id="fecha_cierre_inscripciones" name="fecha_cierre_inscripciones" value="{{ cronograma_seleccionado.fecha_cierre_inscripciones }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_seleccion_aspirantes">Fecha de Selección de Aspirantes:</label>
+                    <input type="date" id="fecha_seleccion_aspirantes" name="fecha_seleccion_aspirantes" value="{{ cronograma_seleccionado.fecha_seleccion_aspirantes }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_entrevistas">Fecha de Entrevistas:</label>
+                    <input type="date" id="fecha_entrevistas" name="fecha_entrevistas" value="{{ cronograma_seleccionado.fecha_entrevistas }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_publicacion_beneficiarios">Fecha de Publicación de Beneficiarios:</label>
+                    <input type="date" id="fecha_publicacion_beneficiarios" name="fecha_publicacion_beneficiarios" value="{{ cronograma_seleccionado.fecha_publicacion_beneficiarios }}" required>
+                </div>
+                <button class="btn-submit" type="submit">Guardar Cambios</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

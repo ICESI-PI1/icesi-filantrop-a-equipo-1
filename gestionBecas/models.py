@@ -31,16 +31,19 @@ class TipoConvocatoria(models.Model):
 
 class Cronograma(models.Model):
     programa_becas = models.ForeignKey(ProgramaBeca, on_delete=models.CASCADE)
-    tipo_convocatoria = models.ForeignKey(TipoConvocatoria, on_delete=models.CASCADE)
+    tipo_convocatoria = models.CharField(max_length=100, choices=[
+        ('Abierta', 'Abierta'),
+        ('Mixta', 'Mixta'),
+        ('Cerrada', 'Cerrada'),
+    ])
     fecha_inscripciones = models.DateField()
     fecha_cierre_inscripciones = models.DateField()
     fecha_seleccion_aspirantes = models.DateField()
     fecha_entrevistas = models.DateField()
     fecha_publicacion_beneficiarios = models.DateField()
 
-
     def __str__(self):
-        return f'Cronograma para {self.programa_becas.nombre} - {self.tipo_convocatoria.nombre}'
+        return f'Cronograma para {self.programa_becas.nombre} - {self.tipo_convocatoria}'
 
 
 class Rol(models.Model):

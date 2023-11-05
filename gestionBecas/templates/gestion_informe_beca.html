@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Informes de Beca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-image: url("/static/images/watermark.jpg");
+            background-size: cover;
+        }
+
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .logo-box img {
+            max-width: 250px;
+            max-height: 250px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 250px;
+            position: relative;
+        }
+
+        .form-container img.return-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            cursor: pointer;
+            max-width: 30px; /*Ajustar el tamaño del retorno*/
+        }
+
+        .form-container h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button-container .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-box">
+        <img src="/static/images/ban-icesi.png" alt="Logo">
+    </div>
+
+    <div class="form-container">
+        <img src="/static/images/return.png" alt="Retornar al menú principal" class="return-button" onclick="retornarMenuPrincipal()">
+        <h2>Gestión de Informes de Beca</h2>
+        <div class="button-container">
+            <button class="btn-submit" onclick="crearCronogramaBeca()">Crear Cronograma Beca</button>
+
+            <button class="btn-submit" onclick="editarCronogramaBeca()">Editar Cronograma Beca</button>
+        </div>
+    </div>
+
+    <script>
+        function crearCronogramaBeca() {
+            window.location.href = '/registrar_cronograma';
+        }
+
+        function editarCronogramaBeca() {
+            window.location.href = '/seleccionar_cronograma';
+        }
+
+        function retornarMenuPrincipal() {
+            window.location.href = '/inicio';
+        }
+    </script>
+</body>
+</html>

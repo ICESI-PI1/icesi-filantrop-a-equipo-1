@@ -12,7 +12,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from .models import ProgramaBeca
-from gestionBecas.forms import ProgramaBecaForm
+from gestionBecas.forms import ProgramaBecaForm, CronogramaForm
 from .models import ProgramaBeca,TipoConvocatoria, Cronograma
 
 def registrar_programa_beca(request):
@@ -209,6 +209,7 @@ def editar_programa_beca(request, programa_id):
         form = ProgramaBecaForm(instance=programa_seleccionado)
 
     return render(request, 'editar_programa_beca.html', {'programa_seleccionado': programa_seleccionado, 'programas': programas, 'usuarios_donantes': usuarios_donantes, 'success_message': success_message, 'form': form})
+
 def crear_cronograma(request):
     if request.method == 'POST':
         programa_becas = request.POST['programa_becas']
@@ -237,3 +238,34 @@ def crear_cronograma(request):
     else:
         # Si el método de solicitud no es POST, muestra el formulario
         return render(request, 'registrar_cronograma.html')
+
+def gestion_informe_beca(request):
+    return render(request, 'gestion_informe_beca.html')
+
+def seleccionar_cronograma(request):
+    cronogramas = Cronograma.objects.all()  # Reemplaza con tu modelo de cronogramas
+
+    if request.method == 'POST':
+        cronograma_id = request.POST.get('cronograma_id')
+        if cronograma_id:
+            # Reemplaza 'editar_cronograma' con el nombre de la vista de edición de cronograma
+            return redirect('app_login:editar_cronograma', cronograma_id=cronograma_id)
+
+    return render(request, 'seleccionar_cronograma.html', {'cronogramas': cronogramas})
+
+def editar_cronograma(request, cronograma_id):
+    cronograma_seleccionado = get_object_or_404(Cronograma, id=cronograma_id)
+    programas = ProgramaBeca.objects.all()
+    success_message = ""
+
+    if request.method == 'POST':
+        form = CronogramaForm(request.POST, instance=cronograma_seleccionado)
+        if form.is_valid():
+            form.save()
+            success_message = "Los cambios se han guardado exitosamente."
+        else:
+            print("Errores en el formulario:", form.errors)
+    else:
+        form = CronogramaForm(instance=cronograma_seleccionado)
+
+    return render(request, 'editar_cronograma.html', {'cronograma_seleccionado': cronograma_seleccionado, 'programas': programas, 'success_message': success_message, 'form': form})
