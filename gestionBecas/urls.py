@@ -26,5 +26,5 @@ path('ver_programa_beca/', views.ver_programa_beca, name='ver_programa_beca'),
 path('seleccionar_programa_beca/', views.seleccionar_programa_beca, name='seleccionar_programa_beca'),
 path('editar_programa_beca/<int:programa_id>/', views.editar_programa_beca, name='editar_programa_beca'),
 path('registrar_cronograma/', views.crear_cronograma, name='registrar_cronograma'),
-
+ path('editar_tipo_convocatoria/', views.editar_tipo_convocatoria, name='editar_tipo_convocatoria')
 ]

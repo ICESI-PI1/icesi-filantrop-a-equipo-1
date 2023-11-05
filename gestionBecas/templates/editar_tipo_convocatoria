@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cronograma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('/static/images/watermark.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .cronograma-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 60px;
+            max-width: 700px;
+            text-align: left;
+            position: relative;
+        }
+
+        .cronograma-box h1 {
+            font-size: 24px;
+        }
+
+        .cronograma-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .cronograma-box th, .cronograma-box td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .cronograma-box th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .editar-tipo-convocatoria-select {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cronograma-box">
+        <h1>Editar Cronograma</h1>
+
+        <table>
+            <tr>
+                <th>Fecha</th>
+                <th>Actividad</th>
+                <th>Tipo de Convocatoria</th>
+            </tr>
+            {% for evento in cronograma %}
+                <tr>
+                    <td>{{ evento.fecha }}</td>
+                    <td>{{ evento.actividad }}</td>
+                    <td>
+                        <select class="editar-tipo-convocatoria-select" data-fecha="{{ evento.fecha }}">
+                            <option value="abierta" {% if evento.tipo_convocatoria == "abierta" %}selected{% endif %}>Abierta</option>
+                            <option value="cerrada" {% if evento.tipo_convocatoria == "cerrada" %}selected{% endif %}>Cerrada</option>
+                            <option value="mixta" {% if evento.tipo_convocatoria == "mixta" %}selected{% endif %}>Mixta</option>
+                        </select>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectTipoConvocatoria = document.querySelectorAll('.editar-tipo-convocatoria-select[data-fecha]');
+
+            selectTipoConvocatoria.forEach(select => {
+                select.addEventListener('change', function() {
+                    const fecha = this.dataset.fecha;
+                    const nuevoTipoConvocatoria = this.value;
+
+                    // Realizar una solicitud para guardar el cambio en el servidor (puedes usar fetch aquí).
+
+                    // Ejemplo de solicitud con fetch:
+                    /*
+                    fetch(`/editar_tipo_convocatoria/${fecha}/`, {
+                        method: 'PUT', // Método HTTP para editar
+                        headers: {
+                            'X-CSRFToken': '{{ csrf_token }}',
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ tipo_convocatoria: nuevoTipoConvocatoria }),
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Actualizar la interfaz si la solicitud fue exitosa
+                            // (por ejemplo, cambiar el estilo del elemento modificado).
+                        } else {
+                            // Manejar errores si la solicitud falla.
+                            console.error('Error al editar tipo de convocatoria');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                    */
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

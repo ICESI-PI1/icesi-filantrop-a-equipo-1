@@ -237,3 +237,24 @@ def crear_cronograma(request):
     else:
         # Si el método de solicitud no es POST, muestra el formulario
         return render(request, 'registrar_cronograma.html')
+
+def editar_tipo_convocatoria2(request, programa_id, fecha):
+    try:
+        # Recuperar el evento del cronograma para la edición
+        evento = Cronograma.objects.get(programa_id=programa_id, fecha=fecha)
+
+        if request.method == 'POST':
+            # Procesar la solicitud de edición del evento del cronograma aquí (guardar cambios, validar, etc.)
+            # Asegúrate de que actualizas el objeto 'evento' con los cambios.
+
+         context = {
+            'evento': evento,
+        }
+
+        return render(request, 'editar_tipo_convocatoria.html', context)
+
+    except Cronograma.DoesNotExist:
+        # Manejar el caso en el que el evento no existe
+        return HttpResponse("El evento del cronograma no existe.")
+def editar_tipo_convocatoria(request):
+        return render(request, 'editar_tipo_convocatoria.html')
