@@ -27,6 +27,7 @@
 |1/11/23| Ayudar a mi comprañero a terminar la funcionalidad de cronograma, pues la neceisto para empezar la mia| Vere que necesito para empezar con mi funcionalidad | Falta el trabajo de mis compañeros |
 |3/11/23| Investigue cosas necesarias para iniciar con mi implementacion | Implementar mi HU | Falta el trabajo de mis compañeros |
 |4/11/23| Empece con el desarrollo de mi H.U. | Seguir con el desarrollo | Falta el trabajo de mis compañeros |
+|5/11/23| continue con el desarrollo, ademas arregle unos errores que habian a la hora de visualizar | continuare con el desarrollo | Falta el trabajo de algunos compañeros |
 
 **Cristian Del Castillo**
 
