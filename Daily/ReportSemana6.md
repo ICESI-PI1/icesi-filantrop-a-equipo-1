@@ -16,8 +16,10 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
-
-
+|30/10/23| Daily con el profesor. | Implementar mi HU. | Ninguno. |
+|1/11/23| Revisar la manera en la que se registra un cronograma. | Añadir template intermedio. | Todavia no se registra un cronograma desde el template. |
+|3/11/23| Crear template intermedio y modificar atributo de tipo convocatioria. | Editar cronograma. | Me tocó cambiar el tipo de dato de tipo convocatoria. |
+|5/11/23| Editar cronograma. | Ayudar a mis compañeros. | Ninguno. |
 
 
 **Juan Ramirez**
