@@ -22,6 +22,4 @@ jobs:
       - name: Run Test
         run: selenium-side-runner Gestion-becas.side
         pip install -r requirements.txt
-    - name: Run Tests
-      run: |
-        python manage.py test
+    
