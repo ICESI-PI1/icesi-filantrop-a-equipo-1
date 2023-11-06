@@ -47,7 +47,7 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
-|30/10/23|dayli con el profesor durante la clase|revisar otra vez github actions para que funcione con el pull request y que funcione con el archivo de selnium|ninguna|
+|30/10/23|daily con el profesor durante la clase|revisar otra vez github actions para que funcione con el pull request y que funcione con el archivo de selnium|ninguna|
 |3/11/23|terminar de investigar sobre el github actions|continuar con la finalizacion de los testeos en selenium|ninguna|
 |4/11/23|continue con los testeos en selenium para las vistas faltantes|continuar con los testeos|ninguno|
 |5/11/23|revisar las nuevas funciones hechas por mis compañeros para empezar a crear los testeos correspondientes|empezar con los testeos faltantes|ninguna|
