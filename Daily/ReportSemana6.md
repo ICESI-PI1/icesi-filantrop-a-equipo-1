@@ -35,6 +35,11 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
+|30/10/23| Se trabajo en clase con el profesor | Implementar el cambio de vistas a clases | dependemos del trabajo del trabajo secuencial |
+|31/10/23| lei nuevamente el src | Implementar el cambio de vistas a clases | por el momento nada |
+|1/11/23| por el momento nada | Implementar mi HU | Falta el trabajo de mis compañeros |
+|3/11/23| ver el video de cambio de clases | Implementar el cambio de vistas a clases | por el momento nada |
+|4/11/23| por el momento no pude avanzar | organizar el trabajo en equipo| necesitamos que todos terminen su parte en un 80% |
 
 
 
