@@ -40,6 +40,8 @@
 |1/11/23| por el momento nada | Implementar mi HU | Falta el trabajo de mis compañeros |
 |3/11/23| ver el video de cambio de clases | Implementar el cambio de vistas a clases | por el momento nada |
 |4/11/23| por el momento no pude avanzar | organizar el trabajo en equipo| necesitamos que todos terminen su parte en un 80% |
+|5/11/23| logre implementar las vistas basadas en clases| continuare con el desarrollo de la creacion de cronograma | niniguno |
+|6/11/23| la creacion del cronograma esta al 100%| lo siguiente seria organizar el modulo completo de gestion de cornograma, es decir falta eliminar | niniguno |
 
 
 
