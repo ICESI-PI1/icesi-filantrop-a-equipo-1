@@ -30,6 +30,7 @@
 |3/11/23| Investigue cosas necesarias para iniciar con mi implementacion | Implementar mi HU | Falta el trabajo de mis compañeros |
 |4/11/23| Empece con el desarrollo de mi H.U. | Seguir con el desarrollo | Falta el trabajo de mis compañeros |
 |5/11/23| continue con el desarrollo, ademas arregle unos errores que habian a la hora de visualizar | continuare con el desarrollo | Falta el trabajo de algunos compañeros |
+|6/11/23| Termine el desarrollo de eliminar cronograma y ver cronograma, por lo que el modulo ya estaria completo | aun no lo se | se tuvieron inconformidades internas entre compañeros, sin embargo se logro solucionar|
 
 **Cristian Del Castillo**
 
