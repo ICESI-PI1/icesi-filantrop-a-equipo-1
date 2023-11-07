@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cronograma</title>
+    <title>Crear Cronograma de Beca</title>
     <style>
+        /* Estilos CSS que proporcionaste */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -33,12 +34,13 @@
             margin-bottom: 5px;
         }
 
-        input[type="text"], input[type="date"] {
-            width: 100%;
+        input[type="text"], input[type="date"], select {
+            width: calc(100% - 20px);
             padding: 8px;
             font-size: 16px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            margin-bottom: 10px;
         }
 
         button {
@@ -54,42 +56,44 @@
 </head>
 <body>
     <div class="container">
-        <h2>Crear Cronograma</h2>
-        <form action="/guardar_cronograma/" method="post">
+        <h1>Crear Cronograma de Beca</h1>
+        <form method="post">
             {% csrf_token %}
             <div class="form-group">
-                <label for="programa_becas">Programa de Becas:</label>
-                <select id="nombre" name="nombre" required style="width: 100%; padding: 10px; font-size: 14px;">
-                    <option value="">Seleccionar un programa</option>  <!-- Opcion vacia al refrescar -->
-                    {% for programa in programas %}
-                        <option value="{{ programa.id }}">{{ programa.nombre }}</option>
-                    {% endfor %}
-                </select>
+                <label for="{{ form.programa_becas.id_for_label }}">Programa de Beca:</label>
+                {{ form.programa_becas }}
             </div>
+
             <div class="form-group">
-                <label for="tipo_convocatoria">Tipo de Convocatoria:</label>
-                <input type="text" id="tipo_convocatoria" name="tipo_convocatoria" required>
+                <label for="{{ form.tipo_convocatoria.id_for_label }}">Tipo de Convocatoria:</label>
+                {{ form.tipo_convocatoria }}
             </div>
+
             <div class="form-group">
-                <label for="fecha_inscripciones">Fecha de Inscripciones:</label>
-                <input type="date" id="fecha_inscripciones" name="fecha_inscripciones" required>
+                <label for="{{ form.fecha_inscripciones.id_for_label }}">Fecha de Inscripciones:</label>
+                <input type="date" name="{{ form.fecha_inscripciones.name }}" id="{{ form.fecha_inscripciones.id_for_label }}" value="{{ form.fecha_inscripciones.value|default:'' }}" required>
             </div>
+
             <div class="form-group">
-                <label for="fecha_cierre_inscripciones">Fecha de Cierre de Inscripciones:</label>
-                <input type="date" id="fecha_cierre_inscripciones" name="fecha_cierre_inscripciones" required>
+                <label for="{{ form.fecha_cierre_inscripciones.id_for_label }}">Fecha de Cierre de Inscripciones:</label>
+                <input type="date" name="{{ form.fecha_cierre_inscripciones.name }}" id="{{ form.fecha_cierre_inscripciones.id_for_label }}" value="{{ form.fecha_cierre_inscripciones.value|default:'' }}" required>
             </div>
+
             <div class="form-group">
-                <label for="fecha_seleccion_aspirantes">Fecha de Selección de Aspirantes:</label>
-                <input type="date" id="fecha_seleccion_aspirantes" name="fecha_seleccion_aspirantes" required>
+                <label for="{{ form.fecha_seleccion_aspirantes.id_for_label }}">Fecha de Selección de Aspirantes:</label>
+                <input type="date" name="{{ form.fecha_seleccion_aspirantes.name }}" id="{{ form.fecha_seleccion_aspirantes.id_for_label }}" value="{{ form.fecha_seleccion_aspirantes.value|default:'' }}" required>
             </div>
+
             <div class="form-group">
-                <label for="fecha_entrevistas">Fecha de Entrevistas:</label>
-                <input type="date" id="fecha_entrevistas" name="fecha_entrevistas" required>
+                <label for="{{ form.fecha_entrevistas.id_for_label }}">Fecha de Entrevistas:</label>
+                <input type="date" name="{{ form.fecha_entrevistas.name }}" id="{{ form.fecha_entrevistas.id_for_label }}" value="{{ form.fecha_entrevistas.value|default:'' }}" required>
             </div>
+
             <div class="form-group">
-                <label for="fecha_publicacion_beneficiarios">Fecha de Publicación de Beneficiarios:</label>
-                <input type="date" id="fecha_publicacion_beneficiarios" name="fecha_publicacion_beneficiarios" required>
+                <label for="{{ form.fecha_publicacion_beneficiarios.id_for_label }}">Fecha de Publicación de Beneficiarios:</label>
+                <input type="date" name="{{ form.fecha_publicacion_beneficiarios.name }}" id="{{ form.fecha_publicacion_beneficiarios.id_for_label }}" value="{{ form.fecha_publicacion_beneficiarios.value|default:'' }}" required>
             </div>
+
             <button type="submit">Guardar Cronograma</button>
         </form>
     </div>
