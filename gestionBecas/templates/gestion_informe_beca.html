@@ -106,6 +106,9 @@
             <button class="btn-submit" onclick="editarCronogramaBeca()">Editar Cronograma Beca</button>
            
             <button class="btn-submit" onclick="eliminarCronograma()">Eliminar Cronograma</button>
+            
+            <button class="btn-submit" onclick="verCronograma()">Ver cronograma</button>
+
 
         </div>
     </div>
@@ -121,6 +124,9 @@
         
             function eliminarCronograma() {
         window.location.href = '/eliminar_cronograma';
+    }
+    function verCronograma() {
+        window.location.href = '/ver_cronograma';
     }
 
         function retornarMenuPrincipal() {
