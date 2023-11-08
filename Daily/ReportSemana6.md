@@ -4,11 +4,9 @@
 
 | Fecha | ¿Qué hice? | ¿Qué voy a hacer? | Impedimentos/Complicaciones |
 | ----- | ------------ | ------------------- | --------------------------- |
-|30/10/23| Se trabajo en clase y se hizo daily con el profesor | Implementar mi HU | Falta el trabajo de mis compañeros |
-|31/10/23| De momento nada | Implementar mi HU | Falta el trabajo de mis compañeros |
-|1/11/23| Revisar el estilo de los templates | Implementar mi HU | Falta el trabajo de mis compañeros |
-|3/11/23| Revisar el estilo de los templates | Implementar mi HU | Falta el trabajo de mis compañeros |
-|4/11/23| Nada | Implementar mi HU | Falta el trabajo de mis compañeros |
+|06/11/23| Se avanzo en la implementacion de una interfaz mas agradable usando boostrap| Continuar | Ninguna|
+|07/11/23| Nada , tuve parcial | Continuar | Ninguna |
+|08/11/23| Nada , tuve parcials | Continuar | Ninguna |
 
 
 
