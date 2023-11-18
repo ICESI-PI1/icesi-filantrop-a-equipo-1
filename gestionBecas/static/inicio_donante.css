@@ -30,7 +30,6 @@ p {
 .container {
     width: 100%;
     max-width: 590px;
-    height: 557px;
     position: relative;
     background: rgba(255, 255, 255, 0.95);
     text-align: center;
@@ -39,6 +38,7 @@ p {
     padding: 20px;
 }
 
+
 .rounded-button {
     border: none;
     border-radius: 15px;
@@ -46,8 +46,6 @@ p {
     font-size: 16px;
     cursor: pointer;
     margin-bottom: 10px;
-    color: white;
-
 }
 
 .logo {
@@ -77,30 +75,6 @@ p {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-}
-
-
-/* Estilos personalizados para el botón */
-#contribuirBecasButton {
-    margin-top: 150px; /* Cambiar la distancia desde la parte superior */
-    margin-left: 20px; /* Cambiar la distancia desde la izquierda */
-     justify-content: center;
-      align-items: center;
-       background: #0060A9;
-}
-#informesbuttom {
-    margin-top: 10px; /* Cambiar la distancia desde la parte superior */
-    margin-left: 10px; /* Cambiar la distancia desde la izquierda */
-     justify-content: center;
-      align-items: center;
-       background: #0060A9;
-}
-#ContribuirnuevoButtom{
-    margin-top: 10px; /* Cambiar la distancia desde la parte superior */
-    margin-left: 10px; /* Cambiar la distancia desde la izquierda */
-     justify-content: center;
-      align-items: center;
-       background: #0060A9;
 }
 
 .menu-item div {

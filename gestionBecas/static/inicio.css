@@ -11,6 +11,18 @@ body {
     height: 100vh;
 }
 
+.container {
+    width: 100%;
+    max-width: 590px;
+    height: 557px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    padding: 20px;
+}
+
 .banner {
     background-color: #007bff;
     color: #fff;
@@ -38,6 +50,21 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+.rounded-button,
+.rounded-button2 {
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-color: #0060A9;
+    color: #fff;
+}
+
+.rounded-button2 {
+    margin-top: 180px;
 }
 
 .logo {
@@ -235,3 +262,5 @@ p {
     border-top: 1px solid #fff; /* Cambia el color y el grosor según tus necesidades */
     margin: -9px; /* Ajusta el margen superior e inferior según tus necesidades */
 }
+}
+
