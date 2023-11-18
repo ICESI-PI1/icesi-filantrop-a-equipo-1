@@ -26,7 +26,7 @@
             margin: 10% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 50%;
             border-radius: 10px;
         }
 
@@ -119,6 +119,22 @@
             background-color: #0056b3;
         }
 
+
+        .program-details {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    .program-details th, .program-details td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .program-details th {
+        background-color: #f2f2f2;
+    }
     </style>
 </head>
 <body>
@@ -128,7 +144,7 @@
         <div class="menu-text">Bienvenido {{user.username}}</div>
         <hr class="divider">
         <div class="navbar">
-            <a href="inicio/">Inicio</a>
+            <a href="/inicio/">Inicio</a>
 
             <div class="dropdown">
                 <button class="dropbtn">Gestión de Programas de Becas
@@ -147,7 +163,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="/lista_usuarios/">Usuarios y Roles</a>
-                    <a href="#">Configuración del Sistema</a>
+                    <a href="/signup/">Registrar Usuarios</a>
                 </div>
             </div>
 
@@ -175,50 +191,61 @@
                         {% endfor %}
                     </select>
                 </div>
+        
+                {% if programa_seleccionado %}
+                    <button type="button" class="btn-submit" onclick="openModal()">Ver Programa de Beca</button>
+                {% else %}
+                <button type="button" class="btn-submit" onclick="openModal()">Ver Programa de Beca</button>
+                    <p>No hay programa seleccionado.</p>
+                {% endif %}
             </form>
+        </div>
+        
+            
 
-            {% if programa_seleccionado %}
-                <button class="btn-submit" onclick="openModal()">Ver Programa de Beca</button>
-            {% endif %}
+
         </div>
 
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Detalles del Programa de Beca</h2>
-                <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <p>{{ programa_seleccionado.descripcion }}</p>
-                </div>
-                <div class="form-group">
-                    <label for="fechaInicio">Fecha de Inicio:</label>
-                    <p>{{ programa_seleccionado.fechaInicio }}</p>
-                </div>
-                <div class="form-group">
-                    <label for="fechaFin">Fecha de Fin:</label>
-                    <p>{{ programa_seleccionado.fechaFin }}</p>
-                </div>
-                <div class="form-group">
-                    <label for="cupo">Cupo:</label>
-                    <p>{{ programa_seleccionado.cupo }}</p>
-                </div>
-                <div class="form-group">
-                    <label for="donantes">Donantes:</label>
-                    <p>{{ programa_seleccionado.donantes }}</p>
-                </div>
-                <div class="form-group">
-                    <label for="requisitos">Requisitos:</label>
-                    <p>{{ programa_seleccionado.requisitos }}</p>
-                </div>
-                <div class="form-group">
-                    <label for="coberturaEconomica">Cobertura Económica:</label>
-                    <p>{{ programa_seleccionado.coberturaEconomica }}</p>
-                </div>
-            </div>
-        </div>
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Detalles del Programa de Beca: {{programa_seleccionado.nombre}}</h2>
+        <table class="program-details">
+            <tr>
+                <th>Descripción</th>
+                <td>{{ programa_seleccionado.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de Inicio</th>
+                <td>{{ programa_seleccionado.fechaInicio }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de Fin</th>
+                <td>{{ programa_seleccionado.fechaFin }}</td>
+            </tr>
+            <tr>
+                <th>Cupo</th>
+                <td>{{ programa_seleccionado.cupo }}</td>
+            </tr>
+            <tr>
+                <th>Donantes</th>
+                <td>{{ programa_seleccionado.donantes }}</td>
+            </tr>
+            <tr>
+                <th>Requisitos</th>
+                <td>{{ programa_seleccionado.requisitos }}</td>
+            </tr>
+            <tr>
+                <th>Cobertura Económica</th>
+                <td>{{ programa_seleccionado.coberturaEconomica }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
 
-        <script>
+
+<script>
             function openModal() {
                 document.getElementById('myModal').style.display = 'block';
             }
