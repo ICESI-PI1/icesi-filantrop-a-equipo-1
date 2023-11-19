@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Programa de Beca</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-image: url("/static/images/watermark.jpg");
-            background-size: cover; 
+        /* Estilos existentes */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
         }
 
-        .logo-box {
-            background-color: #ffffff;
-            padding: 10px;
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
             border-radius: 10px;
-            margin-bottom: 20px;
         }
 
-        .logo-box img {
-            max-width: 250px;
-            max-height: 250px;
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .form-container {
@@ -36,12 +51,14 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             max-width: 600px;
             width: 100%;
+            margin-top: 20px;
         }
 
         .form-container h2 {
             color: #333;
             text-align: center;
             margin-bottom: 20px;
+
         }
 
         .form-group {
@@ -102,82 +119,82 @@
             background-color: #0056b3;
         }
 
-        .error-message {
-            color: red;
-            font-size: 14px;
-            margin: 0;
-        }
 
-        .success-message {
-            color: green;
-            font-size: 14px;
-            margin: 0;
-        }
+        .program-details {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
 
+    .program-details th, .program-details td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .program-details th {
+        background-color: #f2f2f2;
+    }
     </style>
 </head>
 <body>
 
-    <div class="logo-box">
-        <img src="/static/images/ban-icesi.png" alt="Logo">
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Detalles del Programa de Beca: {{programa_seleccionado.nombre}}</h2>
+        <table class="program-details">
+            <tr>
+                <th>Descripción</th>
+                <td>{{ programa_seleccionado.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de Inicio</th>
+                <td>{{ programa_seleccionado.fechaInicio }}</td>
+            </tr>
+            <tr>
+                <th>Fecha de Fin</th>
+                <td>{{ programa_seleccionado.fechaFin }}</td>
+            </tr>
+            <tr>
+                <th>Cupo</th>
+                <td>{{ programa_seleccionado.cupo }}</td>
+            </tr>
+            <tr>
+                <th>Donantes</th>
+                <td>{{ programa_seleccionado.donantes }}</td>
+            </tr>
+            <tr>
+                <th>Requisitos</th>
+                <td>{{ programa_seleccionado.requisitos }}</td>
+            </tr>
+            <tr>
+                <th>Cobertura Económica</th>
+                <td>{{ programa_seleccionado.coberturaEconomica }}</td>
+            </tr>
+        </table>
     </div>
+</div>
 
-    <div class="form-container">
-        <h2>Ver Programa de Beca</h2>
-        <form method="post" action="{% url 'app_login:ver_programa_beca' %}">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="nombre">Seleccionar Programa:</label>
-                <select id="nombre" name="nombre" required style="width: 100%; padding: 10px; font-size: 14px;">
-                    <option value="">Seleccionar un programa</option>  <!-- Opcion vacia al refrescar -->
-                    {% for programa in programas %}
-                        <option value="{{ programa.id }}">{{ programa.nombre }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <button class="btn-submit" type="submit">Ver Programa de Beca</button>
-        </form>
 
-        {% if programa_seleccionado %}
-            <div class="top">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="{{ programa_seleccionado.nombre }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" cols="50" readonly>{{ programa_seleccionado.descripcion }}</textarea>
-            </div>
-            <div class="form-group">
-                <label for="fechaInicio">Fecha de Inicio:</label>
-                <input type="text" id="fechaInicio" name="fechaInicio" value="{{ programa_seleccionado.fechaInicio }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="fechaFin">Fecha de Fin:</label>
-                <input type="text" id="fechaFin" name="fechaFin" value="{{ programa_seleccionado.fechaFin }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="cupo">Cupo:</label>
-                <input type="text" id="cupo" name="cupo" value="{{ programa_seleccionado.cupo }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="donantes">Donantes:</label>
-                <input type="text" id="donantes" name="donantes" value="{{ programa_seleccionado.donantes }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="coberturaEconomica">Cobertura Económica:</label>
-                <input type="text" id="coberturaEconomica" name="coberturaEconomica" value="{{ programa_seleccionado.coberturaEconomica }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="tipoBeca">Tipo de Beca:</label>
-                <input type="text" id="tipoBeca" name="tipoBeca" value="{{ programa_seleccionado.tipoBeca }}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="requisitos">Requisitos:</label>
-                <textarea id="requisitos" name="requisitos" rows="4" cols="50" readonly>{{ programa_seleccionado.requisitos }}</textarea>
-            </div>
-        {% endif %}
+<script>
+            function openModal() {
+                document.getElementById('myModal').style.display = 'block';
+            }
+
+            function closeModal() {
+                document.getElementById('myModal').style.display = 'none';
+            }
+
+            // Cierra el modal si el usuario hace clic fuera del contenido
+            window.onclick = function(event) {
+                if (event.target === document.getElementById('myModal')) {
+                    closeModal();
+                }
+            }
+        </script>
     </div>
 
 </body>
 </html>
-

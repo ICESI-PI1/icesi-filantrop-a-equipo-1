@@ -1,222 +1,116 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universidad ICESI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
-
-    <style>
-        body {
-            overflow-x: hidden;
-            background-image: url('/static/images/watermark.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .banner {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 590px;
-            height: 557px;
-            position: relative;
-            background: rgba(255, 255, 255, 0.95);
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            border-radius: 15px;
-            padding: 20px;
-        }
-
-        .rounded-button {
-            border: none;
-            border-radius: 15px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        .rounded-button2 {
-            border: none;
-            border-radius: 15px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-bottom: 10px;
-            margin-top: 180px;
-        }
-
-        .logo {
-            width: 188px;
-            height: 62px;
-            margin: auto;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        .menu-text {
-            font-size: 24px;
-            color: #fff;
-            font-weight: 800;
-            position: absolute;
-            top: 90px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            background: #007bff;
-            color: #fff;
-            padding: 10px;
-        }
-
-        .menu-item {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .menu-item div {
-            background: #0060A9;
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-            justify-content: flex-start;
-            align-items: center;
-            gap: 39px;
-            display: inline-flex;
-            color: white;
-            font-size: 16px;
-            font-weight: 400;
-            word-wrap: break-word;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            padding: 10px 20px;
-            border-radius: 15px;
-        }
-
-        .admin-profile {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .admin-profile img {
-            width: 42px;
-            height: 39px;
-        }
-
-        .admin-info {
-            margin-left: 10px;
-            text-align: right;
-        }
-
-        .perfil-text {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-        }
-
-        .cerrar-sesion {
-            width: 42px;
-            height: 39px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .cerrar-sesion img {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-
-    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
-
-</head>
-
-<body>
-
-    <div class="container">
-        <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
-        <div class="menu-text">Bienvenido {{user.username}} </div>
-        <div class="menu-item">
-            <button type="button" class="rounded-button2" id="gestionPogramaBecasButton" style="color: white; background: #0060A9;">Gestión de Programas de Becas</button>
-        </div>
-        <div class="menu-item">
-            <button type="button" class="rounded-button" id="gestionUsuariosRolesButton">Gestión de Usuarios y Roles</button>
-        </div>
-        <div class="menu-item">
-            <div>Generación de Informes y Estadísticas</div>
-        </div>
-        <div class="menu-item">
-            <div>Configuración del Sistema</div>
-        </div>
-        <div class="admin-profile">
-            <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
-            <div class="admin-info">
-                <div>{{user.first_name}}</div>
+    <!DOCTYPE html>
+    <html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Universidad ICESI</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/inicio.css">
+    </head>
+    
+    <body>
+    
+        <div class="container">
+            <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
+            <div class="menu-text">Bienvenido {{user.username}} </div>
+            <hr class="divider">
+            <div class="navbar">
+                <a href="inicio/">Inicio</a>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Gestión de Programas de Becas
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/registrar_programa_beca/">Crear programa beca</a>
+                        <a href="/ver_programa_beca/">Buscar programa beca</a>
+                        <a href="/seleccionar_programa_beca/">Editar programa beca</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Gestión de Cronograma
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/seleccionar_pb2/">Crear Cronograma</a>
+                        <a href="/eliminar_cronograma/">Eliminar Cronograma</a>
+                        <a href="/ver_cronograma/">Buscar Cronograma</a>
+                        <a href="/seleccionar_cronograma/">Editar Cronograma</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Gestión de Usuarios y Roles
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/lista_usuarios/">Usuarios y Roles</a>
+                        <a href="/signup/">Registrar Usuarios</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Generación de Informes y Estadísticas
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/informes_estadisticas/">Generación de Informes y Estadísticas</a>
+                        <a href="#">Configuración del Sistema</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="cerrar-sesion" onclick="cerrarSesion()">
-            <img src="/static/images/cerrar_sesion.png" alt="Cerrar Sesión">
+            
+            <div class="program-info">
+                <h2 class="program-title">Programa de Gestión de Becas</h2>
+                <p class="program-paragraph">Bienvenido al Programa de Gestión de Becas de la Universidad ICESI, diseñado para facilitar y optimizar el proceso de administración de becas, asegurando un acceso equitativo a la educación superior. Este programa integra funciones avanzadas para brindar una experiencia eficiente y transparente tanto a los estudiantes como a los administradores.</p>
+            <img class="program-image" src="/static/images/jornada-informativa-becas.jpg" >
         </div>
 
-        <div style="font-weight: bold;" class="perfil-text" onclick="irAPerfil()">{{user.username}}</div>
-    </div>
 
-    <script>
-        function cerrarSesion() {
-            var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
-            if (confirmacion) {
-                window.location.href = "/login";
+                 <div class="admin-profile">
+                <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
+                <div class="admin-info">
+                    <div>{{user.first_name}}</div>
+                </div>
+            </div>
+            <div class="cerrar-sesion" onclick="cerrarSesion()">
+                <img src="/static/images/cerrar_sesion.png" alt="Cerrar Sesión">
+            </div>
+           
+            <div style="font-weight: bold;" class="perfil-text" onclick="irAPerfil()">{{user.username}}</div>
+        </div>
+    
+        <script>
+            function cerrarSesion() {
+                var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
+                if (confirmacion) {
+                    window.location.href = "/login";
+                }
             }
-        }
+    
+            function irAPerfil() {
+                window.location.href = '/perfil';
+            }
+    
+            const gestionUsuariosRolesButton = document.getElementById('gestionUsuariosRolesButton');
+    
+            gestionUsuariosRolesButton.addEventListener('click', function () {
+                window.location.href = '/lista_usuarios';
+            });
+            
+            const gestionPogramaBecasButton = document.getElementById('gestionPogramaBecasButton');
+    
+            gestionPogramaBecasButton.addEventListener('click', function () {
+                window.location.href = '/gestion_programa_beca';
+            });
+    
+        </script>
+    </body>
+    
+    </html>
 
-        function irAPerfil() {
-            window.location.href = '/perfil';
-        }
 
-        const gestionUsuariosRolesButton = document.getElementById('gestionUsuariosRolesButton');
-
-        gestionUsuariosRolesButton.addEventListener('click', function () {
-            window.location.href = '/lista_usuarios';
-        });
-        
-        const gestionPogramaBecasButton = document.getElementById('gestionPogramaBecasButton');
-
-        gestionPogramaBecasButton.addEventListener('click', function () {
-            window.location.href = '/gestion_programa_beca';
-        });
-
-    </script>
-</body>
-
-</html>
+    
+    
+    

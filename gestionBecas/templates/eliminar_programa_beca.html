@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eliminar Programa de Beca</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
     <style>
         body {
             overflow-x: hidden;
@@ -60,61 +60,101 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
+        .cerrar-sesion-button {
+            text-decoration: none;
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="programas-box">
-        <h1>Eliminar Programas de Beca</h1>
 
-        <table>
-            <tr>
-                <th>Nombre del Programa</th>
-                <th>Eliminar Programa</th>
-            </tr>
-            {% for programa in programas_de_beca %}
+    <div class="container">
+        <img class="logo" src="https://www.icesi.edu.co/biblioteca/wp-content/uploads/2022/02/logo_icesi.png" />
+        <div class="menu-text">Bienvenido {{user.username}}</div>
+        <hr class="divider">
+        <div class="navbar">
+            <a href="/inicio/">Inicio</a>
+
+               <div class="dropdown">
+                    <button class="dropbtn">Gestión de Programas de Becas
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/registrar_programa_beca/">Crear programa beca</a>
+                        <a href="/eliminar_programa_beca/">Eliminar programa beca</a>
+                        <a href="/ver_programa_beca/">Buscar programa beca</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Gestión de Usuarios y Roles
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/lista_usuarios/">Usuarios y Roles</a>
+                        <a href="#">Configuración del Sistema</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Generación de Informes y Estadísticas
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Generación de Informes y Estadísticas</a>
+                        <a href="#">Configuración del Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="programas-box">
+            <h1>Eliminar Programas de Beca</h1>
+
+            <table>
                 <tr>
-                    <td>{{ programa.nombre }}</td>
-                    <td>
-                        <a class="eliminar-programa-button" href="{{programa.nombre}}" data-nombre="{{ programa.nombre }}">Eliminar</a>
-                    </td>
+                    <th>Nombre del Programa</th>
+                    <th>Eliminar Programa</th>
                 </tr>
-            {% endfor %}
-        </table>
-        
+                {% for programa in programas_de_beca %}
+                    <tr>
+                        <td>{{ programa.nombre }}</td>
+                        <td>
+                            <a class="eliminar-programa-button" href="{{programa.nombre}}" data-nombre="{{ programa.nombre }}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="admin-profile">
+            <img src="https://static.vecteezy.com/system/resources/previews/014/541/527/non_2x/administrator-system-icon-simple-style-vector.jpg" />
+            <div class="admin-info">
+                <div>{{user.first_name}}</div>
+            </div>
+        </div>
+
+        <div class="perfil-text" onclick="irAPerfil()">{{user.username}}</div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const botonesEliminarPrograma = document.querySelectorAll('.eliminar-programa-button[data-nombre]');
+        function cerrarSesion() {
+            var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
+            if (confirmacion) {
+                window.location.href = "/login";
+            }
+        }
 
-            botonesEliminarPrograma.forEach(boton => {
-                boton.addEventListener('click', function(event) {
-                    event.preventDefault(); // Evita que el enlace se siga y recargue la página
-
-                    const nombrePrograma = this.dataset.nombre;
-
-                    if (confirm(`¿Estás seguro de que quieres eliminar el programa de beca "${nombrePrograma}"?`)) {
-                        fetch(`/eliminar_programa_beca/${nombrePrograma}/`, {
-                            method: 'DELETE',
-                            headers: {
-                                'X-CSRFToken': '{{ csrf_token }}',
-                            },
-                        })
-                        .then(response => {
-                            if (response.ok) {
-                                // Eliminar la fila de la tabla
-                                const fila = this.parentElement.parentElement;
-                                fila.remove();
-                            } else {
-                                alert('Hubo un error al eliminar el programa de beca.');
-                            }
-                        })
-                        .catch(error => console.error('Error:', error));
-                    }
-                });
-            });
-        });
+        function irAPerfil() {
+            window.location.href = '/perfil';
+        }
     </script>
 </body>
 
