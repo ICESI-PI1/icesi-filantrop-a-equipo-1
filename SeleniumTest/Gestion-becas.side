@@ -1252,7 +1252,7 @@
     }]
   }, {
     "id": "6bfa3e29-06a0-4835-8be3-c1d258865a46",
-    "name": "Prueba-inicio-ver-programa-beca",
+    "name": "Prueba-inicio-ver-programa-beca-Admin",
     "commands": [{
       "id": "18636759-f526-4999-b31b-2936a67fa6c8",
       "comment": "",
@@ -1390,7 +1390,7 @@
       "command": "select",
       "target": "id=nombre",
       "targets": [],
-      "value": "label=BECA FUTBOLIN2"
+      "value": "label=visualizar-beca"
     }, {
       "id": "9b37c396-8fc8-4521-a54f-8dd4880588d8",
       "comment": "",
@@ -1401,142 +1401,6 @@
         ["xpath=//button[@type='submit']", "xpath:attributes"],
         ["xpath=//button", "xpath:position"],
         ["xpath=//button[contains(.,'Ver Programa de Beca')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
-    "id": "269e273e-dae0-401e-9162-59a80370b4c5",
-    "name": "Prueba-cambiar-rol-usuario-admin",
-    "commands": [{
-      "id": "ed5ca103-0878-48ef-ad73-ddc675cbbbcd",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "caff66ce-e944-44a6-a4fd-2db2356dc3d8",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "792x730",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "beda3905-f3d7-473a-8f76-b238271bbb4b",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Iniciar Sesión",
-      "targets": [
-        ["linkText=Iniciar Sesión", "linkText"],
-        ["css=.login-button", "css:finder"],
-        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
-        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
-        ["xpath=//a", "xpath:position"],
-        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "72bc7a95-85d4-4a16-bff9-3fdfca9d5789",
-      "comment": "",
-      "command": "click",
-      "target": "id=usuario",
-      "targets": [
-        ["id=usuario", "id"],
-        ["name=usuario", "name"],
-        ["css=#usuario", "css:finder"],
-        ["xpath=//input[@id='usuario']", "xpath:attributes"],
-        ["xpath=//input[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "37304cad-4572-4b3b-863f-ba40467b0cf5",
-      "comment": "",
-      "command": "type",
-      "target": "id=usuario",
-      "targets": [
-        ["id=usuario", "id"],
-        ["name=usuario", "name"],
-        ["css=#usuario", "css:finder"],
-        ["xpath=//input[@id='usuario']", "xpath:attributes"],
-        ["xpath=//input[2]", "xpath:position"]
-      ],
-      "value": "juanb"
-    }, {
-      "id": "935e12f1-a2b1-404a-8578-d8f798f27563",
-      "comment": "",
-      "command": "click",
-      "target": "id=contraseña",
-      "targets": [
-        ["id=contraseña", "id"],
-        ["name=contraseña", "name"],
-        ["css=#contrase\\F1 a", "css:finder"],
-        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
-        ["xpath=//input[3]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3028c7a9-9002-49de-94e4-7c73bcd8848a",
-      "comment": "",
-      "command": "type",
-      "target": "id=contraseña",
-      "targets": [
-        ["id=contraseña", "id"],
-        ["name=contraseña", "name"],
-        ["css=#contrase\\F1 a", "css:finder"],
-        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
-        ["xpath=//input[3]", "xpath:position"]
-      ],
-      "value": "icesi12345678"
-    }, {
-      "id": "31bf3a86-1727-494f-8a80-80274cf5ff09",
-      "comment": "",
-      "command": "click",
-      "target": "css=button",
-      "targets": [
-        ["css=button", "css:finder"],
-        ["xpath=//button[@type='submit']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "5ed0d757-c98f-4933-913a-88df4f38ca72",
-      "comment": "",
-      "command": "click",
-      "target": "id=gestionUsuariosRolesButton",
-      "targets": [
-        ["id=gestionUsuariosRolesButton", "id"],
-        ["css=#gestionUsuariosRolesButton", "css:finder"],
-        ["xpath=//button[@id='gestionUsuariosRolesButton']", "xpath:attributes"],
-        ["xpath=//div[3]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Gestión de Usuarios y Roles')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "fad86808-45f3-45d4-835c-ef469b1a0cc2",
-      "comment": "",
-      "command": "click",
-      "target": "css=tr:nth-child(6) .editar-rol-select",
-      "targets": [
-        ["css=tr:nth-child(6) .editar-rol-select", "css:finder"],
-        ["xpath=//tr[6]/td[3]/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "97a9041e-2bdc-48d5-a085-f84f79b55558",
-      "comment": "",
-      "command": "select",
-      "target": "css=tr:nth-child(6) .editar-rol-select",
-      "targets": [],
-      "value": "label=Filantropia"
-    }, {
-      "id": "fd69e465-e2c3-4bd2-9e65-2ebf0f131a65",
-      "comment": "",
-      "command": "click",
-      "target": "css=tr:nth-child(6) .editar-rol-button",
-      "targets": [
-        ["css=tr:nth-child(6) .editar-rol-button", "css:finder"],
-        ["xpath=//tr[6]/td[3]/button", "xpath:position"]
       ],
       "value": ""
     }]
@@ -7913,6 +7777,5090 @@
         ["xpath=//button[@type='submit']", "xpath:attributes"],
         ["xpath=//form/button", "xpath:position"],
         ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9e28323c-6c62-4fb2-a380-bb116ad7b059",
+    "name": "Prueba-inicio-filantropia",
+    "commands": [{
+      "id": "6102e1c3-8ff7-4459-b012-eec282562136",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02822c0c-55ad-4b37-bece-d521dfad597f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58bb8603-acb8-4a06-b577-12996d439b2b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "246bbc21-abdb-46d5-abf0-5a549bf5ba48",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0748eda1-a0e4-42c6-9382-821c9cee839d",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "04d7c0d5-fe7a-430f-b664-b5a649471376",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a0d8255-ab8b-4c95-93fe-3fe81b09d662",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "c1042076-bc26-4520-84c9-ff38c547681e",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d1de7067-00da-4b1b-ba7c-622082573acc",
+    "name": "Prueba-crearProgramaBeca-filantropia ",
+    "commands": [{
+      "id": "8bfe3c2a-4201-4df9-bd8c-c486661e3459",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fcf5430-f1ed-4d98-b5e3-fd5bb27af97e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb80e98e-f6a8-48bf-a4fd-0bef606a3ae5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f3edc50-4d78-45f3-816c-cc81638b8117",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "845ef311-5cb2-4bc6-a9f5-2329755bfdbf",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "560926da-0411-425f-b227-499af76958da",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60dea6e0-38d7-4d7d-9e71-2883cf482d04",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "31b49be3-45c8-4bd1-9b10-5f769e50a80c",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "175c811f-d3bf-4131-8240-40366433f276",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6c60fe4-9688-45d0-95ef-b251126875fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6465e41-19e3-42b1-b04c-c5a3132dcae5",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa21a7a9-c771-4e76-83ae-f90296a19171",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "b1ac6a3e-57d4-4a80-b066-56a192d551c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49d4f390-c3ea-42a1-806b-22d12c1e996b",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "84a56093-1d71-41cb-a23c-e9fac4e2985d",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d57dc61-d962-4f77-af35-5a768d544427",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "068ec6f6-4af3-4eba-af52-0cf14a60b07c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "d46fdbed-2738-4c45-8f8b-b2c71a234c0a",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "7cadca47-ead6-4b9e-9ecb-fd60f56fd411",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "3bb495cf-035a-4a97-8c8d-24e8e0a8db48",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b2ef4f8-5806-4b89-b0d1-ca67a078a97f",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "0e62a5e8-4351-4ca9-b3a6-6c1899d86659",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "605f05be-c444-42bd-8b9d-eadb07154e5c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "b7369e6f-3966-464d-b0ad-23218d8199ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "f7033612-06b0-4f82-a5c9-276c81c7c1ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea488c7a-7600-48e5-8831-ae2642f08215",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "25aa8637-bdfe-480f-8d80-e4501a1d6f3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae0b8d8f-b82a-4feb-816b-85af7313b053",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "6d6f2ee2-9f3e-46d4-b95b-d443a926e6d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "062c1c10-9893-4592-867e-38ed9be9b3ab",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "07c06b01-ea1a-41f8-8f69-a0a3f8c9aad4",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6309bea-4d6b-4987-bf7d-d46d23e278e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bc938f2-75a5-4c11-83b6-f701103be459",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d71675e-79c3-4b77-909e-ac54fca7181c",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "3e5c097a-f7da-4702-9d04-cf9426a7aca0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6fb57d14-ce79-4514-8c95-2b274540b813",
+    "name": "Prueba-crearProgramaBeca-fallo-Nombre-filantropia  (1)",
+    "commands": [{
+      "id": "08682931-c13e-4c45-b10c-0ec1e5f2e365",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b6162bc-d1ca-4e11-943e-88cc6688b5b2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90722379-7055-4145-af4f-e3c2db3bc7f2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1c036d0-e1ed-4d27-b1a7-84ac6269a459",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eec41752-0884-4a6a-b359-727f8f1e8198",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "a6b1e3e0-1c84-42aa-b50b-c84084b2cb69",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e523ee42-9a78-46d2-b29d-85a77395d0b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "25020461-10aa-4dfa-b363-d2a655fddf90",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "943f0d65-0bd9-43ce-9335-99ffbe0d1119",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "881e7953-9b69-4ef8-9d61-c6a2cb3db710",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2d17a6a-fa71-40ff-8fa3-0e6efd2c20f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "891866a4-f6b5-4778-9659-998dd3405cfe",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd6de298-03bd-449a-aca9-aba2249ca0c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9abbb7c-f974-4155-b9b3-a062e8e88761",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "f2e9fb6d-eff7-4983-9962-c74433f350c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a18fbf4-2db4-4dc4-aecb-29d720a8e5cd",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "bb924cce-3f40-424e-b2cd-d825fcd505a2",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "1d708c05-2348-4355-9fb0-0cc88a3bfd63",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "a078fa2d-b60f-48dc-8c54-798c5dc47db0",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "e945fb02-98ce-462f-a255-0b393c51bffa",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "618be937-7b82-4bc9-a9f2-6aa872ab2fdc",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "13d8ac39-bf40-462f-98b9-e731c10c3a9d",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "5e7a89ad-d3e2-433e-8f72-d00a358ff1b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "261b4188-f90f-48ed-807a-353bb1931cf9",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "cf300168-f891-4720-a275-f2b20b4c4320",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b650e7e-ab6a-479a-b3dd-e7488b6154db",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "c07da72e-c266-4fc6-b160-85a14cf88b3e",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ed06678-0910-458d-a424-8c456317bfa6",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "61800c78-562d-460b-a64b-0fced0009384",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ebd726e-cecc-4142-8529-9ada3c5c6b0f",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "8cfe5e47-ad70-4b55-a270-797cd65cdcbd",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "719c9b0c-de37-4f11-a7df-98c293c5cb8b",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0356abc-38dd-4680-8486-926363822ad1",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e9e825c-7b2f-4e78-ad98-57057045e09c",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "9c084393-5ad4-498d-aaaa-e9ed942e3bfd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "43dcfe38-53cc-450d-8ae5-e33344fc18ed",
+    "name": "Prueba-crearProgramaBeca-fallo-descripcion-filantropia ",
+    "commands": [{
+      "id": "50d91a93-afcc-44f9-b3e0-aadfce48c524",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a541bc51-9bf1-482d-b22d-58d7bef30f07",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c43552c-b360-4cd8-a0ad-b7f1d9e55b18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f2aba06-2f63-4126-b613-4e4237b63d68",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "385dcfb8-4d89-4266-94f0-8ea6420867bb",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "cba6c85d-ca7a-4b10-9f7b-e24583a43f16",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1311bd3-f733-4784-b88c-97dce511748b",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "22ed9548-178c-4aa7-8445-be34e3a6bd55",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4599683a-74cf-490d-a738-06d4c9804b0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef4bb392-ee71-42dd-8af5-f4138304494c",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45fc6387-6730-4e83-9af6-4dedc6fcf80c",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0a2dd5a-f8e8-491c-84f5-63ddabefc24b",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "b7f84881-a8d6-455f-8fdf-85175ae017b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa7065fa-8d15-4839-bbcc-4f642f642df5",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1140a77a-a2c4-477a-b55d-48dceb68699d",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bbb292f-3e6c-490a-9afc-c117e225dbeb",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "4923fa9a-18eb-4b19-8965-f698081eb9b0",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "3271d596-2de8-4ef6-a59e-05b351937fd2",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "96f3a664-2565-446b-adce-a94b5c6495a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "6c3efb03-24fc-4ddf-abe4-95bc7bf83a22",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "175dda8a-f70b-4cd2-b9b3-96326ea88515",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "92ff3594-5328-43c1-8464-1d8bfb3f4b0c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "5f087e9b-64e0-4283-80cb-9a5438454aa6",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "c9152cf0-3265-4cd0-b8de-5406a21a4878",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "7b78a565-65a6-47be-ad2d-9015ed319749",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "273d7ddb-a194-4f0b-b8b9-0cf282b33005",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "617e4921-3f80-428c-838d-0933b9bdf45f",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f44d041-81c5-4f1d-9677-14d2c322cb81",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "3c3b2463-77e1-4dda-b31a-1a929ecfe4b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad13dc6d-6a5e-4af3-886d-f2cdb4f45236",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "30878a0d-f789-4eb3-bd88-898672cb05c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "551481b8-e2e5-4b8e-b86e-cb8fe85a0e6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2be17283-5823-4118-8deb-84694656688c",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9462c678-df97-499c-b725-41a5c5617c8a",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "29553cac-73f7-47c7-9fd3-d0c8164812a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8a9ea5b5-ce7b-4da9-a947-4bd6c973ccdd",
+    "name": "Prueba-crearProgramaBeca-fallo-fecha-incio-filantropia  (1)",
+    "commands": [{
+      "id": "73483067-e4c7-453e-a56d-a203b9fe8bf8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb1960c4-4ad7-4dcd-8782-7fe0c8daf256",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e332345f-8788-413c-8569-dbfde20dcef7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a3389b1-aa06-40a8-929e-4835727c92f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb2d71a8-4400-4973-a64f-0b42fc31117f",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "96312185-fd7c-4843-a74c-5f7c1b7ce0d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98a4e8cc-26ad-4b58-8ee1-62ba1b3810f5",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "f9af80bf-cc23-4ff6-81aa-1d03070d3b74",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8b7f04a-b732-4ebf-ac9a-bdc720977607",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc372b90-d249-40dc-bb90-5aa02bd301e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb6666bc-5401-4233-95ee-43885e2977b8",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03e5ef30-73a9-468b-949b-afea697a52c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "6cb6ae97-762d-49d1-a262-5ddf718fbdfa",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23a6ef8d-5fe2-47d4-8af2-87d63a2ad1fb",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "09c04da5-3965-4b83-ab52-3defc27cfca2",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a58f2c6-79e0-4f23-9e62-a649619d5234",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "a2ee0c54-82c9-4b91-9d8c-90299c56cb83",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "5aaf40d1-2517-4f5f-ba54-d41135d508eb",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "4fc6a7f2-5841-4d14-8960-94eadfbee8ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22cf95b9-0b26-4487-9ef3-937293898354",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b39e4b0-98da-4704-8da9-7f229ecdcebc",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "ac11f2dd-45f3-4d9b-a124-fdf30676a735",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "24a16a8e-afc3-4f5c-8f77-e016d53d19a7",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "07f2b574-b146-433a-9118-d4cdd8a932e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8295caf3-10f1-4262-9fb9-f33420971c0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1518865-f23f-4cc2-84f7-7670fd4f3d61",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "e96442fa-0901-495e-bd8e-dcbbf717e843",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a639538-36b2-4c96-87ad-8a33a6eb9433",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "935bed3f-016c-4689-87a7-99a21f33f4b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc776b03-4b23-45fa-9ebb-43d201b9f909",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "ce878d44-c33c-4310-8d29-85c66a749791",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad83b72f-1995-4f02-b14a-be57e3ecd033",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18d60612-a5ee-4a96-83c4-337498b9b257",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4245c06-6b42-4a6e-8284-0f6f7d7ff3f8",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "1004f60e-4484-43c2-9fda-d85c065e5cb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ecaf0c9b-058d-428d-8680-927d916c8ce6",
+    "name": "Prueba-crearProgramaBeca-fallo-fecha-fin-filantropia ",
+    "commands": [{
+      "id": "300134be-419d-42c4-a19a-b6fafc121c32",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61880e42-0b58-4419-a63f-3b97ebac15f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "747b6b61-5c4a-4716-b99e-92c9d6811b50",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8566a816-8fd1-4cae-8b33-d5f0281f73f5",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c8b96a-d960-47c1-b546-f529c885d2cd",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "4f572c97-aaa5-49c8-9153-e38cd594898c",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bb689d2-7872-49da-969a-38b0b663a943",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "dba0a693-b5b7-47b1-ab46-2b826a91a4a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd84d59d-5955-4df9-b593-a8eca06c5559",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89a38192-d358-48a3-b44f-e5704ac9d87f",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "173bde73-9b97-4b92-a3b9-0e9d1bfe2d24",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39857429-64b5-4f9f-8f36-bb69b9dbeba0",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "f3b39a00-b2eb-4074-90c5-09ed7da2e68a",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2e46ac6-7674-4096-86cc-9167c5e9c5b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "9ae520cf-54ec-4268-afec-2b64afc9caf0",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "374901eb-4279-40d2-8d6b-ac768e9a85c0",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "d98cd6a9-2681-41a3-9a5c-dff3876d73f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "dd7d4879-51e7-4b88-ac48-1cdd58804abc",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "98282c59-08b2-47d7-934f-0e8fe313360c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "1147a419-7fab-4b5c-b35f-908f3d712ce4",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9efc539-11ad-45ce-998b-40095bf6676d",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "a15db8c7-1282-4eca-ade7-c76a22b74a13",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "5218377f-12d2-4d35-bfc8-e69289e6dc82",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "d5363096-0075-46fe-86f8-40792793a684",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "f35825fe-b050-4b1e-96b7-f134088d075d",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68171874-85cb-4e97-9cc4-9c97fd3cd6ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "1c551cc1-e7d5-4137-b481-e4a8e70d1155",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7b5ada0-8a12-436c-a6d8-37b568014ac7",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "03d1de9e-3875-424b-8382-4e250c940a7a",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b92f53b-6468-45d7-8181-70ddf57cd680",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "c0bf73bf-87b7-42d0-9838-58c89047f29b",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5660f0c-fc35-4197-9129-c31c45b0f51c",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44b6fcfb-fe80-43ed-a16c-17e4158adf10",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4236db5e-e7bc-4aaa-832c-45f2d7eadb9d",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "17a9313a-9548-42a3-b9b4-22f84a905da0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c65c753c-e362-4161-bceb-bdb592ee49e5",
+    "name": "Prueba-crearProgramaBeca-fallo-cupos-filantropia ",
+    "commands": [{
+      "id": "856dcad2-eeb9-44a9-be05-90bf44781d10",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "181453eb-e7f8-4aec-97ea-a3e659a56840",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4314fa0b-29a2-4276-8a8e-56c9015cd9f3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "987ca7d1-d25c-4538-a4f5-985c56e82748",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cb77f06-60f6-4ca7-a7aa-c77e256e456b",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "d617f002-5a43-42ce-94bf-1101a372a9f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f5cde96-b97c-4eb4-89c1-f6c6bd787302",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "0a209678-1b4e-46ac-b2d8-2104ae0fb7be",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1204b7c6-cdb9-4dd1-9053-c8cf32a85174",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7caa7a4-c382-43ad-9859-2a0ccdc1a475",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b32fa804-df0c-4e71-b2b9-012775c821e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0120f872-2c91-46db-8fb2-9461f0f86e78",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "0955b39e-e836-4380-9cc4-7b3277ae7132",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eac9d668-71fb-4774-b053-f320109cf230",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "e224b5ba-9383-433d-b8ac-5307faae3548",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eea0837-96bf-4553-a88a-8dc1f9b4f810",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "915c3151-b18e-4768-b013-9270bd533dc9",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "46eb2af2-fce3-494b-92f7-a3c1637b687b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "937c14fb-7ca7-4d3c-b9a8-88638237a324",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "8131dd40-e773-4e35-934d-9f5116c12ac3",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "797d53cf-5a21-4126-a133-521d9d8be03c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "4187583b-d125-4acf-b0bb-be2c29829e17",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "1ac2882d-c2ce-4f4a-a4b1-f2052d8c20dc",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "af109271-343e-4ad2-9b10-c76e860f7dc4",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "afc624d2-8c96-4532-a02e-b50be24a4d85",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07969231-2453-4576-ba95-52c4c0b3c316",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97841838-026a-4d4b-ac3f-79bc6a2c62f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13b163ce-88bb-40d1-b86a-2e153c3410d8",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "5da668d3-767a-4f6f-8dba-ae4a3c1ba8bd",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03a71c64-b2fd-483a-95f0-9150b73645ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "2db4bf54-ed40-4d56-89f4-22a3efe85851",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce8bbb06-17e5-4fd6-9513-b50ed5cffc70",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38dc6832-a5ac-4524-a832-b07dbdf9b6c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95a988cc-cb26-4d80-80bc-885ebb8efe4e",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "db34517f-5a73-494a-b9dd-de06ac95e53e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0380fa73-f789-4db5-a02c-31a555f149d0",
+    "name": "Prueba-crearProgramaBeca-fallo-donante-filantropia ",
+    "commands": [{
+      "id": "25a0771c-aee7-4c7b-9820-b7efa97674a7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccd70e34-a0e5-46a3-9279-b8378c008689",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc6ec7c3-19b3-4593-9a19-2986fc4b69ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bbb7e45-8a8c-4ec7-858d-25f8df1595a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c24455d-766d-438b-8512-20ebd07d8ac6",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "d8393009-8ae3-44b9-b04f-bb5d3a3a42bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61b04760-c5d5-46d9-8c60-b5f10dec68c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "beed5c9d-11bb-49b2-bd56-9419e5911558",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e12f30-950b-4f5c-881a-5328f9573262",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2157e376-4735-4849-b07f-e2bb2aa90202",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cede92c6-2a71-4aa3-9bc0-6cb64cfe1404",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f161a9c-65c3-4054-84e5-e2ee327b8458",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "47e27007-02b1-4b20-a869-f753c9d809e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1456b998-b4f8-469c-9c77-4f8e5cc83eb6",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "a1cacafd-bc6e-41b6-ac85-1be9ce5a3ebf",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2bcc0a1-ef1f-42af-bec7-a1dd88903084",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "6caa7805-7ba5-4ae3-bacb-c924e20b8b8f",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "ad434d7b-3663-44c2-9250-385a38f0b702",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "c78aa7c7-a07f-4f8d-b33b-0e4430fcefe6",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "72268a3f-5161-4c74-9803-3366a183da48",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e41fd24-67f3-4a6f-8422-6bdc7dde2929",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "7c57ccfc-eb34-4a5b-ae45-fe33bbe71447",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "5d64fa67-9f53-4a34-b2a9-41d8964a9647",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "851118cb-fde4-465c-adad-118f32c0ab9b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "30d55119-02c6-4e2d-a261-8cc06782c6ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39a14842-1b5a-4689-aeb1-f9e78ad96b01",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "a8974faf-44f5-4dfc-bceb-3b736919059c",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "556a220e-3be7-438c-996c-47724d698909",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label="
+    }, {
+      "id": "4edcbc63-572b-41f7-9f53-60c3e2bbe02d",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc9d0919-17c6-44cf-b03a-01dd9e3dc2b8",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "90c95192-70c6-47e7-9c1e-65afb0da3057",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cad5253-7b80-4f36-87a0-7ef59c5c67dd",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73e973d5-cd2f-497a-b839-18152d9c5dbe",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7091f70-3635-4ff0-b9e7-3ea01dda8353",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "52d1165e-1aef-43bd-9267-90507fcfce87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2f36c58a-a4fd-49c1-8298-9c757df57e40",
+    "name": "Prueba-crearProgramaBeca-fallo-cobertura-economica-filantropia  (1)",
+    "commands": [{
+      "id": "812c35a6-55eb-4a9c-8161-e0d20bcb4f19",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae5c599f-143c-40cc-a214-4fafaf34d785",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62f6bd9b-11ff-444b-b13a-b2172ca80c59",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2642fbc-5760-42bb-abdf-79dbecf5cbcb",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3c16ae4-5142-47cb-99ca-cc71be45f75b",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "8cd96507-9e73-4f16-a303-6ee8f679f973",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebc80e30-ce02-4b8f-8b99-cedc62bf977e",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "4a4de125-8dc9-4cdd-9da7-f3d0580dfe96",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b97e6122-e337-42bc-acdb-93d373dbcf84",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad97fc44-e527-4abc-bce9-d70fa9a539da",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21f09577-ab35-4e04-ac7d-3b6e6359b4cc",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e483e4d-3318-4a87-b8f1-159d1b12de64",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "b9412567-c0ea-4e37-8886-7ebb8c287a84",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f54fbf3-8231-4fff-97d8-d34291cfc13a",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "58d98ddf-a8f0-44f0-932a-75d5a40e4200",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99433ca7-60f9-4077-96e4-930eb1230d76",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "4e79975b-e1b7-40ce-90bb-de3b3b892163",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "23d05d41-4907-4678-bd1a-f339e578ef1f",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "4d449be6-c9be-466a-9858-57e88059d4db",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "ae51122e-579c-419d-b5dc-4ea3428a5f74",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0709bf3-1940-4b8f-876d-93d65cff6e0e",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "2ac5237d-e778-4dab-a645-b9ebee283ef5",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "1645c61c-2bc7-4687-9fe9-776f9944edd5",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "a25a98ad-114f-4694-9dff-6e1f7f12db94",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "8e6bf9e1-3a31-4fb8-9f80-dbddb27b891a",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c21418b4-e837-4ef3-99e4-22aa9a469fea",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "0d5236a6-82cc-4e2f-8e60-bc3b8607bee7",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dda7f420-f711-416a-a547-7eb76b66596d",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "3a11f2b8-6a6a-48a1-9e10-a708f597ff01",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1aae6b7-ff6f-4845-b659-9e5147a156f0",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c4edeb8-53b9-4b2f-a32b-8412afd34fb1",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1dbe3f24-fc1e-432b-b4d0-f1e195e39489",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55eefe99-9d13-451b-b70d-e53a753d75ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd77d83c-5a4a-4dfb-a968-b005d689ed31",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": "sdjfklsfj"
+    }, {
+      "id": "2d1c8d90-bc39-445f-904e-0c26a32a7a76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "14530c0d-6c04-4552-b9ba-3251cbe56677",
+    "name": "Prueba-crearProgramaBeca-fallo-requisitos-filantropia  (1)",
+    "commands": [{
+      "id": "5a2b1d98-b5e9-42a8-bc55-f632ce1e3a2f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5c7373f-7316-4ad8-9049-36078dc7d24a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a648d0ec-7c90-4f31-b9fb-fdc60d591f8b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "06d055ea-b19d-4e68-8bcb-54205d829dc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2edf1ae0-f504-4069-b643-e1088a7666ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "46bd89e2-b6c0-454b-8740-95e149c6eb43",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a250b046-3114-4866-a7dc-73bdbf81c881",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "74702a7f-4263-46d9-813c-811e6538fd37",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e514e1d-7989-4a6a-8593-1bde95bcb9e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7f4db9f-a529-4dcd-ae65-6c9f06af006a",
+      "comment": "",
+      "command": "click",
+      "target": "id=crearProgramaBecaButton",
+      "targets": [
+        ["id=crearProgramaBecaButton", "id"],
+        ["css=#crearProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='crearProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e4164f2-3902-46e7-9208-56193d7a313d",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56aeceb1-c0b8-4532-a50a-1bb6c404fe97",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "programaBecaFilantropia"
+    }, {
+      "id": "98f47fd2-a5c1-47c2-ae63-d3c7aa58c612",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c03f154-41ea-4d74-9963-e9ab075910a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion",
+      "targets": [
+        ["id=descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#descripcion", "css:finder"],
+        ["xpath=//textarea[@id='descripcion']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "progrograma beca filan"
+    }, {
+      "id": "e6254856-a638-47a0-ac91-0f4f49fcb0ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be120a91-08e7-4c38-a0b7-2c315bfc326d",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0002-05-07"
+    }, {
+      "id": "442a6ed7-0b1c-4a23-820b-e1b5147b8d17",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0020-05-07"
+    }, {
+      "id": "5bd66c54-1b77-4b9b-9bda-e191d90798d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0202-05-07"
+    }, {
+      "id": "3a5326ba-408e-4418-8eaa-05f99b50c815",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaInicio",
+      "targets": [
+        ["id=fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#fechaInicio", "css:finder"],
+        ["xpath=//input[@id='fechaInicio']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2025-05-07"
+    }, {
+      "id": "81b376f5-5e52-478c-b119-2795f73dd3b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62202f2a-f15c-4c08-909a-0a36decb0c75",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0002-09-05"
+    }, {
+      "id": "efd6cbeb-0c00-4864-9cd3-ab0198f5f63b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0020-09-05"
+    }, {
+      "id": "b11aecfe-38f7-4925-a946-1b25ef6cc9e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "0202-09-05"
+    }, {
+      "id": "51a60416-d45a-4f60-9c60-e340b0b88c9b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaFin",
+      "targets": [
+        ["id=fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#fechaFin", "css:finder"],
+        ["xpath=//input[@id='fechaFin']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "2027-09-05"
+    }, {
+      "id": "2fa3aaca-4207-4701-9323-30f36dfa0a27",
+      "comment": "",
+      "command": "click",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "674208b0-5666-4a35-b096-f6f53b80864d",
+      "comment": "",
+      "command": "type",
+      "target": "id=cupo",
+      "targets": [
+        ["id=cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#cupo", "css:finder"],
+        ["xpath=//input[@id='cupo']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "25"
+    }, {
+      "id": "619891cd-d1fb-49da-8ae3-e2473067b126",
+      "comment": "",
+      "command": "click",
+      "target": "id=donantes",
+      "targets": [
+        ["id=donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#donantes", "css:finder"],
+        ["xpath=//select[@id='donantes']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24650761-e3a8-4441-b7fb-26b255563f21",
+      "comment": "",
+      "command": "select",
+      "target": "id=donantes",
+      "targets": [],
+      "value": "label=testeoSelenium"
+    }, {
+      "id": "b8d35bc9-7590-4c72-9cfa-da92275c3a0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d560680-2456-4248-b997-5e4fce3c274f",
+      "comment": "",
+      "command": "type",
+      "target": "id=coberturaEconomica",
+      "targets": [
+        ["id=coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10005"
+    }, {
+      "id": "d538a11e-a9d7-4540-88ac-adba7140bdc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "043e89d8-931b-4dcf-bcd4-1b6d590f1b59",
+      "comment": "",
+      "command": "click",
+      "target": "id=tipoBeca",
+      "targets": [
+        ["id=tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#tipoBeca", "css:finder"],
+        ["xpath=//select[@id='tipoBeca']", "xpath:attributes"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a65984c8-54be-4fb4-9616-cc6ad3f15225",
+      "comment": "",
+      "command": "click",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de6ef0f0-1faf-49eb-bf9f-29b7dab8c915",
+      "comment": "",
+      "command": "type",
+      "target": "id=requisitos",
+      "targets": [
+        ["id=requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#requisitos", "css:finder"],
+        ["xpath=//textarea[@id='requisitos']", "xpath:attributes"],
+        ["xpath=//div[10]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b1945ab-e4f2-4ad1-a4bc-b4588a15cdc4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "02f4164c-a549-4f5f-b29d-4a02d726da29",
+    "name": "Prueba-Eliminar-programa-beca-filantropia ",
+    "commands": [{
+      "id": "935c3fd9-c2b6-4e99-a110-7ea2edce7ee7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f97570e-40f9-4ff7-923b-a72ede8a6cb4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fcb3a4a-71f7-4de9-a8b0-ea904c99f5fb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d641c9a-73b2-4d91-b2cc-11ec7e4c4a8b",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54f88db0-ddd3-4700-a5d4-f95132bd938d",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "f4c70fd8-8815-4626-be1c-8d7aa09c9397",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f916ce7-0202-4f0f-85f3-3fd5ec80b5dd",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "5198d4a0-5da0-49fd-b438-998dc4724d64",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "539fbb15-f76f-4639-b016-72b77cbae75c",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e74ce82d-c7eb-48a3-90aa-a4bbdac8c6a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=eliminarProgramaBecaButton",
+      "targets": [
+        ["id=eliminarProgramaBecaButton", "id"],
+        ["css=#eliminarProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='eliminarProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "142c4545-ee78-4ef0-803d-de7cd25beb9e",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7ec4d3c-c75c-42ff-b453-7128b255477f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) .eliminar-programa-button",
+      "targets": [
+        ["css=tr:nth-child(4) .eliminar-programa-button", "css:finder"],
+        ["xpath=(//a[contains(text(),'Eliminar')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'programaBecaFilantropia')]", "xpath:href"],
+        ["xpath=//tr[4]/td[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bccbd9d-247d-4955-9ec1-777630995dae",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "¿Estás seguro de que quieres eliminar el programa de beca \"programaBecaFilantropia\"?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bea22ec0-0c89-413a-b5d5-56dbc1be8445",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a1485c3d-a3c1-4438-9a58-d22a12c27306",
+    "name": "Prueba-visualizar-programa-beca-filantropia ",
+    "commands": [{
+      "id": "54c44274-5d58-4e31-b263-40000f61a104",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1604fb0-9f86-4af4-ab04-4daa4d4a55bc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a760af2-ad54-4b0d-aa2d-c8f41c35274f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e14ac2ec-6c82-4f88-873f-8bbd0cecb7ac",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b1b4977-925d-4bad-a43e-d580cd654e8d",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "a534a1ef-3178-48c8-9662-794f255526c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58ba3908-b316-45ba-bc30-b69f3b2de13d",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "c5d37fea-2aa3-4a6a-998c-b4ede88ded34",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82e8a176-82f3-4dfc-8f2a-6c22e3d440b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionPogramaBecasButton",
+      "targets": [
+        ["id=gestionPogramaBecasButton", "id"],
+        ["css=#gestionPogramaBecasButton", "css:finder"],
+        ["xpath=//button[@id='gestionPogramaBecasButton']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Programas de Becas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a6135c3-206c-40b6-b050-847082578083",
+      "comment": "",
+      "command": "click",
+      "target": "id=verProgramaBecaButton",
+      "targets": [
+        ["id=verProgramaBecaButton", "id"],
+        ["css=#verProgramaBecaButton", "css:finder"],
+        ["xpath=//button[@id='verProgramaBecaButton']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fcda31d-0f03-48de-bcac-0a507e988b19",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["name=nombre", "name"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//select[@id='nombre']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4530e226-75a7-4734-b0dc-6407759a152a",
+      "comment": "",
+      "command": "select",
+      "target": "id=nombre",
+      "targets": [],
+      "value": "label=visualizar-beca"
+    }, {
+      "id": "b29a90a8-bb6e-42ed-bf4f-a19c95585a03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0e5b8401-7d00-4a97-953c-70dc9f0ab898",
+    "name": "Prueba-registro-usuario (1)",
+    "commands": [{
+      "id": "c29f614f-9b1e-4422-b64f-edc8e523f08b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7a1c892-9758-4091-b5e7-7e8b66622888",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0d040b3-9343-4190-bd7d-ce83a033336b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "189c5c0e-db31-47b5-b75d-671b560bca20",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Crear Usuario",
+      "targets": [
+        ["linkText=Crear Usuario", "linkText"],
+        ["css=a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Crear Usuario')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/signup/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Crear Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e2c8325-a7e8-4cfb-b122-cdfe78c46f9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "890315e9-30be-4911-a27b-4396ac9de9b3",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "Admisiones"
+    }, {
+      "id": "4501b557-07da-45f5-8406-f1992b4360b0",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_password1",
+      "targets": [
+        ["id=id_password1", "id"],
+        ["name=password1", "name"],
+        ["css=#id_password1", "css:finder"],
+        ["xpath=//input[@id='id_password1']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "840a80cb-5284-4727-98f9-e3bbfd978f6c",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password1",
+      "targets": [
+        ["id=id_password1", "id"],
+        ["name=password1", "name"],
+        ["css=#id_password1", "css:finder"],
+        ["xpath=//input[@id='id_password1']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "Icesi12345678"
+    }, {
+      "id": "05ff3dba-7c8e-4c5f-bc1d-e84106bb8e8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_password2",
+      "targets": [
+        ["id=id_password2", "id"],
+        ["name=password2", "name"],
+        ["css=#id_password2", "css:finder"],
+        ["xpath=//input[@id='id_password2']", "xpath:attributes"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "729b5eb4-ed6b-49bd-a39d-d0b9c85bd328",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password2",
+      "targets": [
+        ["id=id_password2", "id"],
+        ["name=password2", "name"],
+        ["css=#id_password2", "css:finder"],
+        ["xpath=//input[@id='id_password2']", "xpath:attributes"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "Icesi12345678"
+    }, {
+      "id": "2b27312e-fb5c-4fea-83f4-0d81c41b5ac9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrarse')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9f2b5860-a538-4816-8d2d-c018fbe1dff7",
+    "name": "Prueba-cambiar-rol-filantropia (1)",
+    "commands": [{
+      "id": "ec91d5e2-5b30-4c2e-9fb9-f367c946c543",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f3b70fb-52bb-49bb-8c51-0a5157ff5028",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bdcd3b2-9b49-4edc-a9f8-b307bf9fb27b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22ed6921-ddcd-4c7c-a83e-111e7839bb15",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3abd9a9f-466e-4a8d-973d-950e97c5922d",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "d8b3d997-c3ff-467d-a514-d9f52eb71c66",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dbfde9d-7ff4-461d-99d8-3438dc6140db",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "787c0d6f-43c9-4208-ab2b-ee3ab2645c19",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e95d12fc-a50d-4b34-b7fa-9ce63eb0deb0",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionUsuariosRolesButton",
+      "targets": [
+        ["id=gestionUsuariosRolesButton", "id"],
+        ["css=#gestionUsuariosRolesButton", "css:finder"],
+        ["xpath=//button[@id='gestionUsuariosRolesButton']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Usuarios y Roles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ed061d1-4a53-4f54-9175-d319e731d1db",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(11) .editar-rol-select",
+      "targets": [
+        ["css=tr:nth-child(11) .editar-rol-select", "css:finder"],
+        ["xpath=//tr[11]/td[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "573c7548-3795-4861-9a5d-b97804c6316c",
+      "comment": "",
+      "command": "select",
+      "target": "css=tr:nth-child(11) .editar-rol-select",
+      "targets": [],
+      "value": "label=Donante"
+    }, {
+      "id": "73610f17-4d9f-432f-9b2c-59e5ddb29a33",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(11) .editar-rol-button",
+      "targets": [
+        ["css=tr:nth-child(11) .editar-rol-button", "css:finder"],
+        ["xpath=//tr[11]/td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0b514c7-13c3-4d85-b822-7419a55c7918",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(11) .editar-rol-button",
+      "targets": [
+        ["css=tr:nth-child(11) .editar-rol-button", "css:finder"],
+        ["xpath=//tr[11]/td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1f8f07e4-bdf2-4a2d-a17c-8b109e7e79fc",
+    "name": "Prueba-ver-usuarios-filantropia ",
+    "commands": [{
+      "id": "9e51cece-001e-44b8-b2df-6f12bc67c78d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "479233ed-3efa-46bb-97da-7f52ae2a3f2c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abcdea1e-eb32-420a-bcbb-8dbb36c5df7a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85339b97-72be-4fee-8885-d55def1cb2ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d49285e-7245-417f-aa71-4fbcfbdc32c4",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "cd32382d-fe6b-41ec-ba31-71d96d1027b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d633df84-f771-4499-b609-b2b97b0e0c99",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "fad89a0b-fa09-4f29-a051-ecf3684ab1da",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53bc5a62-8d32-407d-9ef0-d713365c83a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionUsuariosRolesButton",
+      "targets": [
+        ["id=gestionUsuariosRolesButton", "id"],
+        ["css=#gestionUsuariosRolesButton", "css:finder"],
+        ["xpath=//button[@id='gestionUsuariosRolesButton']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Usuarios y Roles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6c1d56a7-4ef3-47d0-b585-8ce22d9d173d",
+    "name": "Prueba-inicio-Beneficiario",
+    "commands": [{
+      "id": "c19d72f4-28a1-4906-bca8-0f00073ccd28",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8c168df-2cc4-41e1-b7d8-95f2f5a6b623",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec2f34f1-8ae3-4ae3-9514-c22fcbcb8f18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a35a581d-62ce-4648-95cf-406bb837e694",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cdfb713-442b-45e0-a8b8-39ab57b608d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Beneficiario"
+    }, {
+      "id": "28ffe5c9-0d76-404a-86cb-92d39191a62d",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa611ec5-eb50-493f-8a2f-9f6ecf8c02b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "Icesi12345678"
+    }, {
+      "id": "7f24a089-dc58-4dbd-b1a0-1de86aa02546",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "849701e5-f868-4ded-a5e0-41ead42f7ffb",
+    "name": "Prueba-ver-usuarios-filantropia  (1)",
+    "commands": [{
+      "id": "4a7dee55-d2ad-4f64-bfea-d9e496e52a64",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abf91c63-10b3-49a0-af31-50300391c8ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19715e62-dab2-421c-8cc5-895f1a62d10a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d62e6e4-8fca-4184-a9b4-494925cbdc9f",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3350a520-532a-4884-8182-595af45f7feb",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "filantropia"
+    }, {
+      "id": "d30bd2ba-653e-4c37-998c-77b6f847bc8a",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "177d2814-301e-44c1-80cc-c1ef089b2197",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "cdefa6e3-9570-439d-b46f-6f1b25824b65",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4a7c06f-9760-4fca-8138-c0e0ee39de3f",
+      "comment": "",
+      "command": "click",
+      "target": "id=gestionUsuariosRolesButton",
+      "targets": [
+        ["id=gestionUsuariosRolesButton", "id"],
+        ["css=#gestionUsuariosRolesButton", "css:finder"],
+        ["xpath=//button[@id='gestionUsuariosRolesButton']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gestión de Usuarios y Roles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ce9cb41-d84e-436a-b877-030331472b50",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(13) .editar-rol-select",
+      "targets": [
+        ["css=tr:nth-child(13) .editar-rol-select", "css:finder"],
+        ["xpath=//tr[13]/td[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2e0786e-1080-48d7-b867-c138d5f91c8d",
+      "comment": "",
+      "command": "select",
+      "target": "css=tr:nth-child(13) .editar-rol-select",
+      "targets": [],
+      "value": "label=Admisiones"
+    }, {
+      "id": "6f314702-989b-4de0-8885-0af0ac237de4",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(13) .editar-rol-button",
+      "targets": [
+        ["css=tr:nth-child(13) .editar-rol-button", "css:finder"],
+        ["xpath=//tr[13]/td[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b55f4b12-5fa2-4f60-95ad-fde56ccbe031",
+    "name": "Prueba-inicio-Admisiones",
+    "commands": [{
+      "id": "6c9024f1-bf3c-4362-a6fe-d0037a88ac99",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "14f914c6-0a86-4935-ab75-3f8149cd6685",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "792x730",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d593f7f6-14a7-44c9-856e-5563f395cb66",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7f14dbc-2ed7-4c4d-a3bd-6bad891565a9",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fd2e5ce-1e1c-4821-a81c-45f971b5495a",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Admisiones"
+    }, {
+      "id": "7a45436d-4cc4-44fa-9fca-8a0c5ce8aa06",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5db295de-e7c9-4456-b1fa-8185b4966900",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "Icesi12345678"
+    }, {
+      "id": "735ffd87-7726-4128-9d71-a0d9895addb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
       ],
       "value": ""
     }]
