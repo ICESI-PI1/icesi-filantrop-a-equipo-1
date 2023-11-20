@@ -145,17 +145,12 @@
 
     function verDetalles() {
         var idBeca = $('#seleccionar_beca').val();
-        // Aquí deberías realizar una petición al servidor para obtener los detalles de la beca con el id seleccionado
-        // Ejemplo: 
-        $.get('/obtener_detalles_beca/' + idBeca, function(data) {
-            // 'data' debe contener los detalles de la beca en formato JSON
-            // Puedes ajustar esta lógica según el formato real de tus datos y la forma en que deseas mostrar los detalles.
-            // Por ahora, simplemente mostraremos los detalles en un div.
-            $('#detalles-beca').html('<p>Detalles de la Beca:</p><p>' + data.nombre + '</p><p>' + data.descripcion + '</p>');
-            // Muestra la sección de detalles
-            $('#detalles-beca').removeClass('hidden');
-        });
+
+        // Redirige a la vista 'ver_beca' con el ID de la beca seleccionada
+        window.location.href = '/ver_beca/' + idBeca;
     }
+
+
 </script>
 
 
