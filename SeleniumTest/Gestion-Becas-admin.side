@@ -5,7 +5,7 @@
   "url": "http://127.0.0.1:8000/",
   "tests": [{
     "id": "db3dfbe8-a6fa-4e58-a21e-62098c1d609b",
-    "name": "Inicio-sesion-admin",
+    "name": "ainicio-sesion-admin",
     "commands": [{
       "id": "7811e599-2eb5-4c96-893e-afb7f2efd23c",
       "comment": "",
@@ -11527,6 +11527,2515 @@
         ["xpath=//button[@type='submit']", "xpath:attributes"],
         ["xpath=//button", "xpath:position"],
         ["xpath=//button[contains(.,'Ver Cronograma')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "334bdb2a-f35c-414b-ac93-802e70678e42",
+    "name": "editar-beca-admin ()",
+    "commands": [{
+      "id": "6f5b2664-8b65-4540-9085-9552b6271b60",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba6c04a1-1aa2-449e-a961-900385dfd87a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0af4f0b-73f5-467f-a88c-bf17341794cc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6175e9c-26fd-4ec2-969a-7b8196d6341a",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "625b725c-8341-4b23-ad57-96b6898c27c3",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "fc12873d-ebd9-49af-8bf5-8cc2a87ebd7f",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a58fac4d-b19b-4856-b1ff-ffb329814e5c",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "834b5701-e4c0-4d82-ac44-36883467f22c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "6984fafd-7dc8-460a-b193-0fd298f3e954",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a01fec43-b4eb-414a-975e-cb175f2f53c6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar programa beca",
+      "targets": [
+        ["linkText=Editar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/seleccionar_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aa6afc1-a037-4522-9ac7-1e14a0650f40",
+      "comment": "",
+      "command": "click",
+      "target": "id=programa_id",
+      "targets": [
+        ["id=programa_id", "id"],
+        ["name=programa_id", "name"],
+        ["css=#programa_id", "css:finder"],
+        ["xpath=//select[@id='programa_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31ca322a-13d9-4c87-8918-7e92d11c1aae",
+      "comment": "",
+      "command": "select",
+      "target": "id=programa_id",
+      "targets": [],
+      "value": "label=becapruebaEdit"
+    }, {
+      "id": "4ec73eb6-29da-4c09-91dd-8b19372fd49d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0216651-ae5e-4e90-876b-57d5806d0fba",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9a4aeaa-f007-4e67-9f70-11fa12b6455f",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "becadeprueba1cambio23"
+    }, {
+      "id": "821da912-899f-4978-b27c-7e6d3933dc84",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31f6994f-eb68-469f-8a41-5a4770c9a7dc",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "2023-06-08"
+    }, {
+      "id": "61e1fe6f-976b-4c3d-8f4b-74000f0381ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70f1f0c7-2186-4da9-bf16-d2eaffae80fb",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "2027-06-10"
+    }, {
+      "id": "86199f40-5873-4b82-b4e1-c77549f39300",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "404da29f-0b85-4a39-8b09-c0124fc82ab8",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": "65"
+    }, {
+      "id": "88cefc63-dfa9-4e1b-9893-3f9813f2f4e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "490d9ee2-1e4f-46e0-b4ea-d17f3d37a7fa",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": "58"
+    }, {
+      "id": "3f7377cc-a55c-41d7-b88f-09e67f805167",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "183afafd-cfa1-447b-9850-0374d34210ae",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": "500.01"
+    }, {
+      "id": "0bd9ea62-a959-4aea-91b6-d29a87d05374",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_tipoBeca",
+      "targets": [
+        ["id=id_tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#id_tipoBeca", "css:finder"],
+        ["xpath=//input[@id='id_tipoBeca']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[8]/input", "xpath:idRelative"],
+        ["xpath=//p[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02d73896-0710-4612-98d8-e6e58f4c09fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c6fe2fb-cfa4-4c7c-b33c-a108eaa89317",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": "ninguno ninguno"
+    }, {
+      "id": "0cb2d02e-b319-446a-9f07-0f2533351f08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5110f4c-4bff-4c68-9722-c245c62d8318",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regresar a Gestion Programa de Beca",
+      "targets": [
+        ["linkText=Regresar a Gestion Programa de Beca", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Regresar a Gestion Programa de Beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/gestion_programa_beca/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regresar a Gestion Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "15a39d0f-a2b0-46da-91a1-c14646cea22c",
+    "name": "editar-beca-fallo-fecha-admin () (1)",
+    "commands": [{
+      "id": "c8b7a3ad-4bba-42d6-a0a6-a0b6bf2b7b74",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04392a31-acaa-468a-b40c-b1efd618dbab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ce5d71a-2f71-4735-a46b-9d67a147d81e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b348993-ce51-4e41-8985-9232ad69217b",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24d0d362-d723-44ef-bf58-83b9426acb8d",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "b1a63dc0-b4db-4712-ba3f-78b16b5d0c7d",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cde891c-4d9e-4ac1-a822-35af45186578",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "47df7855-2f0e-482d-96e9-25a7c25d44fa",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bf0c073b-6183-45e1-bb4b-6ef59cb1b0bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cc54582-52b1-4650-a44c-fbc80e2673a6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar programa beca",
+      "targets": [
+        ["linkText=Editar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/seleccionar_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22e584a0-3227-4a71-8b27-76e8d9aa5aa5",
+      "comment": "",
+      "command": "click",
+      "target": "id=programa_id",
+      "targets": [
+        ["id=programa_id", "id"],
+        ["name=programa_id", "name"],
+        ["css=#programa_id", "css:finder"],
+        ["xpath=//select[@id='programa_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da70a1c9-42eb-44d1-b03c-bd6f3301d65b",
+      "comment": "",
+      "command": "select",
+      "target": "id=programa_id",
+      "targets": [],
+      "value": "label=becapruebaEdit"
+    }, {
+      "id": "0c17859c-ac71-4512-8b50-99560cb92081",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f31fcca3-d9a5-46b2-977e-9113f5ec81f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26c68b28-d8e8-43dc-82a2-749b14b15de0",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "becadeprueba1cambio23"
+    }, {
+      "id": "fd8e9e5a-f00f-42cf-9ef2-7f9af1f4d604",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f869f2b-83ca-44e6-bd8f-840387cec362",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a03096a2-f374-4772-9ed9-1505e3c55bb9",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfac5446-edb9-4fce-8067-c5fb7c9fcd3a",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "2027-06-10"
+    }, {
+      "id": "5a2dd961-211d-4b49-baab-da5179d4acd2",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5a34f2f-a086-4695-bd4a-e821a3e83c92",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": "65"
+    }, {
+      "id": "28669c1e-4ae8-49ed-9b99-8d3628b87e30",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdb8f953-01fb-49e6-8f71-fc623b07ce0a",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": "58"
+    }, {
+      "id": "4db24238-d2dc-40ab-acbe-9daa5dde2a46",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9c91fea-822a-4c92-ac3c-40cc2ec65db8",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": "500.01"
+    }, {
+      "id": "a97ef93d-d8bc-4e53-9308-85529ed4e2ef",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_tipoBeca",
+      "targets": [
+        ["id=id_tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#id_tipoBeca", "css:finder"],
+        ["xpath=//input[@id='id_tipoBeca']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[8]/input", "xpath:idRelative"],
+        ["xpath=//p[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0e90e25-10ef-4681-b0cc-f8c41ab3e6e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74206fbe-7010-4339-bf24-02794b7f95b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": "ninguno ninguno"
+    }, {
+      "id": "de420faf-4ef1-4e42-998f-704d7737d9dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b0041b6-6596-4da1-a190-f8876bc7bb5a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regresar a Gestion Programa de Beca",
+      "targets": [
+        ["linkText=Regresar a Gestion Programa de Beca", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Regresar a Gestion Programa de Beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/gestion_programa_beca/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regresar a Gestion Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8939ecfb-a998-4748-a51c-8dbb6e15006b",
+    "name": "editar-beca-fallo-fecha-fin-admin () (1)",
+    "commands": [{
+      "id": "e77e4c49-0fdf-4e7f-a6ed-eb65b31828c6",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "301f2150-4ca1-415a-a9b8-5144777acb28",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a9ef5c6-2a5f-4dff-b8b9-588ec41712d8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b1738c3-3d39-4b9a-b2d1-60874a81fb3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a031bda1-c393-490f-ab20-ec285a5064ad",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "d4e6323d-7732-4755-81de-b001f8982944",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a587d6fd-61b7-4deb-82e3-09eca507eecb",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "d228c7ac-2c50-444c-a4af-5877dc87aa10",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "8f56ce51-a8e3-4f45-b064-6a45b3559d96",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7273c140-b34c-4ae2-92e8-aad69f2afe58",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar programa beca",
+      "targets": [
+        ["linkText=Editar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/seleccionar_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7456806f-786b-494d-bced-3ed32d982ec7",
+      "comment": "",
+      "command": "click",
+      "target": "id=programa_id",
+      "targets": [
+        ["id=programa_id", "id"],
+        ["name=programa_id", "name"],
+        ["css=#programa_id", "css:finder"],
+        ["xpath=//select[@id='programa_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65cf59fa-675c-4868-b238-1fed69f734d9",
+      "comment": "",
+      "command": "select",
+      "target": "id=programa_id",
+      "targets": [],
+      "value": "label=becapruebaEdit"
+    }, {
+      "id": "156f8f02-0ccd-44d0-b420-effc84c9fadc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeb030c5-cc8d-4e7d-b99a-4dda303a6f98",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd556543-7958-419c-b503-710dbeaa835b",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "becadeprueba1cambio23"
+    }, {
+      "id": "d1dbf8dd-722c-4cc4-8f0e-64cd896ce81c",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57459c07-41f8-4f54-9487-31ccb07c294f",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "2023-06-08"
+    }, {
+      "id": "a6be5998-dc85-4ca0-8425-09b39e771c05",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9b74649-8f89-4c15-a0df-fcddb88acb8f",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a65efb69-8121-4dc0-bd69-ab754732ab5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0959d7d0-6e6c-4331-94cf-be4687a7c825",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": "65"
+    }, {
+      "id": "a331d5ac-2f5f-42ca-8e28-8daac3f54051",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f64dfb51-d5cd-47ba-9790-de62942352b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": "58"
+    }, {
+      "id": "b4f238f2-7bc5-4419-8091-bb7408723653",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f7c647e-030a-4cf2-b2f9-644a7b02ed7f",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": "500.01"
+    }, {
+      "id": "b866d74c-45a6-4139-9379-117c78323e8a",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_tipoBeca",
+      "targets": [
+        ["id=id_tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#id_tipoBeca", "css:finder"],
+        ["xpath=//input[@id='id_tipoBeca']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[8]/input", "xpath:idRelative"],
+        ["xpath=//p[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b847121e-c963-4e7b-ae49-09e4f384c5c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ceed74c-47eb-4177-98df-eb8483037554",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": "ninguno ninguno"
+    }, {
+      "id": "78f25fc0-62c1-4c92-8d44-4a718db8d9ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18b5d4cd-312d-4cf2-9b62-41090a63363d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regresar a Gestion Programa de Beca",
+      "targets": [
+        ["linkText=Regresar a Gestion Programa de Beca", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Regresar a Gestion Programa de Beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/gestion_programa_beca/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regresar a Gestion Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8324811e-3f1f-4475-9794-f59e89f897d8",
+    "name": "editar-beca-fallo-cupo-admin () (1)",
+    "commands": [{
+      "id": "abb289d7-dfe4-4f15-ac09-ca12355604b0",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96e90780-27c5-4d17-8f2e-72173ac7934e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62d2f853-6de5-41e3-8b89-5c1cf09b58f3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebc292a2-0c3a-48f9-91ca-ca740e9d4666",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf116265-5690-468a-abd4-3fdc84b3959e",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "392f038a-5540-44d1-8bc5-7459ab6ba232",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31a3c290-080c-4486-9e19-d30c5da0a271",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "ed538ccf-4a47-4262-add3-7482eb3d6d9d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "b65e4bb1-b846-44f0-8896-80539bd49c76",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eacada90-d523-4938-9c2b-d423e6ed5c58",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar programa beca",
+      "targets": [
+        ["linkText=Editar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/seleccionar_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "046819cb-0757-458d-9cc9-ce6db2094f01",
+      "comment": "",
+      "command": "click",
+      "target": "id=programa_id",
+      "targets": [
+        ["id=programa_id", "id"],
+        ["name=programa_id", "name"],
+        ["css=#programa_id", "css:finder"],
+        ["xpath=//select[@id='programa_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdcf3b3c-56d4-4f22-84fb-93f50f8c40c4",
+      "comment": "",
+      "command": "select",
+      "target": "id=programa_id",
+      "targets": [],
+      "value": "label=becapruebaEdit"
+    }, {
+      "id": "03901119-631f-4653-b9cd-f1cb8537f098",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63be3572-9a6f-433f-8a6e-ceaea66cf82a",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ecd8eb0-9020-4b9c-8cf2-2588fd17da8f",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "becadeprueba1cambio23"
+    }, {
+      "id": "82e84965-408a-4694-a3bd-7d4bf8c4dcca",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ddbf63f-07c2-488c-89df-15211d3b0946",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "2023-06-08"
+    }, {
+      "id": "09b60991-6c51-4869-9acc-076aa305d810",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84b1eceb-097b-4e35-a2cd-d4204a44e2d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "2027-06-10"
+    }, {
+      "id": "5d4f4df9-5cac-4026-a35d-367c9330becb",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b021da5-7a60-4cae-8b4c-fc87c86e25af",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a52b101-16d7-4dba-8534-463ad3164065",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47a31b02-9ff6-43ac-a58f-897fd3888f60",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": "58"
+    }, {
+      "id": "5f4d31aa-d24f-46e9-b39c-5ba2ff907993",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0846083d-6838-4e5e-8e66-9657fac0b63b",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": "500.01"
+    }, {
+      "id": "cf55ff7f-ac4f-44b7-9510-52e06f93be02",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_tipoBeca",
+      "targets": [
+        ["id=id_tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#id_tipoBeca", "css:finder"],
+        ["xpath=//input[@id='id_tipoBeca']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[8]/input", "xpath:idRelative"],
+        ["xpath=//p[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "184a57bd-ae15-439a-b892-c88fe11695dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3f9c828-e171-4902-8664-8b411250bfba",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": "ninguno ninguno"
+    }, {
+      "id": "9f5c7095-7a03-484f-bcec-925c5b56f632",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "097a2f5c-a827-4fe1-85d6-70cb72b783bc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regresar a Gestion Programa de Beca",
+      "targets": [
+        ["linkText=Regresar a Gestion Programa de Beca", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Regresar a Gestion Programa de Beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/gestion_programa_beca/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regresar a Gestion Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "284ee0fd-c4dd-4ac3-bfb6-59b11091d77e",
+    "name": "editar-beca-fallo-donantes-admin () (1)",
+    "commands": [{
+      "id": "09f74446-b0d5-4c70-aee5-16a24a439bfc",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "826687a4-df52-4f66-a250-e6cd2d6d73e9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8241b753-f944-4e85-a5ed-c1fbd1368174",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a58b235-15af-406e-ad6e-d609b101d0ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8ad706b-f501-49a6-8d54-9862ebaf086c",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "2c77ff52-8a81-4f49-b37e-e5b92183a50d",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac28de11-0f35-4b89-931f-84e542e0b430",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "177d800b-48ce-4ed2-ae25-c0e3b1c33e69",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ca431f40-9d13-4db3-8b10-952876a2ebfa",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73fd1c34-038c-478a-8017-056c8bb23764",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar programa beca",
+      "targets": [
+        ["linkText=Editar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/seleccionar_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67d1e8c1-c0ed-4a88-a711-b4407c59e000",
+      "comment": "",
+      "command": "click",
+      "target": "id=programa_id",
+      "targets": [
+        ["id=programa_id", "id"],
+        ["name=programa_id", "name"],
+        ["css=#programa_id", "css:finder"],
+        ["xpath=//select[@id='programa_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dd66fba-0b9f-495d-b380-5d4dd0ee55ad",
+      "comment": "",
+      "command": "select",
+      "target": "id=programa_id",
+      "targets": [],
+      "value": "label=becapruebaEdit"
+    }, {
+      "id": "2cc17920-029d-4a3b-87ce-de8cb715c9f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25b3aba7-a58e-4db3-9db5-3f5716f140f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8a0e50b-79b4-4e73-ac10-91c06b4781c1",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "becadeprueba1cambio23"
+    }, {
+      "id": "52f0efa2-5bc8-4cce-a9e7-ef245bab7022",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29db1288-6405-4315-a98d-dbaf927a209c",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "2023-06-08"
+    }, {
+      "id": "46c26bf0-57c5-435d-a77e-e1e62b52501e",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0910923c-d4f7-4e20-947f-677af9912466",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "2027-06-10"
+    }, {
+      "id": "28cc894e-fc97-4ad5-a2a2-8093370b9df1",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4db92e91-6ae8-4e0f-be7b-4e3f9f229dbd",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": "65"
+    }, {
+      "id": "015d88d2-a0e6-4e42-8744-9ab6c31cfdaf",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4880c0ea-1588-4261-ad73-56b0e46a32c4",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": "500.01"
+    }, {
+      "id": "18051046-6a1a-4d71-a9ba-85053b8dd4ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fe0c11d-452f-4d90-ad02-3946032f243a",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": "500.01"
+    }, {
+      "id": "e47feab9-3e85-4545-9932-04a47198432c",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_tipoBeca",
+      "targets": [
+        ["id=id_tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#id_tipoBeca", "css:finder"],
+        ["xpath=//input[@id='id_tipoBeca']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[8]/input", "xpath:idRelative"],
+        ["xpath=//p[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3092cbd9-f8e6-4267-a71d-40feb72e4869",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7edadc09-b091-4a66-ba19-726fb94906fb",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": "ninguno ninguno"
+    }, {
+      "id": "e24cc2ae-f85f-4d50-9345-7ca76505f8b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd2d1ff5-dbb6-432b-91a6-84076f612346",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regresar a Gestion Programa de Beca",
+      "targets": [
+        ["linkText=Regresar a Gestion Programa de Beca", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Regresar a Gestion Programa de Beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/gestion_programa_beca/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regresar a Gestion Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e6c5ffb6-1288-4972-997d-b2c66dca96f9",
+    "name": "editar-beca-fallo-cobertura-economica-admin () (1)",
+    "commands": [{
+      "id": "a2e85867-bdbb-45fd-85fa-d72964f32171",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03a2999d-c07c-4d2b-a886-7e1a23d6856a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e36b5ec8-18a3-4d46-a9ca-6cd52bd74dc6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6fe5934-5a3e-4abb-8100-1359158f2482",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31483083-a9f8-485b-b504-55a4998dfaf7",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "5f83ece9-5ffe-4293-8c10-4b58e92c5e8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "858f9eb2-eab3-4be5-a201-b1c1e81f6221",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "ddeb18bb-9ceb-425f-98ea-0d004b08fce7",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f4b90b54-9614-4214-86dc-c9c7be66046d",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bb532b2-d879-47ec-b8bc-5c5c03eb238f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Editar programa beca",
+      "targets": [
+        ["linkText=Editar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Editar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/seleccionar_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Editar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f99bf27-6b28-483e-b612-e5c50b3dff6e",
+      "comment": "",
+      "command": "click",
+      "target": "id=programa_id",
+      "targets": [
+        ["id=programa_id", "id"],
+        ["name=programa_id", "name"],
+        ["css=#programa_id", "css:finder"],
+        ["xpath=//select[@id='programa_id']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9856573b-d70b-4393-a443-6e8fec40a51a",
+      "comment": "",
+      "command": "select",
+      "target": "id=programa_id",
+      "targets": [],
+      "value": "label=becapruebaEdit"
+    }, {
+      "id": "fa8f3db4-7004-4d1d-9425-293b0f0b0b70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48f38697-7618-4c2a-a9a9-49d8b0b0e26b",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "891f5559-43a0-40bd-96e3-f2edc658fdd5",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_descripcion",
+      "targets": [
+        ["id=id_descripcion", "id"],
+        ["name=descripcion", "name"],
+        ["css=#id_descripcion", "css:finder"],
+        ["xpath=//textarea[@id='id_descripcion']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "becadeprueba1cambio23"
+    }, {
+      "id": "94363524-8315-4e24-b923-b387b387bede",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78e85393-3ed0-477e-a9fb-31a350acf22b",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaInicio",
+      "targets": [
+        ["id=id_fechaInicio", "id"],
+        ["name=fechaInicio", "name"],
+        ["css=#id_fechaInicio", "css:finder"],
+        ["xpath=//input[@id='id_fechaInicio']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "2023-06-08"
+    }, {
+      "id": "a9012ea8-7e68-4e66-8b47-cb3a01ce30e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "583c7f77-20bf-432d-9a34-148dc6edd53e",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_fechaFin",
+      "targets": [
+        ["id=id_fechaFin", "id"],
+        ["name=fechaFin", "name"],
+        ["css=#id_fechaFin", "css:finder"],
+        ["xpath=//input[@id='id_fechaFin']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "2027-06-10"
+    }, {
+      "id": "b4fec423-34be-41cc-a26d-b89ce7bf6f4f",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "525850c5-6580-403b-9824-1f11a252004c",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cupo",
+      "targets": [
+        ["id=id_cupo", "id"],
+        ["name=cupo", "name"],
+        ["css=#id_cupo", "css:finder"],
+        ["xpath=//input[@id='id_cupo']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[5]/input", "xpath:idRelative"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": "65"
+    }, {
+      "id": "f204d1fb-6b6a-472d-99ec-6e210b728ff3",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2a4fa81-ecbf-4ff2-b222-8f055d25b740",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_donantes",
+      "targets": [
+        ["id=id_donantes", "id"],
+        ["name=donantes", "name"],
+        ["css=#id_donantes", "css:finder"],
+        ["xpath=//input[@id='id_donantes']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[6]/input", "xpath:idRelative"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": "58"
+    }, {
+      "id": "bdcad2e7-b77d-4551-992d-5d47ab9dea01",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95464629-26d7-4ab0-9ac7-3f79469cedae",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_coberturaEconomica",
+      "targets": [
+        ["id=id_coberturaEconomica", "id"],
+        ["name=coberturaEconomica", "name"],
+        ["css=#id_coberturaEconomica", "css:finder"],
+        ["xpath=//input[@id='id_coberturaEconomica']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[7]/input", "xpath:idRelative"],
+        ["xpath=//p[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97cfc874-74f8-4628-be74-b6614c33d506",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_tipoBeca",
+      "targets": [
+        ["id=id_tipoBeca", "id"],
+        ["name=tipoBeca", "name"],
+        ["css=#id_tipoBeca", "css:finder"],
+        ["xpath=//input[@id='id_tipoBeca']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[8]/input", "xpath:idRelative"],
+        ["xpath=//p[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbbe72c4-9c64-4c7c-8bf7-75f197a70b88",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1fef0de-13e8-4c92-a3cf-fff49ebd91fc",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_requisitos",
+      "targets": [
+        ["id=id_requisitos", "id"],
+        ["name=requisitos", "name"],
+        ["css=#id_requisitos", "css:finder"],
+        ["xpath=//textarea[@id='id_requisitos']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/p[9]/textarea", "xpath:idRelative"],
+        ["xpath=//p[9]/textarea", "xpath:position"]
+      ],
+      "value": "ninguno ninguno"
+    }, {
+      "id": "781c0054-d9df-4209-bd42-458146827a2e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='editar-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f0fc1a4-739a-4928-90bb-4dfec81190f4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Regresar a Gestion Programa de Beca",
+      "targets": [
+        ["linkText=Regresar a Gestion Programa de Beca", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Regresar a Gestion Programa de Beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/gestion_programa_beca/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Regresar a Gestion Programa de Beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9ec6d0c0-8080-46b4-ab80-c518fc604563",
+    "name": "buscar-beca-admin",
+    "commands": [{
+      "id": "4190b045-261d-440f-8a5f-cefbc7120b9d",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "547ab4a8-4bc3-46dc-8900-536b7ec43da5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e853a05-fe67-43f1-96cb-3ec38715deab",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iniciar Sesión",
+      "targets": [
+        ["linkText=Iniciar Sesión", "linkText"],
+        ["css=.login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Iniciar Sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a49a0d6-4f98-4aa6-a2ba-f95eabe9dab7",
+      "comment": "",
+      "command": "click",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa1ed991-c422-4de7-92f2-9bf03269837d",
+      "comment": "",
+      "command": "type",
+      "target": "id=usuario",
+      "targets": [
+        ["id=usuario", "id"],
+        ["name=usuario", "name"],
+        ["css=#usuario", "css:finder"],
+        ["xpath=//input[@id='usuario']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "juanb"
+    }, {
+      "id": "52e7ec55-7a1c-4732-97c4-205a6c1fb2a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72b97fa4-82f2-49dd-a64a-0a1092f927a6",
+      "comment": "",
+      "command": "type",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "icesi12345678"
+    }, {
+      "id": "4f0d5a51-c990-45e7-ada1-10c0bbdbb5cb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=contraseña",
+      "targets": [
+        ["id=contraseña", "id"],
+        ["name=contraseña", "name"],
+        ["css=#contrase\\F1 a", "css:finder"],
+        ["xpath=//input[@id='contraseña']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "4c095aeb-4658-42cc-a298-7d071a470a9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar Sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d405ce93-ba57-4473-a89b-474ae1c59ad7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Buscar programa beca",
+      "targets": [
+        ["linkText=Buscar programa beca", "linkText"],
+        ["css=.dropdown:nth-child(2) a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Buscar programa beca')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/ver_programa_beca/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Buscar programa beca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "084b3257-4076-45b7-acee-0df6629ee6f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=seleccionar_beca",
+      "targets": [
+        ["id=seleccionar_beca", "id"],
+        ["name=seleccionar_beca", "name"],
+        ["css=#seleccionar_beca", "css:finder"],
+        ["xpath=//select[@id='seleccionar_beca']", "xpath:attributes"],
+        ["xpath=//form[@id='ver-beca-form']/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09a661c8-e036-45f9-b079-d42853005c97",
+      "comment": "",
+      "command": "select",
+      "target": "id=seleccionar_beca",
+      "targets": [],
+      "value": "label=becaprueba"
+    }, {
+      "id": "ecfb4522-c52e-4023-9fbb-84a5b32c96e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-submit",
+      "targets": [
+        ["css=.btn-submit", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//form[@id='ver-beca-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver Detalles')]", "xpath:innerText"]
       ],
       "value": ""
     }]
