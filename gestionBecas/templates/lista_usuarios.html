@@ -79,29 +79,33 @@
     
         const selectoresEditar = document.querySelectorAll('.editar-rol-select');
     
-        selectoresEditar.forEach(function(selector) {
-            selector.addEventListener('change', function() {
-                const username = this.getAttribute('data-username');
-                const nuevoFirstName = this.value;
-    
-                // Enviar el nuevoFirstName al servidor
-                fetch('/editar_firstname/' + username + '/', {
+        selectoresEditar.forEach(async function (selector) {
+        selector.addEventListener('change', async function () {
+            const username = this.getAttribute('data-username');
+            const nuevoFirstName = this.value;
+
+            try {
+                const response = await fetch('/editar_firstname/' + username + '/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                         'X-CSRFToken': '{{ csrf_token }}'
                     },
                     body: 'first_name=' + encodeURIComponent(nuevoFirstName)
-                }).then(function(response) {
-                    if (response.ok) {
-                        // Actualizar el valor en la página
-                        document.getElementById('firstname-' + username).textContent = nuevoFirstName;
-                    } else {
-                        alert('Hubo un error al guardar los cambios.');
-                    }
                 });
-            });
+
+                if (response.ok) {
+                    // Actualizar el valor en la página
+                    document.getElementById('firstname-' + username).textContent = nuevoFirstName;
+                } else {
+                    throw new Error('Error al guardar los cambios.');
+                }
+            } catch (error) {
+                // Manejar errores de red o del servidor
+                alert('Hubo un error al guardar los cambios: ' + error.message);
+            }
         });
+    });
     });
     </script>
 
