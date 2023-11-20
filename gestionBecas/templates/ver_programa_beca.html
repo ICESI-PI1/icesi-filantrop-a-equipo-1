@@ -3,45 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Programa de Beca</title>
+    <title>Escoger y Ver Detalles de Beca</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/static/inicio.css">
     <style>
-        /* Estilos existentes */
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 3;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("/static/images/watermark.jpg");
+            background-size: cover;
         }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%;
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
             border-radius: 10px;
+            margin-bottom: 20px;
         }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+        .logo-box img {
+            max-width: 250px;
+            max-height: 250px;
         }
 
         .form-container {
@@ -51,14 +36,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             max-width: 600px;
             width: 100%;
-            margin-top: 20px;
         }
 
         .form-container h2 {
             color: #333;
             text-align: center;
             margin-bottom: 20px;
-
         }
 
         .form-group {
@@ -73,8 +56,9 @@
             flex: 1;
         }
 
-        .form-group input, 
-        .form-group textarea {
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
             flex: 2;
             padding: 10px;
             border: 1px solid #ccc;
@@ -86,22 +70,6 @@
         .form-group textarea {
             height: 100px;
             resize: vertical;
-        }
-
-        .top {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            margin-top: 25px;
-        }
-
-        .top input {
-            flex: 2;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            width: 100%;
         }
 
         .btn-submit {
@@ -119,82 +87,72 @@
             background-color: #0056b3;
         }
 
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin: 0;
+        }
 
-        .program-details {
-        width: 100%;
-        margin-top: 20px;
-        border-collapse: collapse;
-    }
+        .success-message {
+            color: green;
+            font-size: 14px;
+            margin: 0;
+        }
 
-    .program-details th, .program-details td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-
-    .program-details th {
-        background-color: #f2f2f2;
-    }
+        /* Nueva regla de estilo para ocultar la sección de edición */
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-<!-- Modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Detalles del Programa de Beca: {{programa_seleccionado.nombre}}</h2>
-        <table class="program-details">
-            <tr>
-                <th>Descripción</th>
-                <td>{{ programa_seleccionado.descripcion }}</td>
-            </tr>
-            <tr>
-                <th>Fecha de Inicio</th>
-                <td>{{ programa_seleccionado.fechaInicio }}</td>
-            </tr>
-            <tr>
-                <th>Fecha de Fin</th>
-                <td>{{ programa_seleccionado.fechaFin }}</td>
-            </tr>
-            <tr>
-                <th>Cupo</th>
-                <td>{{ programa_seleccionado.cupo }}</td>
-            </tr>
-            <tr>
-                <th>Donantes</th>
-                <td>{{ programa_seleccionado.donantes }}</td>
-            </tr>
-            <tr>
-                <th>Requisitos</th>
-                <td>{{ programa_seleccionado.requisitos }}</td>
-            </tr>
-            <tr>
-                <th>Cobertura Económica</th>
-                <td>{{ programa_seleccionado.coberturaEconomica }}</td>
-            </tr>
-        </table>
+    <div class="logo-box">
+        <img src="/static/images/ban-icesi.png" alt="Logo">
     </div>
-</div>
 
+    <div class="form-container">
+        <h2>Escoger y Ver Detalles de Beca</h2>
+        <form method="post" id="ver-beca-form" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="seleccionar_beca">Seleccionar Beca:</label>
+                <select id="seleccionar_beca" name="seleccionar_beca" required style="width: 100%; padding: 10px; font-size: 14px;">
+                    <option value="">Seleccionar una beca</option>
+                    <!-- Agregar opciones dinámicamente según tus necesidades -->
+                </select>
+            </div>
+            <button class="btn-submit" type="button" onclick="verDetalles()">Ver Detalles</button>
+        </form>
 
+        <div class="form-container hidden" id="detalles-beca">
+            <!-- Aquí se mostrarán los detalles de la beca seleccionada -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-            function openModal() {
-                document.getElementById('myModal').style.display = 'block';
-            }
+    // Puedes cargar dinámicamente las opciones del select con datos del servidor si es necesario
+    // Ejemplo:
+    $.get('/obtener_becas', function(data) {
+        // 'data' debe contener la lista de becas en formato JSON
+        // Puedes ajustar esta lógica según el formato real de tus datos y el valor que deseas mostrar en la opción.
+        for (var i = 0; i < data.length; i++) {
+            $('#seleccionar_beca').append('<option value="' + data[i].id + '">' + data[i].nombre + '</option>');
+        }
+    });
 
-            function closeModal() {
-                document.getElementById('myModal').style.display = 'none';
-            }
+    function verDetalles() {
+        var idBeca = $('#seleccionar_beca').val();
 
-            // Cierra el modal si el usuario hace clic fuera del contenido
-            window.onclick = function(event) {
-                if (event.target === document.getElementById('myModal')) {
-                    closeModal();
-                }
-            }
-        </script>
-    </div>
+        // Redirige a la vista 'ver_beca' con el ID de la beca seleccionada
+        window.location.href = '/ver_beca/' + idBeca;
+    }
+
+
+</script>
+
 
 </body>
 </html>

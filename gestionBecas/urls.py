@@ -25,6 +25,7 @@ from .views.seleccionar_pb2 import Seleccionar2ProgramaBecaView
 from .views.eliminar_cronograma import EliminarCronograma, EliminarCronogramaIndividual
 from .views.ver_cronograma import VerCronogramaView 
 from .views.eliminar_programa_beca import EliminarProgramaBeca, EliminarProgramaBecaIndividual
+from .views.obtener_becas import ObtenerProgramasBecaView,DetallesProgramaBecaView,VerBecaView
 
 
 app_name = 'app_login'
@@ -57,5 +58,7 @@ urlpatterns  = [
     path('ver_cronograma/', views.ver_cronograma.VerCronogramaView.as_view(), name='ver_cronograma'),
     path('eliminar_programa_beca/', views.eliminar_programa_beca.EliminarProgramaBeca.as_view(), name='eliminar_programa_beca'),
    path('eliminar_programa_beca_individual/<int:programa_id>/', views.eliminar_programa_beca.EliminarProgramaBecaIndividual.as_view(), name='eliminar_programa_beca_individual'),
-
+    path('obtener_becas/', views.obtener_becas.ObtenerProgramasBecaView.as_view(), name='obtener_beca'),
+     path('obtener_detalles_programa_beca/<int:id_programa_beca>/', views.obtener_becas.DetallesProgramaBecaView.as_view(), name='obtener_detalles_programa_beca'),
+     path('ver_beca/<int:pk>/', views.obtener_becas.VerBecaView.as_view(), name='ver_beca'),
 ]
