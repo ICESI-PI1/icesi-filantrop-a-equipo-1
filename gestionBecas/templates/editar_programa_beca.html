@@ -57,7 +57,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             flex: 2;
             padding: 10px;
             border: 1px solid #ccc;
@@ -97,6 +98,11 @@
             font-size: 14px;
             margin: 0;
         }
+
+        /* Nueva regla de estilo para ocultar la sección de edición */
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -109,20 +115,12 @@
         <h2>Escoger Beca para Editar</h2>
         <form method="post" id="editar-beca-form" action="">
             {% csrf_token %}
-            <div class="form-group">
-                <label for="seleccionar_beca">Seleccionar Beca:</label>
-                <select id="seleccionar_beca" name="id_beca" required>
-                    <option value="" disabled selected>Seleccionar Beca</option>
-                    {% for beca in becas %}
-                        <option value="{{ beca.id }}">{{ beca.nombre }}</option>
-                    {% endfor %}
-                </select>
-            </div>
+            
             {{ form.as_p }}
             <button class="btn-submit" type="submit">Editar Beca</button>
         </form>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -134,93 +132,32 @@
         });
     </script>
 
-</body>
-        <h2>Editar Programa de Beca</h2>
-        {% if success_message %}
-            <p class="success-message">{{ success_message }}</p>
-        {% endif %}
-        <a href="{% url 'app_login:gestion_programa_beca' %}">Regresar a Gestion Programa de Beca</a>
-        {% if programa_seleccionado %}
-            <form method="post">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" value="{{ programa_seleccionado.nombre }}" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" cols="50" required>{{ programa_seleccionado.descripcion }}</textarea>
-                </div>
-                <div class="form-group">
-                    <label for="fechaInicio">Fecha de Inicio:</label>
-                    <input type="date" id="fechaInicio" name="fechaInicio" value="{{ programa_seleccionado.fechaInicio }}" required>
-                </div>
-                <div class="form-group">
-                    <label for="fechaFin">Fecha de Fin:</label>
-                    <input type="date" id="fechaFin" name="fechaFin" value="{{ programa_seleccionado.fechaFin }}" required>
-                </div>
-                <div class="form-group">
-                    <label for="cupo">Cupo:</label>
-                    <input type="number" id="cupo" name="cupo" min="1" value="{{ programa_seleccionado.cupo }}" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="donantes">Donantes:</label>
-                    <select id="donantes" name="donantes" required style="width: 70%; padding: 10px; font-size: 14px;">
-                        {% for usuario in usuarios_donantes %}
-                            <option value="{{ usuario.username }}" {% if usuario.username == programa_seleccionado.donantes %} selected {% endif %}>
-                                {{ usuario.username }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                    <button type="button" id="agregarDonante">Agregar</button>
-                </div>                               
-                
-                <div class="form-group">
-                    <label>Donantes Seleccionados:</label>
-                    <ul id="donantesSeleccionados">
-                        <li>{{ programa_seleccionado.donantes }}</li>
-                    </ul>
-                </div>                
+    {% if programa_seleccionado %}
+        <div class="form-container {% if not programa_seleccionado %}hidden{% endif %}">
+    
+            
+            {% if success_message %}
+                <p class="success-message">{{ success_message }}</p>
+            {% endif %}
+            
+            <a href="{% url 'app_login:gestion_programa_beca' %}">Regresar a Gestion Programa de Beca</a>
 
-                <div class="form-group">
-                    <label for="coberturaEconomica">Cobertura Económica:</label>
-                    <input type="number" id="coberturaEconomica" name="coberturaEconomica" step="0.01" value="{{ programa_seleccionado.coberturaEconomica }}" required>
-                </div>
-                <div class="form-group">
-                    <label for="tipoBeca">Tipo de Beca:</label>
-                    <select id="tipoBeca" name="tipoBeca" required style="width: 100%; padding: 10px; font-size: 14px;">
-                        <option value="Beca 1" {% if programa_seleccionado.tipoBeca == 'Beca Deportiva' %} selected {% endif %}>
-                            Beca Deportiva
-                        </option>
-                        <option value="Beca 2" {% if programa_seleccionado.tipoBeca == 'Beca Academica' %} selected {% endif %}>
-                            Beca Academica
-                        </option>
-                        <option value="Beca 3" {% if programa_seleccionado.tipoBeca == 'Beca Convenio' %} selected {% endif %}>
-                            Beca Convenio
-                        </option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="requisitos">Requisitos:</label>
-                    <textarea id="requisitos" name="requisitos" rows="4" cols="50" required>{{ programa_seleccionado.requisitos }}</textarea>
-                </div>
-                <button class="btn-submit" type="submit">Guardar Cambios</button>
-            </form>
-        {% endif %}
-    </div>
-</body>
-<script>
-    document.getElementById('agregarDonante').addEventListener('click', function() {
-        var select = document.getElementById('donantes');
-        var selectedOption = select.options[select.selectedIndex];
-        var donantesSeleccionados = document.getElementById('donantesSeleccionados');
+          
+        </div>
 
-        if (selectedOption) {
-            var listItem = document.createElement('li');
-            listItem.textContent = selectedOption.text;
-            donantesSeleccionados.appendChild(listItem);
-        }
-    });
-</script>
+        <script>
+            document.getElementById('agregarDonante').addEventListener('click', function() {
+                var select = document.getElementById('donantes');
+                var selectedOption = select.options[select.selectedIndex];
+                var donantesSeleccionados = document.getElementById('donantesSeleccionados');
+
+                if (selectedOption) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = selectedOption.text;
+                    donantesSeleccionados.appendChild(listItem);
+                }
+            });
+        </script>
+    {% endif %}
+</body>
 </html>
