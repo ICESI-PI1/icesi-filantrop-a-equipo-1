@@ -228,13 +228,24 @@ def eliminar_programa_beca(request):
     context = {'programas_de_beca': programas_de_beca}
     return render(request, 'eliminar_programa_beca.html', context)
 
-def eliminar_programa_beca_individual(request, programa_nombre):
-    try:
-        programa_beca = ProgramaBeca.objects.get(nombre=programa_nombre)
-        programa_beca.delete()
-        return JsonResponse({'success': True, 'message': 'Programa de Beca eliminado con éxito.'})
-    except ProgramaBeca.DoesNotExist:
-        return JsonResponse({'success': False, 'message': 'El programa de beca no existe.'})
+
+
+class EliminarProgramaBecaIndividualViewTest(TestCase):
+    def setUp(self):
+        self.programa_beca = ProgramaBeca.objects.create(nombre='Programa Test')
+
+    def test_eliminar_programa_beca_individual_view_success(self):
+        response = self.client.get(reverse('app_login:eliminar_programa_beca_individual', args=[self.programa_beca.nombre]))
+        self.assertEqual(response.status_code, 200)
+        expected_data = {'success': True, 'message': 'Programa de Beca eliminado con éxito.'}
+        self.assertJSONEqual(str(response.content, encoding='utf8'), expected_data)
+
+    def test_eliminar_programa_beca_individual_view_does_not_exist(self):
+        response = self.client.get(reverse('app_login:eliminar_programa_beca_individual', args=['nonexistentprograma']))
+        self.assertEqual(response.status_code, 200)
+        expected_data = {'success': False, 'message': 'El programa de beca no existe.'}
+        self.assertJSONEqual(str(response.content, encoding='utf8'), expected_data)
+
 
 
 

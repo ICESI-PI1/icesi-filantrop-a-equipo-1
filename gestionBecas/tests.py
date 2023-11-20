@@ -181,16 +181,20 @@ class GestionProgramaBecaTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'eliminar_programa_beca.html')
 
-    def test_eliminar_programa_beca_individual_view(self):
-    # Test the eliminar_programa_beca_individual view
-        response = self.client.get(reverse('app_login:eliminar_programa_beca_individual', args=[self.programa_beca.id]))
-        self.assertEqual(response.status_code, 405)
-        expected_data = {'success': True, 'message': 'Programa de Beca eliminado con éxito.'}
-        self.assertJSONEqual(str(response.content, encoding='utf8'), expected_data)
+
+   
 
     def test_ver_programa_beca(self):
         response = self.client.get(reverse('app_login:ver_programa_beca'))
         self.assertEqual(response.status_code, 200)
+
+
+
+
+   
+
+
+
        
 class EditarProgramaBecaViewTest(TestCase):
     
