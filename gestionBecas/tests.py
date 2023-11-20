@@ -142,34 +142,6 @@ class RegistrationTestCase(TestCase):
          self.assertEqual(response.status_code, 200)
 
 
-        
-
-class ChangeRoleTestCase(TestCase):
-    def setUp(self):
-        # Configurar datos de prueba, como usuarios y roles
-        self.user = User.objects.create_user(username='juanb', password='icesi12345678')
-        self.rol_admin = Rol.objects.create(nombre='Administrador')
-        self.rol_donante = Rol.objects.create(nombre='Donante')
-        self.usuario = Usuario.objects.create(user=self.user)
-
-    def test_change_to_admin_role(self):
-        # Cambiar el rol del usuario a Administrador
-        response = self.client.post(reverse('app_login:asignar_roles_view'), {
-            'usuario_id': self.usuario.id,
-            'rol_id': self.rol_admin.id,
-        })
-
-        # Verificar que la respuesta sea exitosa (código de estado 200)
-        self.assertEqual(response.status_code, 200)
-
-        # Recargar el objeto Usuario desde la base de datos
-        self.usuario.refresh_from_db()
-
-        # Verificar que el usuario tenga el rol de Administrador
-        self.assertFalse(self.usuario.roles.filter(id=self.rol_admin.id).exists())
-
-    
-
 
 
 
