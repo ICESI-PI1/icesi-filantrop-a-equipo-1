@@ -16,6 +16,32 @@ from django.http import HttpResponseRedirect
 
 from .models import ProgramaBeca
 from .forms import ProgramaBecaForm
+# views.py
+from django.http import JsonResponse
+from django.core.mail import send_mail
+from django.views import View
+from django.shortcuts import render
+
+from django.core.mail import send_mail
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+@csrf_exempt
+def enviar_correo(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        correo = data['correo']
+        usuario = data['usuario']
+
+        subject = 'Restablecimiento de Contraseña'
+        message = f'Hola {usuario},\n\nPara restablecer tu contraseña, por favor haz clic en el siguiente enlace:\n\nhttp://tu-pagina-web.com/restablecer-contraseña/{usuario}\n\nSi no solicitaste un restablecimiento de contraseña, por favor ignora este correo.\n\nSaludos,\nEl Equipo'
+        from_email = 'gestionbecag1@gmail.com'
+        to_list = [correo]
+
+        send_mail(subject, message, from_email, to_list, fail_silently=True)
+        return JsonResponse({'message': 'Correo enviado con éxito.'})
+
 
 
 def editar_programa_beca(request):

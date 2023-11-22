@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Cronograma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/ver_programa_beca.css"> <!-- Utilizando los estilos de "Ver Programa de Beca" -->
+</head>
+<body>
+
+    <div class="logo-box">
+        <img src="/static/images/ban-icesi.png" alt="Logo">
+    </div>
+
+    <div class="form-container">
+        <h2>Ver Cronograma</h2>
+        <form method="post" action="{% url 'app_login:ver_cronograma' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Seleccionar Cronograma:</label>
+                <select id="nombre" name="nombre" required style="width: 100%; padding: 10px; font-size: 14px;">
+                    <option value="">Seleccionar un cronograma</option>  <!-- Opción vacía al refrescar -->
+                    {% for cronograma in cronogramas %}
+                        <option value="{{ cronograma.id }}">{{ cronograma.programa_becas }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="btn-submit" type="submit">Ver Cronograma</button>
+        </form>
+
+        {% if cronograma_seleccionado %}
+            <div class="top">
+                <label for="nombre">Nombre del Cronograma:</label>
+                <input type="text" id="nombre" name="nombre" value="{{ cronograma_seleccionado.programa_becas }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="tipo_convocatoria">Tipo de Convocatoria:</label>
+                <input type="text" id="tipo_convocatoria" name="tipo_convocatoria" value="{{ cronograma_seleccionado.tipo_convocatoria }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fechaInscripciones">Fecha de Inscripciones:</label>
+                <input type="text" id="fechaInscripciones" name="fechaInscripciones" value="{{ cronograma_seleccionado.fecha_inscripciones }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fechaCierreInscripciones">Fecha de Cierre de Inscripciones:</label>
+                <input type="text" id="fechaCierreInscripciones" name="fechaCierreInscripciones" value="{{ cronograma_seleccionado.fecha_cierre_inscripciones }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fechaSeleccionAspirantes">Fecha de Selección de Aspirantes:</label>
+                <input type="text" id="fechaSeleccionAspirantes" name="fechaSeleccionAspirantes" value="{{ cronograma_seleccionado.fecha_seleccion_aspirantes }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fechaEntrevistas">Fecha de Entrevistas:</label>
+                <input type="text" id="fechaEntrevistas" name="fechaEntrevistas" value="{{ cronograma_seleccionado.fecha_entrevistas }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fechaPublicacionBeneficiarios">Fecha de Publicación de Beneficiarios:</label>
+                <input type="text" id="fechaPublicacionBeneficiarios" name="fechaPublicacionBeneficiarios" value="{{ cronograma_seleccionado.fecha_publicacion_beneficiarios }}" readonly>
+            </div>
+            <!-- Añade más campos de cronograma aquí -->
+        {% endif %}
+    </div>
+
+</body>
+</html>
