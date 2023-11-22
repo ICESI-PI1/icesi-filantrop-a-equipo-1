@@ -7,6 +7,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> <!-- Agregamos la fuente Roboto -->
     <link rel="stylesheet" type="text/css" href="/static/login.css">
 </head>
+
+<style>/* Agrega este código a tu archivo de estilos CSS */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup-contenido {
+        background-color: #fefefe;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .cerrar {
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    </style>
 <body>
 
     <div class="logo-container">
@@ -29,9 +55,44 @@
             <label for="contraseña">Contraseña:</label>
             <input type="password" id="contraseña" name="contraseña" required><br>
             <button type="submit">Iniciar Sesión</button>
-            <p>¿Olvidó su contraseña?</a></p>
+            <p><a onclick="mostrarPopup()">¿Olvidó su contraseña?</a></p>
+
         </form>
     </div>
     </div>
+    <div id="popup" class="popup">
+        <div class="popup-contenido">
+            <span class="cerrar" onclick="cerrarPopup()">&times;</span>
+            <h2>Restablecer Contraseña</h2>
+            <p>Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.</p>
+            <form id="form-olvido-contraseña" method="post">
+                {% csrf_token %}
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <button type="button" onclick="enviarCorreo()">Enviar Correo</button>
+            </form>
+        </div>
+    </div>
 </body>
+
+<!-- Agrega este código al final de tu template, después del cuerpo del HTML -->
+<script>
+    function mostrarPopup() {
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function cerrarPopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function enviarCorreo() {
+        // Puedes agregar lógica adicional aquí si es necesario
+        document.getElementById('form-olvido-contraseña').submit();
+        // Muestra el pop-up de confirmación después de enviar el correo
+        alert('Correo enviado con éxito. Revise su bandeja de entrada.');
+        // Cierra el pop-up
+        cerrarPopup();
+    }
+</script>
+
 </html>
