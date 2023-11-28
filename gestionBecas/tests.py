@@ -7,6 +7,9 @@ from django.utils import timezone
 from . import views
 from datetime import date  # Importa la clase 'date' para definir la fecha
 from gestionBecas.models import Cronograma
+from django.test import RequestFactory
+
+
 
 class LoginTestCase(TestCase):
     def setUp(self):
@@ -181,15 +184,66 @@ class GestionProgramaBecaTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'eliminar_programa_beca.html')
 
-
-   
-
     def test_ver_programa_beca(self):
         response = self.client.get(reverse('app_login:ver_programa_beca'))
         self.assertEqual(response.status_code, 200)
 
 
+class RegistrarProgramaBecaViewTest(GestionProgramaBecaTestCase):
+    def test_get_registrar_programa_beca_view(self):
+        response = self.client.get(reverse('app_login:registrar_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'registrar_programa_beca.html')
+        self.assertEqual(len(response.context['usuarios']), 0)
 
+    def test_post_registrar_programa_beca_view(self):
+        response = self.client.post(reverse('app_login:registrar_programa_beca'), {
+            'nombre': 'Beca Prueba 2',
+            'descripcion': 'Esta es otra beca de prueba',
+            'fechaInicio': '2023-01-01',
+            'fechaFin': '2023-12-31',
+            'cupo': 10,
+            'donantesSeleccionados': [self.user.username],
+            'coberturaEconomica': 1000,
+            'tipoBeca': 'Tipo Prueba',
+            'requisitos': 'Requisitos Prueba'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'registrar_programa_beca.html')
+        self.assertEqual(ProgramaBeca.objects.count(), 2)
+
+
+    def test_post_registrar_programa_beca_view_with_invalid_dates(self):
+        response = self.client.post(reverse('app_login:registrar_programa_beca'), {
+            'nombre': 'Beca Prueba 2',
+            'descripcion': 'Esta es otra beca de prueba',
+            'fechaInicio': '2023-12-31',
+            'fechaFin': '2023-01-01',  # La fecha de fin es anterior a la fecha de inicio
+            'cupo': 10,
+            'donantesSeleccionados': [self.user.username],
+            'coberturaEconomica': 1000,
+            'tipoBeca': 'Tipo Prueba',
+            'requisitos': 'Requisitos Prueba'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'registrar_programa_beca.html')
+        self.assertEqual(ProgramaBeca.objects.count(), 2)  # No se creó un nuevo programa de beca
+
+    def test_post_registrar_programa_beca_view_with_no_donantes(self):
+        response = self.client.post(reverse('app_login:registrar_programa_beca'), {
+            'nombre': 'Beca Prueba 2',
+            'descripcion': 'Esta es otra beca de prueba',
+            'fechaInicio': '2023-01-01',
+            'fechaFin': '2023-12-31',
+            'cupo': 10,
+            'donantesSeleccionados': [],  # No se seleccionaron donantes
+            'coberturaEconomica': 1000,
+            'tipoBeca': 'Tipo Prueba',
+            'requisitos': 'Requisitos Prueba'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'registrar_programa_beca.html')
+        self.assertEqual(ProgramaBeca.objects.count(), 2)  # No se creó un nuevo programa de beca
 
    
 
@@ -314,6 +368,39 @@ class CronogramaViewTest(TestCase):
         self.assertTemplateUsed(response, 'eliminar_cronograma.html')
         self.assertEqual(len(response.context['cronogramas']), 0)
 
+    def test_get_eliminar_cronograma_view_with_no_cronogramas(self):
+        Cronograma.objects.all().delete()  # Elimina todos los cronogramas
+        response = self.client.get(reverse('app_login:eliminar_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'eliminar_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 0)
+
+    def test_delete_request_with_no_cronogramas(self):
+        Cronograma.objects.all().delete()  # Elimina todos los cronogramas
+        response = self.client.delete(reverse('app_login:eliminar_cronograma_individual', args=[999]))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {'success': False, 'message': 'El cronograma no existe.'})
+
+    def test_get_eliminar_cronograma_view_with_one_cronograma(self):
+        Cronograma.objects.all().delete()  # Elimina todos los cronogramas
+        self.cronograma3 = Cronograma.objects.create(programa_becas=self.programa_beca1, tipo_convocatoria='Abierta', fecha_inscripciones=timezone.now(), fecha_cierre_inscripciones=timezone.now(), fecha_seleccion_aspirantes=timezone.now(), fecha_entrevistas=timezone.now(), fecha_publicacion_beneficiarios=timezone.now())
+        response = self.client.get(reverse('app_login:eliminar_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'eliminar_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 1)
+
+    def test_delete_request_with_one_cronograma(self):
+        Cronograma.objects.all().delete()  # Elimina todos los cronogramas
+        self.cronograma3 = Cronograma.objects.create(programa_becas=self.programa_beca1, tipo_convocatoria='Abierta', fecha_inscripciones=timezone.now(), fecha_cierre_inscripciones=timezone.now(), fecha_seleccion_aspirantes=timezone.now(), fecha_entrevistas=timezone.now(), fecha_publicacion_beneficiarios=timezone.now())
+        response = self.client.delete(reverse('app_login:eliminar_cronograma_individual', args=[self.cronograma3.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {'success': True, 'message': 'Cronograma eliminado con éxito.'})
+        with self.assertRaises(Cronograma.DoesNotExist):
+            Cronograma.objects.get(id=self.cronograma3.id)
+
+
+        
+
 
 
 class EditarCronogramaViewTest(TestCase):
@@ -352,6 +439,82 @@ class EditarCronogramaViewTest(TestCase):
         self.assertTemplateUsed(response, 'editar_cronograma.html')
 
 
+
+class SeleccionarProgramaBecaViewTest(CronogramaViewTest):
+    def test_get_seleccionar_programa_beca_view(self):
+        response = self.client.get(reverse('app_login:seleccionar_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'seleccionar_programa_beca.html')
+        self.assertEqual(len(response.context['programas']), 2)
+
+    def test_post_seleccionar_programa_beca_view_with_valid_programa_id(self):
+        response = self.client.post(reverse('app_login:seleccionar_programa_beca'), {'programa_id': self.programa_beca1.id})
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('app_login:editar_programa_beca', args=[self.programa_beca1.id]))
+
+    
+
+    def test_get_seleccionar_programa_beca_view_with_no_programas(self):
+        ProgramaBeca.objects.all().delete()  # Elimina todos los programas de beca
+        response = self.client.get(reverse('app_login:seleccionar_programa_beca'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'seleccionar_programa_beca.html')
+        self.assertEqual(len(response.context['programas']), 0)
+
+
+class VerCronogramaViewTest(CronogramaViewTest):
+    def test_get_ver_cronograma_view(self):
+        response = self.client.get(reverse('app_login:ver_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'ver_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 2)
+
+    def test_get_ver_cronograma_view1(self):
+        response = self.client.get(reverse('app_login:ver_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'ver_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 2)    
+
+    def test_post_ver_cronograma_view_with_valid_cronograma_id(self):
+        response = self.client.post(reverse('app_login:ver_cronograma'), {'nombre': self.cronograma1.id})
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'ver_cronograma.html')
+        self.assertEqual(response.context['cronograma_seleccionado'], self.cronograma1)
+
+    def test_post_ver_cronograma_view_with_invalid_cronograma_id(self):
+        response = self.client.post(reverse('app_login:ver_cronograma'), {'nombre': 999})
+        self.assertEqual(response.status_code, 404)  
+
+    
+
+    def test_get_ver_cronograma_view_with_no_cronogramas(self):
+        Cronograma.objects.all().delete()  # Elimina todos los cronogramas
+        response = self.client.get(reverse('app_login:ver_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'ver_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 0)
+
+
+        
+class SeleccionarCronogramaViewTest(CronogramaViewTest):
+    def test_get_seleccionar_cronograma_view(self):
+        response = self.client.get(reverse('app_login:seleccionar_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'seleccionar_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 2)
+
+    def test_post_seleccionar_cronograma_view_with_valid_cronograma_id(self):
+        response = self.client.post(reverse('app_login:seleccionar_cronograma'), {'cronograma_id': self.cronograma1.id})
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('app_login:editar_cronograma', args=[self.cronograma1.id]))
+
+
+    def test_get_seleccionar_cronograma_view_with_no_cronogramas(self):
+        Cronograma.objects.all().delete()  # Elimina todos los cronogramas
+        response = self.client.get(reverse('app_login:seleccionar_cronograma'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'seleccionar_cronograma.html')
+        self.assertEqual(len(response.context['cronogramas']), 0)
 
 
 
