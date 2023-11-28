@@ -1,0 +1,93 @@
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Usamos la fuente Roboto */
+            display: flex;
+            flex-direction: column; /* Poner los elementos en columna */
+            align-items: center; /* Centrar horizontalmente */
+            height: 10vh;
+            margin: 0;
+            background-image: url("/static/images/watermark.jpg");
+            background-size: cover; 
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-top: 20px; /* Espacio entre el logo y el formulario */
+            margin-bottom: 20px; /* Espacio entre el logo y el formulario */
+        }
+
+        .logo-box {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .logo-box img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .login-container {
+            text-align: center;  
+            padding: 20px;
+            border: 1px solid #ffffff;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            width: 100%;
+            border-radius: 10px; /* Añadimos bordes redondeados */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        p.error-message {
+            color: red;
+        }
+
+        .error-box {
+            background-color: #ff6b6b; /* Color rojo */
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px; /* Espacio entre el mensaje de error y el formulario */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .error-message {
+            color: #fff !important; /* Cambiado de rojo a blanco */
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
